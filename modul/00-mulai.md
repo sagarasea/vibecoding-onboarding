@@ -8,7 +8,7 @@
 
 Agent, ajukan empat pertanyaan ini dalam satu pesan:
 
-1. Sudah punya apa saja? Claude Pro/Max, Claude Code, VS Code, akun GitHub? Pernah ngoding atau ikut kelas vibe coding sebelumnya?
+1. Sudah punya apa saja? Claude Pro/Max, ChatGPT Plus (untuk Codex), Claude Code, VS Code, akun GitHub? Pernah ngoding atau ikut kelas vibe coding sebelumnya?
 2. Mau fokus ngapain, dan ada bottleneck di kerjaan yang mau dioptimalkan pakai AI?
 3. Project pertama mau bikin apa? (contoh: aplikasi internal buat operasional tim klien, clipper konten podcast, SaaS, AI agent kayak Hermes)
 4. Dalam sehari paling banyak ngapain, pakai tools atau aplikasi apa?

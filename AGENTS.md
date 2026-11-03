@@ -22,10 +22,12 @@ Pemicu: kalau orangnya mengetik "mulai onboarding", "lanjut onboarding", atau se
 
    Setelah dia bilang selesai, verifikasi dari terminalmu sendiri (`brew --version`, dll).
 8. **Yang tetap dikerjakan orangnya sendiri:** mengisi form signup, mengetik password, verifikasi email, membayar, memasukkan kartu, dan menyalin API key ke file `.env` (bukakan file-nya: `open -e .env` di macOS, `notepad .env` di Windows). Jangan pernah minta dia menempelkan password atau API key ke chat.
-9. **Cek OS dulu.** Jalankan `uname -s` (macOS/Linux) atau cek apakah ini PowerShell. macOS ikut `modul/02-install-macos.md`, Windows ikut `modul/03-install-windows.md`.
-10. **Bahasa:** pakai Bahasa Indonesia santai tapi jelas. Istilah teknis boleh Inggris, jelaskan sekali saat pertama muncul. Hindari em-dash (karakter panjang). Pakai koma, titik, atau titik dua.
-11. **Jangan melebar.** Tujuan sesi ini setup dan proyek pertama jalan. Kalau orangnya tanya hal di luar itu, jawab singkat lalu catat di bagian "Nanti dieksplor" di `PROGRESS.md`.
-12. **Akhir tiap modul:** centang modul di `PROGRESS.md`, jalankan `bash scripts/cek-setup.sh` (macOS) atau `scripts\cek-setup.ps1` (Windows) kalau modulnya menginstall sesuatu, lalu tanya "lanjut ke modul berikutnya?".
+9. **Materi muncul sesuai fasenya.** Kalau modul punya bagian **Materi dulu** atau menunjuk file di `materi/`, jelaskan materi itu tepat sebelum langkahnya dijalankan, bukan di awal onboarding. Caranya: gambaran besar dengan analogi (orangnya kemungkinan desainer atau non-programmer), tunjukkan istilahnya sambil benar-benar menjalankan perintahnya, lalu ajukan satu pertanyaan cek pemahaman di akhir file materi. Kalau jawabannya meleset, jelaskan ulang bagian itu saja. Catat di `PROGRESS.md` materi mana yang sudah dibahas.
+10. **Tiap ada ide project baru, tawarkan cari dulu di GitHub.** Contoh: "Mau aku cariin dulu di GitHub, siapa tahu sudah ada yang bikin? Nanti aku kasih report." Kalau iya, ikuti `materi/06-cari-repo-open-source.md` dan tulis report ke `docs/riset-repo.md`. Kalau ide atau prompt-nya masih tipis, tawarkan alur brainstorm di ChatGPT/Gemini dari `materi/05-dari-ide-ke-prompt.md`.
+11. **Cek OS dulu.** Jalankan `uname -s` (macOS/Linux) atau cek apakah ini PowerShell. macOS ikut `modul/02-install-macos.md`, Windows ikut `modul/03-install-windows.md`.
+12. **Bahasa:** pakai Bahasa Indonesia santai tapi jelas. Istilah teknis boleh Inggris, jelaskan sekali saat pertama muncul. Hindari em-dash (karakter panjang). Pakai koma, titik, atau titik dua.
+13. **Jangan melebar.** Tujuan sesi ini setup dan proyek pertama jalan. Kalau orangnya tanya hal di luar itu, jawab singkat lalu catat di bagian "Nanti dieksplor" di `PROGRESS.md`.
+14. **Akhir tiap modul:** centang modul di `PROGRESS.md`, jalankan `bash scripts/cek-setup.sh` (macOS) atau `scripts\cek-setup.ps1` (Windows) kalau modulnya menginstall sesuatu, lalu tanya "lanjut ke modul berikutnya?".
 
 ## Aturan keamanan
 
@@ -38,6 +40,7 @@ Pemicu: kalau orangnya mengetik "mulai onboarding", "lanjut onboarding", atau se
 
 - `README.md`: gambaran untuk manusia, urutan modul, jalur.
 - `modul/`: langkah-langkah. Setiap modul punya bagian Tujuan, Langkah, Verifikasi, dan Kalau gagal.
+- `materi/`: penjelasan konsep yang dibuka sesuai fasenya: git dan GitHub, API key dan .env, deploy, worktree dan bersih-bersih, dari ide ke prompt, cari repo open source.
 - `templates/`: file yang disalin ke project baru dan ke `~/.claude/`.
 - `scripts/`: cek setup dan installer sekali jalan.
 - `referensi/`: daftar link, biaya, skill global mentor, dan `katalog-tools.md` (daftar lengkap tools, ekstensi, MCP, plugin, skill per jalur). Kalau orangnya tanya "butuh apa lagi?" atau "X itu buat apa?", jawab dari katalog ini.

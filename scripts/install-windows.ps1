@@ -41,9 +41,14 @@ Langkah "Claude Code (native installer, update otomatis)"
 if (Ada claude) { Write-Host "sudah ada" } else { irm https://claude.ai/install.ps1 | iex }
 Segarkan-Path
 
+Langkah "Codex (OpenAI) dan opencode"
+Winget "OpenAI.Codex" "codex"
+if (-not (Ada opencode)) { npm install -g opencode-ai }
+Segarkan-Path
+
 Langkah "Ekstensi VS Code"
 if (Ada code) {
-  foreach ($ext in @("anthropic.claude-code","dbaeumer.vscode-eslint","esbenp.prettier-vscode","bradlc.vscode-tailwindcss","ms-python.python","ms-playwright.playwright","eamodio.gitlens")) {
+  foreach ($ext in @("anthropic.claude-code","openai.chatgpt","sst-dev.opencode","dbaeumer.vscode-eslint","esbenp.prettier-vscode","bradlc.vscode-tailwindcss","ms-python.python","ms-playwright.playwright","eamodio.gitlens")) {
     code --install-extension $ext --force *> $null
     if ($LASTEXITCODE -eq 0) { Write-Host "$ext ok" } else { Write-Host "$ext gagal (install manual dari VS Code)" }
   }
@@ -75,8 +80,7 @@ if ($Video) {
 }
 
 if ($Agent) {
-  Langkah "Jalur agent: opencode, Hermes Agent, 9router, Ollama, Gemini CLI"
-  if (-not (Ada opencode)) { npm install -g opencode-ai }
+  Langkah "Jalur agent: Hermes Agent, 9router, Ollama, Gemini CLI"
   if (-not (Ada hermes)) { iex (irm https://hermes-agent.nousresearch.com/install.ps1) }
   if (-not (Ada 9router)) { npm install -g 9router }
   if (-not (Ada gemini)) { npm install -g @google/gemini-cli }
@@ -97,4 +101,4 @@ if ($Craft) {
 
 Langkah "Selesai. Tutup dan buka PowerShell baru, lalu cek:"
 Write-Host "  powershell -ExecutionPolicy Bypass -File scripts\cek-setup.ps1"
-Write-Host "Langkah berikutnya yang butuh login di browser: gh auth login, claude (login), npx ctx7 setup --claude, /mcp untuk MCP OAuth."
+Write-Host "Langkah berikutnya yang butuh login di browser: gh auth login, claude (login), codex login, npx ctx7 setup --claude, /mcp untuk MCP OAuth."

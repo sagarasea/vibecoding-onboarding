@@ -4,6 +4,10 @@
 
 **Waktu:** 20 menit (jalur gratis), 1-2 jam (VPS).
 
+## Materi dulu
+
+Agent jelaskan [materi 03: Deploy](../materi/03-deploy.md) (localhost, build, production vs preview, domain, DNS, rollback). Sebelum mengisi environment variable di Vercel, ingatkan lagi aturan di [materi 02](../materi/02-api-key-dan-env.md), terutama soal awalan `NEXT_PUBLIC_`.
+
 ## Pilih jalur
 
 | | Jalur gratis | Jalur berbayar (VPS) |

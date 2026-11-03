@@ -25,6 +25,8 @@ cek "uv"         uv      "uv --version"
 cek "jq"         jq      "jq --version"
 cek "VS Code"    code    "code --version"
 cek "Claude Code" claude "claude --version"
+cek "Codex"      codex   "codex --version"
+cek "opencode"   opencode "opencode --version"
 
 echo
 echo "Tools opsional (sesuai jalur minat)"
@@ -40,7 +42,6 @@ cek "whisper.cpp" whisper-cli "echo terpasang"
 cek "Ollama"     ollama  "ollama --version"
 cek "Gemini CLI" gemini  "gemini --version"
 cek "9router"    9router "echo terpasang"
-cek "opencode"   opencode "opencode --version"
 cek "Hermes"     hermes  "hermes --version"
 
 echo

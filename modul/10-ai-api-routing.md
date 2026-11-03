@@ -4,11 +4,14 @@
 
 **Waktu:** 30-60 menit. Bagian D dan E opsional untuk jalur Gratis/Hemat.
 
+> Modul ini banyak memakai API key (TokenomixAI, 9router, token bot Telegram). Agent ingatkan lagi [materi 02: API key dan .env](../materi/02-api-key-dan-env.md) sebelum key pertama dibuat, terutama bagian "Kalau key terlanjur bocor".
+
 ## A. Langganan atau token: mana yang dibeli
 
 | Pilihan | Bentuk | Cocok untuk | Catatan |
 |---|---|---|---|
 | **Claude Pro / Max / Ultra** | langganan bulanan (USD 20 / 100 / 200) | coding harian di Claude Code | Paling enak untuk coding. Ada batas pemakaian per 5 jam. |
+| **ChatGPT Plus / Pro** | langganan bulanan (Plus USD 20) | Codex: second opinion, review kode, cadangan saat kuota Claude habis | Codex ikut di paket ChatGPT, tidak ada langganan terpisah. Paket Free terbatas. |
 | **Google AI Pro (Gemini)** | langganan | Gemini app, Gemini CLI, kuota Gemini lebih besar | Harga resmi Rp309rb/bulan. Mentor biasa beli paket **18 bulan lewat AAL** (tanya mentor link-nya). Paket 18 bulan yang beredar umumnya promo operator luar negeri yang dijual ulang, jadi bisa dicabut sewaktu-waktu. Beli yang murah, jangan jadikan satu-satunya andalan. |
 | **TokenomixAI** | token prepaid, bayar QRIS | agent dan aplikasi yang butuh API (Hermes, opencode, aplikasi kamu sendiri) | Satu API key untuk banyak model (GLM, DeepSeek, Kimi, dll), endpoint OpenAI-compatible `https://api.tokenomixai.com/v1`, tidak ada limit 5 jam, sisa token tidak hangus. Harga paket lihat di https://tokenomixai.com. |
 | **Worg** | saldo prepaid (USD, top-up rupiah) | **skala perusahaan**: data sensitif, butuh inference di mesin lokal Indonesia dan Zero Data Retention | Lihat bagian F. |
@@ -21,12 +24,7 @@ Rekomendasi kombinasi:
 
 ## B. opencode: agent coding dengan model gratis
 
-[opencode](https://opencode.ai) mirip Claude Code tapi bisa dipakai dengan model apa saja, termasuk yang gratis.
-
-```bash
-curl -fsSL https://opencode.ai/install | bash      # macOS / Linux
-npm install -g opencode-ai                          # Windows (atau semua OS)
-```
+[opencode](https://opencode.ai) mirip Claude Code tapi bisa dipakai dengan model apa saja, termasuk yang gratis. Sudah terpasang di modul 04 (`opencode --version`).
 
 Jalankan `opencode` di folder project. Untuk lihat model gratis:
 
@@ -139,7 +137,7 @@ Pola mentor: 9router dan Hermes jalan di VPS yang sama, Hermes memanggil 9router
 
 Tulis aturan agent di `~/.hermes/SOUL.md` dan `~/.hermes/AGENTS.md`. Masukkan Karpathy guidelines dan aturan keamanan (jangan tampilkan token, jangan hapus data tanpa konfirmasi). Skill Hermes bisa disimpan di repo GitHub private supaya sama di laptop dan VPS.
 
-## E. Gemini CLI dan Codex (opsional)
+## E. Gemini CLI (opsional)
 
 Kalau punya Google AI Pro, Gemini CLI bisa jadi agent coding cadangan saat kuota Claude habis. Install: `npm install -g @google/gemini-cli`, jalankan `gemini`. Aturan di `AGENTS.md` tetap berguna karena semua agent ini membacanya.
 

@@ -20,7 +20,11 @@ Windows, buka PowerShell:
 irm https://claude.ai/install.ps1 | iex
 ```
 
-Belum mau bayar? Pakai jalur Gratis: install [opencode](https://opencode.ai) (`npm install -g opencode-ai`, butuh Node.js) dan pakai model gratisnya. Instruksi agent di repo ini juga terbaca oleh opencode.
+Sudah langganan ChatGPT Plus tapi belum Claude? Pakai [Codex](https://developers.openai.com/codex): macOS `brew install --cask codex`, Windows `winget install OpenAI.Codex`, lalu `codex login`.
+
+Belum mau bayar sama sekali? Pakai jalur Gratis: install [opencode](https://opencode.ai) (`npm install -g opencode-ai`, butuh Node.js) dan pakai model gratisnya.
+
+Ketiga agent ini membaca `AGENTS.md`, jadi panduan di repo ini jalan di mana pun.
 
 **2. Ambil repo ini**
 
@@ -34,7 +38,7 @@ cd ~/Projects/vibecoding-onboarding-main   # sesuaikan dengan nama folder hasil 
 claude
 ```
 
-Atau pakai Claude Desktop: tab **Code**, pilih folder ini.
+Atau pakai Claude Desktop: tab **Code**, pilih folder ini. Untuk Codex: `codex`. Untuk opencode: `opencode`.
 
 **4. Ketik:**
 
@@ -52,7 +56,7 @@ Agent akan membaca `AGENTS.md`, bertanya 4 hal tentang kamu, memilihkan jalur, l
 | 01 | [Akun](modul/01-akun.md) | GitHub, Claude, Vercel, Supabase, Cloudflare, dll | 15 menit |
 | 02 | [Install macOS](modul/02-install-macos.md) | Homebrew, git, gh, Node, uv, VS Code, Claude Code | 30 menit |
 | 03 | [Install Windows](modul/03-install-windows.md) | winget, Git for Windows, Node, uv, VS Code, Claude Code | 30 menit |
-| 04 | [Claude Code dan VS Code](modul/04-claude-code.md) | login, ekstensi, perintah penting, kebiasaan | 20 menit |
+| 04 | [VS Code + Claude Code, Codex, opencode](modul/04-claude-code.md) | ekstensi, login langganan Claude dan ChatGPT, perintah penting | 25 menit |
 | 05 | [GitHub](modul/05-github.md) | login gh, repo pertama, kosakata git | 15 menit |
 | 06 | [File wajib](modul/06-file-wajib.md) | CLAUDE.md global (Karpathy), antislop, AGENTS.md, DESIGN.md | 15 menit |
 | 07 | [Skills, plugin, MCP](modul/07-skills-plugins-mcp.md) | global vs per repo, MCP dasar | 20 menit |
@@ -84,6 +88,8 @@ AGENTS.md              instruksi untuk AI agent pemandu (dibaca semua agent)
 CLAUDE.md              satu baris: @AGENTS.md
 PROGRESS.template.md   disalin jadi PROGRESS.md oleh agent
 modul/                 langkah-langkah 00-14
+materi/                konsep yang muncul sesuai fase: git & GitHub, API key & .env, deploy, worktree & bersih-bersih,
+                       dari ide ke prompt (brainstorm di ChatGPT/Gemini), cari repo open source dulu
 templates/             file untuk project baru dan ~/.claude/
   CLAUDE.global.md       aturan kerja agent global (Karpathy + aturan mentor)
   AGENTS.project.md      template konteks project

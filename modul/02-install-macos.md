@@ -14,7 +14,7 @@ bash scripts/install-macos.sh
 
 Tambahkan flag sesuai jalur minat dari `PROGRESS.md`: `--web`, `--video`, `--agent`, `--desain`, atau `--semua`. Script melewati yang sudah terpasang, jadi aman diulang.
 
-Yang dipasang script dasar: Homebrew, git, gh, Node, uv, jq, VS Code + 7 ekstensi (Claude Code, ESLint, Prettier, Tailwind, Python, Playwright, GitLens), Claude Code, Claude Desktop, Google Chrome, dan MCP **Playwright** + **Chrome DevTools** supaya agent bisa membuka browser dan mengecek hasil kerjanya sendiri. Isi tiap flag dan fungsi tiap tool ada di [referensi/katalog-tools.md](../referensi/katalog-tools.md).
+Yang dipasang script dasar: Homebrew, git, gh, Node, uv, jq, Codex, opencode, VS Code + 9 ekstensi (Claude Code, Codex, opencode, ESLint, Prettier, Tailwind, Python, Playwright, GitLens), Claude Code, Claude Desktop, Google Chrome, dan MCP **Playwright** + **Chrome DevTools** supaya agent bisa membuka browser dan mengecek hasil kerjanya sendiri. Isi tiap flag dan fungsi tiap tool ada di [referensi/katalog-tools.md](../referensi/katalog-tools.md).
 
 Kalau mau paham tiap langkah, atau script gagal di tengah, ikuti cara manual di bawah.
 
@@ -30,7 +30,9 @@ Kalau mau paham tiap langkah, atau script gagal di tengah, ikuti cara manual di 
 | 6 | uv | Python dan paket Python | `brew install uv` | `uv --version` |
 | 7 | VS Code | editor kode | `brew install --cask visual-studio-code` | buka dari Launchpad |
 | 8 | Claude Code | agent coding | `curl -fsSL https://claude.ai/install.sh \| bash` | `claude --version`, `claude doctor` |
-| 9 | Claude Desktop | aplikasi Claude dengan tab Code | `brew install --cask claude` | buka dari Launchpad |
+| 9 | Codex CLI | agent coding OpenAI | `brew install --cask codex` | `codex --version` |
+| 10 | opencode | agent coding model gratis | `curl -fsSL https://opencode.ai/install \| bash` | `opencode --version` |
+| 11 | Claude Desktop | aplikasi Claude dengan tab Code | `brew install --cask claude` | buka dari Launchpad |
 
 Catatan langkah 2: Homebrew minta password Mac. Orangnya yang mengetik password langsung di terminal (tidak terlihat saat diketik, itu normal). Setelah selesai, jalankan dua baris "Next steps" yang dicetak Homebrew supaya `brew` dikenali, biasanya:
 
@@ -68,4 +70,4 @@ Semua baris di "Tools dasar" berstatus `[OK]`.
 
 ## Lanjut
 
-Modul [04 Claude Code dan VS Code](04-claude-code.md).
+Modul [04 VS Code + Claude Code, Codex, opencode](04-claude-code.md).

@@ -15,6 +15,11 @@
 
 Saran untuk desainer yang pegang klien: mulai dari **aplikasi operasional internal**. Masalahnya sudah kamu tahu, penggunanya sudah ada, dan kamu bisa kasih ke klien minggu ini.
 
+## Sebelum ngoding: matangkan ide, lalu cek GitHub
+
+1. **Bingung mulai dari mana atau prompt-nya masih satu kalimat?** Brainstorm dulu di ChatGPT atau Gemini sampai jadi brief lengkap, panjang lebar. Agent kasih "prompt untuk bikin prompt" dari [materi 05: Dari ide ke prompt](../materi/05-dari-ide-ke-prompt.md). Hasilnya disimpan sebagai `docs/brief.md`.
+2. **Cek apakah sudah ada yang bikin.** Agent tawarkan: "Mau aku cariin dulu di GitHub?" Kalau iya, agent cari repo open source yang mirip, nilai lisensi, aktivitas, dan stack-nya, lalu tulis report ke `docs/riset-repo.md` ([materi 06: Cari repo open source](../materi/06-cari-repo-open-source.md)). Putuskan: pakai langsung, fork, jadikan referensi, atau bangun sendiri.
+
 ## Alur kerja (sama untuk semua ide)
 
 1. **Bikin folder dan repo.**
@@ -24,7 +29,7 @@ Saran untuk desainer yang pegang klien: mulai dari **aplikasi operasional intern
    ```
 2. **Salin file wajib project** dari `templates/`: `AGENTS.project.md` jadi `AGENTS.md`, `DESIGN.md`, lalu bikin `CLAUDE.md` berisi satu baris `@AGENTS.md`. Isi bagian yang kosong bersama agent (detail di modul 06).
 3. **Cari referensi desain dulu** (modul 08) sebelum minta agent nulis UI. Tempel 2-3 link referensi ke `DESIGN.md`.
-4. **Masuk plan mode.** Di Claude Code tekan `Shift+Tab` sampai muncul "plan mode", lalu ceritakan:
+4. **Masuk plan mode.** Di Claude Code tekan `Shift+Tab` sampai muncul "plan mode" (Codex dan opencode punya mode serupa). Kalau sudah punya `docs/brief.md`, cukup minta agent membacanya bersama `AGENTS.md` dan `DESIGN.md`. Kalau belum, ceritakan:
    - siapa penggunanya,
    - 3 hal yang harus bisa mereka lakukan di versi pertama,
    - apa yang sengaja belum dibuat.
@@ -33,6 +38,10 @@ Saran untuk desainer yang pegang klien: mulai dari **aplikasi operasional intern
 5. **Bangun per potongan kecil.** Satu fitur, cek di browser, commit. Ulangi.
 6. **Deploy** (modul 09): push ke GitHub, sambungkan ke Vercel, tambahkan environment variable di dashboard Vercel.
 7. **Kirim link ke satu orang pengguna nyata.** Catat feedback di `PROGRESS.md`.
+
+## Saat mulai kerja paralel
+
+Begitu kamu ingin dua sesi agent jalan bersamaan di project ini (misalnya satu bikin fitur, satu benerin bug), agent jelaskan dulu [materi 04: Worktree dan bersih-bersih](../materi/04-worktree-dan-bersih-bersih.md), lalu praktikkan satu worktree dan bersihkan setelah PR-nya di-merge.
 
 ## Contoh prompt pembuka (aplikasi operasional)
 

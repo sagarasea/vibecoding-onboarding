@@ -6,7 +6,7 @@
 
 - Nama:
 - OS: macOS / Windows
-- Sudah punya: (Claude Pro? VS Code? GitHub? pernah ngoding?)
+- Sudah punya: (Claude Pro? ChatGPT Plus? VS Code? GitHub? pernah ngoding?)
 - Fokus / project pertama:
 - Kegiatan harian dan tools yang paling sering dipakai:
 - Jalur: Gratis / Hemat / Builder / Company
@@ -18,7 +18,7 @@
 - [ ] 00 Mulai di sini
 - [ ] 01 Akun
 - [ ] 02 atau 03 Install dasar (macOS / Windows)
-- [ ] 04 Claude Code dan VS Code
+- [ ] 04 VS Code + Claude Code, Codex, opencode
 - [ ] 05 GitHub
 - [ ] 06 File wajib (CLAUDE.md, anti-slop, DESIGN.md)
 - [ ] 07 Skills, plugin, MCP
@@ -29,6 +29,15 @@
 - [ ] 12 Jalur minat
 - [ ] 13 Proyek pertama
 - [ ] 14 Belajar lanjut
+
+## Materi yang sudah dibahas
+
+- [ ] 01 Git dan GitHub dasar (modul 05)
+- [ ] 02 API key dan .env (modul 07)
+- [ ] 03 Deploy (modul 09)
+- [ ] 04 Worktree dan bersih-bersih (modul 13)
+- [ ] 05 Dari ide ke prompt (modul 13)
+- [ ] 06 Cari repo open source (modul 13)
 
 ## Catatan
 

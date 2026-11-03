@@ -58,6 +58,10 @@ Agent jalankan dari terminal biasa (bukan di dalam sesi Claude), lalu buka sesi 
 | Playwright | agent membuka browser, klik, dan screenshot untuk ngetes aplikasi | `claude mcp add --scope user playwright -- npx @playwright/mcp@latest` | user |
 | Chrome DevTools | debug performa dan console di Chrome | `claude mcp add --scope user chrome-devtools -- npx chrome-devtools-mcp@latest` | user |
 
+## Materi dulu: API key dan .env
+
+Beberapa MCP di langkah ini butuh API key. Sebelum meminta key pertama, agent jelaskan [materi 02: API key dan .env](../materi/02-api-key-dan-env.md), lalu praktikkan bikin `.env` dan `.env.example` di project latihan.
+
 ## Langkah 3: MCP sesuai minat
 
 | MCP | Untuk | Perintah | Scope |

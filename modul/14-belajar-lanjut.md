@@ -39,8 +39,11 @@ Semua di https://anthropic.skilljar.com, gratis, dapat sertifikat. Urutan yang d
 
 ## Kebiasaan jangka panjang
 
+- Setiap ide baru: brainstorm dulu di ChatGPT/Gemini sampai jadi brief ([materi 05](../materi/05-dari-ide-ke-prompt.md)), lalu cek GitHub apakah sudah ada yang bikin ([materi 06](../materi/06-cari-repo-open-source.md)).
+
 - Setiap kali agent melakukan kesalahan yang sama dua kali, tambahkan aturannya ke `AGENTS.md` project atau `~/.claude/CLAUDE.md`.
 - Setiap kali kamu mengulang alur kerja tiga kali, jadikan skill.
+- Bersih-bersih sebulan sekali: worktree dan branch yang sudah di-merge, `node_modules` project lama, cache. Caranya di [materi 04](../materi/04-worktree-dan-bersih-bersih.md#bersih-bersih-kapan-dan-kenapa).
 - Update tools sebulan sekali: `brew upgrade` (Mac) atau `winget upgrade --all` (Windows), `npx antislop-ai --update`, `/plugin` lalu update marketplace.
 - Simpan keputusan dengan tanggal absolut ("2026-11-04", bukan "kemarin").
 

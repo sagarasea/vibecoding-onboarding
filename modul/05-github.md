@@ -6,6 +6,10 @@
 
 Kenapa wajib: GitHub itu tempat backup, riwayat perubahan (bisa balik ke versi kemarin kalau AI merusak sesuatu), dan pintu masuk deploy. Vercel, Cloudflare, dan VPS semuanya narik kode dari GitHub.
 
+## Materi dulu
+
+Sebelum langkah pertama, agent jelaskan [materi 01: Git dan GitHub dasar](../materi/01-git-github-dasar.md): repo, commit, push, pull, branch, merge, PR, dan kapan commit. Praktiknya di langkah 3.
+
 ## Langkah
 
 1. **Login GitHub CLI.** Agent jalankan:
@@ -31,18 +35,21 @@ Kenapa wajib: GitHub itu tempat backup, riwayat perubahan (bisa balik ke versi k
    gh repo create halo-dunia --private --source=. --push
    ```
 
-## Kosakata yang perlu dipahami (cukup ini dulu)
+## Latihan branch dan PR (setelah repo pertama jadi)
 
-| Istilah | Artinya |
-|---|---|
-| repo | folder project yang dilacak git |
-| commit | titik simpan (save point) dengan pesan |
-| push | kirim commit ke GitHub |
-| pull | ambil perubahan terbaru dari GitHub |
-| branch | cabang kerja terpisah, buat nyoba fitur tanpa merusak `main` |
-| pull request (PR) | permintaan menggabungkan branch ke `main`, tempat review |
+Agent jalankan sambil menjelaskan tiap langkah dengan istilah dari materi 01:
 
-Kamu tidak perlu hafal perintahnya. Cukup bilang ke agent: "commit perubahan ini", "bikin branch buat fitur login", "push dan bikin PR". Agent yang mengetik perintahnya.
+```bash
+git switch -c coba-branch
+echo "Baris dari branch" >> README.md
+git add README.md && git commit -m "Coba commit di branch"
+git push -u origin coba-branch
+gh pr create --fill
+gh pr merge --merge --delete-branch
+git switch main && git pull
+```
+
+Hasilnya: kamu sudah mengalami satu siklus penuh branch, commit, push, PR, merge, dan bersih-bersih branch.
 
 ## Kebiasaan yang dipakai mentor
 

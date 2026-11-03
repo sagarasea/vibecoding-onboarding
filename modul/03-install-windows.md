@@ -20,7 +20,7 @@ powershell -ExecutionPolicy Bypass -File scripts\install-windows.ps1
 
 Tambahkan `-Web`, `-Video`, `-Agent`, `-Desain`, atau `-Semua` sesuai jalur minat. Yang sudah terpasang dilewati.
 
-Yang dipasang script dasar: git, gh, Node, uv, jq, VS Code + 7 ekstensi (Claude Code, ESLint, Prettier, Tailwind, Python, Playwright, GitLens), Claude Code, Claude Desktop, Google Chrome, dan MCP **Playwright** + **Chrome DevTools** supaya agent bisa membuka browser dan mengecek hasil kerjanya sendiri. Isi tiap flag dan fungsi tiap tool ada di [referensi/katalog-tools.md](../referensi/katalog-tools.md).
+Yang dipasang script dasar: git, gh, Node, uv, jq, Codex, opencode, VS Code + 9 ekstensi (Claude Code, Codex, opencode, ESLint, Prettier, Tailwind, Python, Playwright, GitLens), Claude Code, Claude Desktop, Google Chrome, dan MCP **Playwright** + **Chrome DevTools** supaya agent bisa membuka browser dan mengecek hasil kerjanya sendiri. Isi tiap flag dan fungsi tiap tool ada di [referensi/katalog-tools.md](../referensi/katalog-tools.md).
 
 ## Cara manual (satu per satu)
 
@@ -34,7 +34,9 @@ Semua lewat `winget` (bawaan Windows 11, di Windows 10 install **App Installer**
 | 4 | uv (Python) | `winget install --id=astral-sh.uv -e` | `uv --version` |
 | 5 | VS Code | `winget install Microsoft.VisualStudioCode` | `code --version` |
 | 6 | Claude Code | `irm https://claude.ai/install.ps1 \| iex` | `claude --version`, `claude doctor` |
-| 7 | Claude Desktop | `winget install Anthropic.Claude` | buka dari Start menu |
+| 7 | Codex CLI | `winget install OpenAI.Codex` | `codex --version` |
+| 8 | opencode | `npm install -g opencode-ai` | `opencode --version` |
+| 9 | Claude Desktop | `winget install Anthropic.Claude` | buka dari Start menu |
 
 Setelah tiap install, **tutup PowerShell dan buka lagi** supaya perintah baru dikenali.
 
@@ -70,4 +72,4 @@ Semua baris di "Tools dasar" berstatus `[OK]`.
 
 ## Lanjut
 
-Modul [04 Claude Code dan VS Code](04-claude-code.md).
+Modul [04 VS Code + Claude Code, Codex, opencode](04-claude-code.md).

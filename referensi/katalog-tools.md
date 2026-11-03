@@ -16,6 +16,7 @@ Kolom **Kapan**: `Dasar` = semua orang. `Web`, `Video`, `Agent`, `Desain` = sesu
 | jq | baca dan olah JSON di terminal (dipakai di hook dan script) | Dasar | `brew install jq` | `winget install jqlang.jq` | dasar |
 | VS Code | editor kode | Dasar | `brew install --cask visual-studio-code` | `winget install Microsoft.VisualStudioCode` | dasar |
 | Claude Code | agent coding utama | Dasar | `curl -fsSL https://claude.ai/install.sh \| bash` | `irm https://claude.ai/install.ps1 \| iex` | dasar |
+| Codex CLI | agent coding dari OpenAI, login pakai akun ChatGPT | Dasar | `brew install --cask codex` | `winget install OpenAI.Codex` | dasar |
 | Claude Desktop | Claude dengan tab Code, browser bawaan, sesi paralel | Dasar | `brew install --cask claude` | `winget install Anthropic.Claude` | dasar |
 | Google Chrome | browser untuk Playwright, Chrome DevTools MCP, Claude in Chrome | Dasar | `brew install --cask google-chrome` | `winget install Google.Chrome` | dasar |
 | Playwright (browser) | browser yang dikendalikan agent untuk ngetes aplikasi | Web | `npx playwright install chromium` | sama | `--web` |
@@ -29,7 +30,7 @@ Kolom **Kapan**: `Dasar` = semua orang. `Web`, `Video`, `Agent`, `Desain` = sesu
 | Deno | dibutuhkan yt-dlp untuk YouTube | Video | `brew install deno` | `winget install DenoLand.Deno` | `--video` |
 | ImageMagick | olah gambar massal: resize, convert, thumbnail | Video, Desain | `brew install imagemagick` | `winget install ImageMagick.ImageMagick` | `--video` |
 | whisper.cpp | transkrip audio jadi teks di laptop, gratis (untuk caption clipper) | Video | `brew install whisper-cpp` | pakai API Whisper/Gemini, atau build manual | `--video` (Mac) |
-| opencode | agent coding dengan model gratis/murah | Agent, jalur Gratis | `curl -fsSL https://opencode.ai/install \| bash` | `npm i -g opencode-ai` | `--agent` |
+| opencode | agent coding dengan model gratis/murah | Dasar | `curl -fsSL https://opencode.ai/install \| bash` | `npm i -g opencode-ai` | dasar |
 | Hermes Agent | asisten 24 jam, Telegram/WhatsApp, cron | Agent | `curl -fsSL https://hermes-agent.nousresearch.com/install.sh \| bash` | `iex (irm https://hermes-agent.nousresearch.com/install.ps1)` | `--agent` |
 | 9router | satu endpoint untuk banyak model + fallback | Agent | `npm i -g 9router` | sama | `--agent` |
 | Ollama | jalankan model AI di laptop sendiri, offline | Agent, Company | `brew install --cask ollama-app` | `winget install Ollama.Ollama` | `--agent` |
@@ -38,11 +39,13 @@ Kolom **Kapan**: `Dasar` = semua orang. `Web`, `Video`, `Agent`, `Desain` = sesu
 
 ## 2. Ekstensi VS Code
 
-Diinstall otomatis oleh script dasar (`code --install-extension <id>`).
+Diinstall otomatis oleh script dasar (`code --install-extension <id>`). Login tiap agent ada di modul 04.
 
 | Ekstensi | ID | Untuk apa |
 |---|---|---|
-| Claude Code | `anthropic.claude-code` | Claude di dalam editor |
+| Claude Code | `anthropic.claude-code` | Claude di dalam editor (login langganan Claude) |
+| Codex | `openai.chatgpt` | Codex di dalam editor (login akun ChatGPT) |
+| opencode | `sst-dev.opencode` | opencode di panel editor (model gratis/murah) |
 | ESLint | `dbaeumer.vscode-eslint` | tanda error JavaScript/TypeScript |
 | Prettier | `esbenp.prettier-vscode` | rapikan format kode |
 | Tailwind CSS IntelliSense | `bradlc.vscode-tailwindcss` | autocomplete class Tailwind |

@@ -20,6 +20,7 @@ Claude Code **tidak** tersedia di paket Claude Free.
 | Kebutuhan | Pakai | Biaya |
 |---|---|---|
 | Agent coding | Claude Pro (termasuk Claude Code) | USD 20/bulan, atau USD 17/bulan kalau tahunan |
+| Agent kedua (opsional) | ChatGPT Plus untuk Codex | USD 20/bulan |
 | Domain | Hostinger `.com` / `.id` | sekitar Rp110rb (promo tahun pertama) / Rp210rb per tahun |
 | Sisanya | sama dengan jalur Gratis | Rp0 |
 

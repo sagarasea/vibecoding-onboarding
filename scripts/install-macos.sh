@@ -2,10 +2,10 @@
 # Installer sekali jalan untuk macOS. Aman dijalankan ulang: yang sudah ada dilewati.
 # Daftar lengkap dan fungsi tiap tool: referensi/katalog-tools.md
 # Pakai:
-#   bash scripts/install-macos.sh            # tools dasar + ekstensi VS Code + MCP Playwright & Chrome DevTools
+#   bash scripts/install-macos.sh            # tools dasar, Claude Code + Codex + opencode, ekstensi VS Code, MCP Playwright & Chrome DevTools
 #   bash scripts/install-macos.sh --web      # + Vercel, Supabase, Wrangler, Docker Desktop, browser Playwright, MCP Vercel
 #   bash scripts/install-macos.sh --video    # + ffmpeg, yt-dlp, deno, ImageMagick, whisper.cpp
-#   bash scripts/install-macos.sh --agent    # + opencode, Hermes Agent, 9router, Ollama, Gemini CLI
+#   bash scripts/install-macos.sh --agent    # + Hermes Agent, 9router, Ollama, Gemini CLI
 #   bash scripts/install-macos.sh --desain   # + Figma Desktop, MCP Jiro
 #   bash scripts/install-macos.sh --craft    # + ArtCraft suite (FigCraft, EffectCraft, FilmCraft, dll) untuk laptop kuat
 #   bash scripts/install-macos.sh --semua    # semua di atas kecuali --craft
@@ -60,10 +60,14 @@ brew_c google-chrome "Google Chrome"
 langkah "Claude Code (native installer, update otomatis)"
 if ada claude; then echo "sudah ada: $(claude --version)"; else curl -fsSL https://claude.ai/install.sh | bash; export PATH="$HOME/.local/bin:$PATH"; fi
 
+langkah "Codex (OpenAI) dan opencode"
+ada codex || brew install --cask codex
+ada opencode || curl -fsSL https://opencode.ai/install | bash
+
 langkah "Ekstensi VS Code"
 CODE_BIN="code"
 ada code || CODE_BIN="/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code"
-for ext in anthropic.claude-code dbaeumer.vscode-eslint esbenp.prettier-vscode bradlc.vscode-tailwindcss ms-python.python ms-playwright.playwright eamodio.gitlens; do
+for ext in anthropic.claude-code openai.chatgpt sst-dev.opencode dbaeumer.vscode-eslint esbenp.prettier-vscode bradlc.vscode-tailwindcss ms-python.python ms-playwright.playwright eamodio.gitlens; do
   "$CODE_BIN" --install-extension "$ext" --force >/dev/null 2>&1 && echo "$ext ok" || echo "$ext gagal (install manual dari VS Code)"
 done
 
@@ -92,8 +96,7 @@ if [ $VIDEO = 1 ]; then
 fi
 
 if [ $AGENT = 1 ]; then
-  langkah "Jalur agent: opencode, Hermes Agent, 9router, Ollama, Gemini CLI"
-  ada opencode || curl -fsSL https://opencode.ai/install | bash
+  langkah "Jalur agent: Hermes Agent, 9router, Ollama, Gemini CLI"
   ada hermes || curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash
   ada 9router || npm install -g 9router
   ada gemini || npm install -g @google/gemini-cli
@@ -122,4 +125,4 @@ fi
 
 langkah "Selesai. Buka terminal baru, lalu cek:"
 echo "  bash scripts/cek-setup.sh"
-echo "Langkah berikutnya yang butuh login di browser: gh auth login, claude (login), npx ctx7 setup --claude, /mcp untuk MCP OAuth."
+echo "Langkah berikutnya yang butuh login di browser: gh auth login, claude (login), codex login, npx ctx7 setup --claude, /mcp untuk MCP OAuth."

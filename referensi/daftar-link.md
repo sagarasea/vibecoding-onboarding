@@ -11,6 +11,12 @@ Semua link yang dipakai di modul, dikelompokkan. Dicek 2026-11-04.
 - Kursus gratis: https://anthropic.skilljar.com
 - Plugin resmi: https://github.com/anthropics/claude-plugins-official
 
+## Codex dan opencode
+
+- Codex: https://developers.openai.com/codex
+- Harga Codex (ikut paket ChatGPT): https://developers.openai.com/codex/pricing
+- opencode: https://opencode.ai
+
 ## Aturan kerja agent
 
 - Karpathy guidelines: https://github.com/multica-ai/andrej-karpathy-skills

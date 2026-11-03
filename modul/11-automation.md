@@ -28,6 +28,8 @@ Agent tidak memposting langsung tanpa review. Draft dulu, kamu setujui, baru dij
 
 ## Langkah: sambungkan Repliz ke agent
 
+Key Repliz bisa dipakai untuk memposting atas nama brand. Perlakukan sesuai [materi 02](../materi/02-api-key-dan-env.md).
+
 1. Daftar di https://repliz.com, sambungkan akun sosmed.
 2. Ambil **Access Key** dan **Secret Key** di dashboard (paket yang punya akses API). Orangnya yang menyalin ke `.env`:
    ```
