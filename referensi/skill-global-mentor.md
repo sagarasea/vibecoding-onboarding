@@ -41,7 +41,7 @@ Legenda sumber: **Custom** = dibuat mentor untuk infrastruktur sendiri, tidak un
 
 Mentor menaruh skill di dalam repo kalau skill itu khusus untuk project tersebut atau harus versinya terkunci:
 
-- `.claude/skills/` di repo: antislop versi tertentu (contoh di repo Hear2Heart dan leaderboard), atau set skill marketing untuk satu brand.
+- `.claude/skills/` di repo: antislop versi tertentu yang dikunci untuk project itu, atau set skill marketing untuk satu brand.
 - `skills/` di root repo: salinan antislop untuk agent non-Claude yang membaca `AGENTS.md`.
 - `.claude/agents/` dan `.claude/commands/`: subagent dan slash command khusus project.
 - `.claude/settings.json`: izin dan larangan perintah (contoh: larang `rm -rf`, larang baca `.env`).

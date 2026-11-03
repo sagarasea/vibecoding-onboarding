@@ -156,7 +156,7 @@ Daripada semua obrolan dengan agent bercampur di satu chat, bikin satu grup Tele
    ```
    TELEGRAM_HOME_CHANNEL=-1001234567890
    TELEGRAM_ALLOWED_USERS=123456789
-   # Topik: Ops=29, Logs=30, project-1=31, project-2=32
+   # Topik: Ops=2, Logs=3, project-1=4, project-2=5  (contoh, pakai ID milikmu sendiri)
    ```
 8. **Arahkan agent per topik**: jalankan `hermes gateway setup` atau minta agent mengatur konfigurasi Telegram Hermes supaya hanya merespons di grup itu, laporan cron dikirim ke topik Logs, dan tiap topik project bekerja di folder project yang sesuai. Agent baca dokumentasi Hermes (https://hermes-agent.nousresearch.com/docs/) untuk nama pengaturan versi terbaru.
 
