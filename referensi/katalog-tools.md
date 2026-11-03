@@ -99,8 +99,8 @@ Yang "manual" butuh login di browser atau API key, jadi agent memandu dan orangn
 | Skill | Untuk apa | Kapan | Install |
 |---|---|---|---|
 | antislop (6 skill) | filter UI, copy, aksesibilitas, mobile, komentar kode | Dasar | `npx antislop-ai` |
-| hyperframes (7 skill) | video, caption, motion | Video | `npx skills add heygen-com/hyperframes` |
-| watch | agent "nonton" video referensi | Video | https://github.com/bradautomates/claude-video |
+| hyperframes (7 skill) | video, caption, motion | Video | plugin (lihat tabel plugin) atau `npx hyperframes skills update` |
+| watch | agent "nonton" video referensi | Video | `/plugin marketplace add bradautomates/claude-video` lalu `/plugin install watch@claude-video` |
 | agent-reach | riset internet 15 platform | Agent | https://github.com/Panniantong/Agent-Reach |
 | awwwards | situs kelas award | Desain | `npx skills add wheresryan22/anatomy` |
 | emil-design-eng, review-animations, apple-design | polish UI dan motion | Desain | animations.dev (Emil Kowalski) |

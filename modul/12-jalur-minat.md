@@ -93,14 +93,16 @@ Contoh: asisten Telegram untuk tim, agent yang kerja 24 jam di VPS, posting otom
 
 ## C. Video dan konten
 
+Alur lengkap motion graphic (jalur recreate dari referensi dan jalur build engine seperti clipper) ada di [modul 13 bagian Motion graphic](13-proyek-pertama.md#motion-graphic-dua-jalur).
+
 Contoh: clipper podcast, reels, motion graphic, caption otomatis.
 
 | Jenis | Yang diinstall | Perintah |
 |---|---|---|
 | CLI | ffmpeg | macOS: `brew install ffmpeg`. Windows: `winget install Gyan.FFmpeg` |
 | CLI | yt-dlp | macOS: `brew install yt-dlp`. Windows: `winget install yt-dlp.yt-dlp` |
-| Skill | HyperFrames (HTML jadi video, 450 blok siap pakai) | `npx skills add heygen-com/hyperframes` |
-| Skill | watch (agent bisa "nonton" video referensi) | lihat [bradautomates/claude-video](https://github.com/bradautomates/claude-video) |
+| Plugin | HyperFrames (HTML jadi video, 450 blok siap pakai) | `claude plugin marketplace add heygen-com/hyperframes` lalu `claude plugin install hyperframes@hyperframes`. opencode/Codex: `npx hyperframes skills update` |
+| Plugin | watch (agent bisa "nonton" video referensi) | `/plugin marketplace add bradautomates/claude-video` lalu `/plugin install watch@claude-video` |
 | Framework | Remotion (video pakai React) | `npx create-video@latest` |
 | CLI | ImageMagick (thumbnail, resize massal) | macOS: `brew install imagemagick`. Windows: `winget install ImageMagick.ImageMagick` |
 | Transkrip | whisper.cpp (lokal, gratis) | macOS: `brew install whisper-cpp`. Windows: pakai API Whisper/Gemini |
