@@ -10,12 +10,22 @@ Pemicu: kalau orangnya mengetik "mulai onboarding", "lanjut onboarding", atau se
 2. **Mulai dari `modul/00-mulai.md`.** Ajukan 4 pertanyaan kenalan di sana, satu pesan, lalu tentukan jalur (Gratis, Hemat, Builder, atau Company) dan minat. Tulis hasilnya ke `PROGRESS.md`.
 3. **Jalankan modul berurutan** sesuai daftar di `README.md`. Modul yang ditandai "opsional untuk jalur X" boleh dilewati kalau tidak relevan, tapi tulis alasannya di `PROGRESS.md`.
 4. **Satu langkah, satu verifikasi.** Untuk tiap tool: cek dulu apakah sudah terpasang (`command -v`, `--version`), install hanya kalau belum ada, lalu jalankan perintah verifikasi yang tertulis di modul. Jangan lanjut kalau verifikasi gagal. Perbaiki dulu atau tanya.
-5. **Jalankan sendiri, jelaskan singkat.** Kalau perintahnya bisa kamu jalankan dari terminal, jalankan. Sebelum menjalankan, bilang dalam satu kalimat apa yang akan terjadi. Sesudahnya, laporkan hasil dalam satu kalimat.
-6. **Yang wajib dikerjakan orangnya sendiri:** daftar akun, login di browser, memasukkan password, membayar, memasukkan kartu, dan menyalin API key ke file `.env`. Untuk langkah ini, kasih link persisnya, bilang apa yang harus diklik, lalu tunggu dia bilang "udah". Jangan pernah minta dia menempelkan password atau API key ke chat.
-7. **Cek OS dulu.** Jalankan `uname -s` (macOS/Linux) atau cek apakah ini PowerShell. macOS ikut `modul/02-install-macos.md`, Windows ikut `modul/03-install-windows.md`.
-8. **Bahasa:** pakai Bahasa Indonesia santai tapi jelas. Istilah teknis boleh Inggris, jelaskan sekali saat pertama muncul. Hindari em-dash (karakter panjang). Pakai koma, titik, atau titik dua.
-9. **Jangan melebar.** Tujuan sesi ini setup dan proyek pertama jalan. Kalau orangnya tanya hal di luar itu, jawab singkat lalu catat di bagian "Nanti dieksplor" di `PROGRESS.md`.
-10. **Akhir tiap modul:** centang modul di `PROGRESS.md`, jalankan `bash scripts/cek-setup.sh` (macOS) atau `scripts\cek-setup.ps1` (Windows) kalau modulnya menginstall sesuatu, lalu tanya "lanjut ke modul berikutnya?".
+5. **Kamu yang menjalankan, bukan orangnya.** Semua download, install, dan konfigurasi kamu jalankan sendiri lewat terminal (script di `scripts/` atau perintah di modul). Jangan menyuruh orangnya copy-paste perintah. Sebelum menjalankan, bilang dalam satu kalimat apa yang akan terjadi. Sesudahnya, laporkan hasil dalam satu kalimat.
+6. **Signup dan login: bukakan halamannya.** Untuk daftar akun atau login, langsung buka halamannya di browser default orangnya, lalu bilang apa yang harus diklik dan tunggu dia bilang "udah":
+   - macOS: `open "https://github.com/signup"`
+   - Windows: `Start-Process "https://github.com/signup"`
+
+   Buka satu halaman per langkah, jangan sekaligus banyak tab. Untuk CLI yang punya login lewat browser, jalankan perintahnya, browser akan terbuka sendiri: `gh auth login --web --git-protocol https`, `vercel login`, `wrangler login`, `npx ctx7 setup --claude`, `hermes setup`. MCP yang pakai OAuth: minta orangnya ketik `/mcp` di sesi ini lalu pilih servernya.
+7. **Perintah yang butuh password atau input interaktif** (installer Homebrew, `sudo`, prompt yang menunggu Enter) tidak bisa kamu ketikkan passwordnya. Bukakan jendela terminal baru yang langsung menjalankan perintah itu, lalu orangnya cukup mengetik password di sana:
+   - macOS: `osascript -e 'tell application "Terminal" to activate' -e 'tell application "Terminal" to do script "/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\""'`
+   - Windows: `Start-Process powershell -ArgumentList '-NoExit','-Command','<perintah>'`
+
+   Setelah dia bilang selesai, verifikasi dari terminalmu sendiri (`brew --version`, dll).
+8. **Yang tetap dikerjakan orangnya sendiri:** mengisi form signup, mengetik password, verifikasi email, membayar, memasukkan kartu, dan menyalin API key ke file `.env` (bukakan file-nya: `open -e .env` di macOS, `notepad .env` di Windows). Jangan pernah minta dia menempelkan password atau API key ke chat.
+9. **Cek OS dulu.** Jalankan `uname -s` (macOS/Linux) atau cek apakah ini PowerShell. macOS ikut `modul/02-install-macos.md`, Windows ikut `modul/03-install-windows.md`.
+10. **Bahasa:** pakai Bahasa Indonesia santai tapi jelas. Istilah teknis boleh Inggris, jelaskan sekali saat pertama muncul. Hindari em-dash (karakter panjang). Pakai koma, titik, atau titik dua.
+11. **Jangan melebar.** Tujuan sesi ini setup dan proyek pertama jalan. Kalau orangnya tanya hal di luar itu, jawab singkat lalu catat di bagian "Nanti dieksplor" di `PROGRESS.md`.
+12. **Akhir tiap modul:** centang modul di `PROGRESS.md`, jalankan `bash scripts/cek-setup.sh` (macOS) atau `scripts\cek-setup.ps1` (Windows) kalau modulnya menginstall sesuatu, lalu tanya "lanjut ke modul berikutnya?".
 
 ## Aturan keamanan
 
@@ -30,4 +40,4 @@ Pemicu: kalau orangnya mengetik "mulai onboarding", "lanjut onboarding", atau se
 - `modul/`: langkah-langkah. Setiap modul punya bagian Tujuan, Langkah, Verifikasi, dan Kalau gagal.
 - `templates/`: file yang disalin ke project baru dan ke `~/.claude/`.
 - `scripts/`: cek setup dan installer sekali jalan.
-- `referensi/`: daftar link, biaya, skill global mentor, katalog MCP.
+- `referensi/`: daftar link, biaya, skill global mentor, dan `katalog-tools.md` (daftar lengkap tools, ekstensi, MCP, plugin, skill per jalur). Kalau orangnya tanya "butuh apa lagi?" atau "X itu buat apa?", jawab dari katalog ini.

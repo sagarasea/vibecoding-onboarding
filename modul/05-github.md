@@ -8,11 +8,11 @@ Kenapa wajib: GitHub itu tempat backup, riwayat perubahan (bisa balik ke versi k
 
 ## Langkah
 
-1. **Login GitHub CLI** (orangnya yang klik di browser):
+1. **Login GitHub CLI.** Agent jalankan:
    ```bash
-   gh auth login
+   gh auth login --hostname github.com --git-protocol https --web
    ```
-   Pilih: `GitHub.com` → `HTTPS` → `Yes` (authenticate Git) → `Login with a web browser`. Salin kode 8 digit, tempel di browser, klik Authorize.
+   Terminal menampilkan kode 8 digit dan browser terbuka ke halaman GitHub. Agent sebutkan kodenya di chat, orangnya tempel di browser lalu klik **Authorize**. Kalau perintahnya menunggu tombol Enter dan agent tidak bisa melanjutkan, agent bukakan jendela terminal baru yang menjalankan perintah ini (lihat aturan 7 di `AGENTS.md`).
 
 2. **Set identitas git** (pakai email yang sama dengan akun GitHub):
    ```bash

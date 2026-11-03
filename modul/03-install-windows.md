@@ -18,7 +18,9 @@ Agent jalankan dari folder onboarding:
 powershell -ExecutionPolicy Bypass -File scripts\install-windows.ps1
 ```
 
-Tambahkan `-Web`, `-Video`, `-Agent`, atau `-Semua` sesuai jalur minat. Yang sudah terpasang dilewati.
+Tambahkan `-Web`, `-Video`, `-Agent`, `-Desain`, atau `-Semua` sesuai jalur minat. Yang sudah terpasang dilewati.
+
+Yang dipasang script dasar: git, gh, Node, uv, jq, VS Code + 7 ekstensi (Claude Code, ESLint, Prettier, Tailwind, Python, Playwright, GitLens), Claude Code, Claude Desktop, Google Chrome, dan MCP **Playwright** + **Chrome DevTools** supaya agent bisa membuka browser dan mengecek hasil kerjanya sendiri. Isi tiap flag dan fungsi tiap tool ada di [referensi/katalog-tools.md](../referensi/katalog-tools.md).
 
 ## Cara manual (satu per satu)
 
@@ -45,9 +47,11 @@ curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del in
 
 | Minat | Install |
 |---|---|
-| Web/SaaS | `npm install -g vercel`. Supabase CLI cukup lewat `npx supabase ...` |
-| Video | `winget install Gyan.FFmpeg`, `winget install yt-dlp.yt-dlp`, `winget install DenoLand.Deno` |
-| Agent | lihat modul 10 |
+| Dasar (tambahan) | `winget install jqlang.jq`, `winget install Google.Chrome` |
+| Web/SaaS | `npm install -g vercel wrangler`, `winget install Docker.DockerDesktop` (installer akan mengaktifkan WSL 2, butuh restart), `npx playwright install chromium`. Supabase CLI cukup lewat `npx supabase ...` |
+| Video | `winget install Gyan.FFmpeg`, `winget install yt-dlp.yt-dlp`, `winget install DenoLand.Deno`, `winget install ImageMagick.ImageMagick`. Transkrip pakai API dulu |
+| Agent | `npm install -g 9router @google/gemini-cli`, `winget install Ollama.Ollama`, opencode dan Hermes di modul 10 |
+| Desain | `winget install Figma.Figma` |
 
 ## Verifikasi
 

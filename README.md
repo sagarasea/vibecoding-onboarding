@@ -92,10 +92,12 @@ templates/             file untuk project baru dan ~/.claude/
   claude-settings.json   izin dasar Claude Code per project
   mcp.json               contoh .mcp.json (Supabase read-only)
 scripts/
-  install-macos.sh       installer sekali jalan (--web --video --agent --semua)
-  install-windows.ps1    installer sekali jalan (-Web -Video -Agent -Semua)
+  install-macos.sh       installer sekali jalan (--web --video --agent --desain --craft --semua)
+  install-windows.ps1    installer sekali jalan (-Web -Video -Agent -Desain -Craft -Semua)
+  figcraft-mcp.sh        MCP FigCraft yang menempel ke aplikasi FigCraft (macOS)
   cek-setup.sh / .ps1    cek apa yang sudah dan belum terpasang
 referensi/
+  katalog-tools.md       semua tools, ekstensi, MCP, plugin, skill: fungsi, kapan, cara install
   biaya.md               harga per jalur
   daftar-link.md         semua link
   skill-global-mentor.md skill dan plugin yang dipakai mentor

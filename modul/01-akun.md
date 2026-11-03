@@ -2,7 +2,9 @@
 
 **Tujuan:** semua akun siap sebelum install, supaya alur berikutnya tidak berhenti di tengah karena nunggu verifikasi email.
 
-**Waktu:** 15-20 menit. Ini bagian yang wajib dikerjakan orangnya sendiri (daftar, verifikasi email, bayar). Agent cukup kasih link dan menunggu.
+**Waktu:** 15-20 menit.
+
+**Cara agent memandu:** buka halaman signup satu per satu langsung di browser default (`open "<link>"` di macOS, `Start-Process "<link>"` di Windows), bilang apa yang harus diklik, lalu tunggu orangnya bilang "udah" sebelum membuka halaman berikutnya. Orangnya yang mengisi form, mengetik password, verifikasi email, dan membayar.
 
 Tips: pakai **satu email yang sama** untuk semua akun, dan aktifkan login dengan Google atau GitHub kalau tersedia. Simpan password di password manager (Apple Passwords, Bitwarden, 1Password).
 

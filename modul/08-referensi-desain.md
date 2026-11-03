@@ -46,7 +46,7 @@ Untuk mulai gratis: jiro.build (MCP gratis) + designspells + styles.refero.desig
 
 ## Kalau kamu desainer
 
-Kelebihanmu di sini besar. Desain dulu di Figma (atau FigCraft), lalu sambungkan MCP Figma supaya agent membaca frame langsung. Tulis keputusan desain yang sudah final di `DESIGN.md` bagian "Keputusan", supaya agent tidak mengubahnya.
+Kelebihanmu di sini besar. Desain dulu di Figma, lalu sambungkan MCP Figma supaya agent membaca frame langsung. Kalau laptopmu kuat, coba FigCraft (modul 12 bagian E): agent bisa langsung membuat dan mengubah frame di aplikasinya lewat MCP, bukan cuma membaca. Tulis keputusan desain yang sudah final di `DESIGN.md` bagian "Keputusan", supaya agent tidak mengubahnya.
 
 ## Verifikasi
 

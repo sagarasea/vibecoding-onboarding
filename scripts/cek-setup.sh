@@ -22,6 +22,7 @@ cek "Node.js"    node    "node --version"
 cek "npm"        npm     "npm --version"
 cek "Python"     python3 "python3 --version"
 cek "uv"         uv      "uv --version"
+cek "jq"         jq      "jq --version"
 cek "VS Code"    code    "code --version"
 cek "Claude Code" claude "claude --version"
 
@@ -32,8 +33,23 @@ cek "ffmpeg"     ffmpeg  "ffmpeg -version"
 cek "yt-dlp"     yt-dlp  "yt-dlp --version"
 cek "Vercel CLI" vercel  "vercel --version"
 cek "Supabase"   supabase "supabase --version"
+cek "Wrangler"   wrangler "wrangler --version"
+cek "Docker"     docker  "docker --version"
+cek "ImageMagick" magick "magick -version"
+cek "whisper.cpp" whisper-cli "echo terpasang"
+cek "Ollama"     ollama  "ollama --version"
+cek "Gemini CLI" gemini  "gemini --version"
+cek "9router"    9router "echo terpasang"
 cek "opencode"   opencode "opencode --version"
 cek "Hermes"     hermes  "hermes --version"
+
+echo
+echo "MCP (Claude Code)"
+if command -v claude >/dev/null 2>&1; then
+  for m in playwright chrome-devtools context7; do
+    if claude mcp get "$m" >/dev/null 2>&1; then echo "  [OK]    MCP $m"; else echo "  [BELUM] MCP $m (modul 07)"; fi
+  done
+fi
 
 echo
 echo "Akun dan identitas"

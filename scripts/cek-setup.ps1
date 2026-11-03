@@ -22,6 +22,7 @@ Cek "Node.js"     node    "--version"
 Cek "npm"         npm     "--version"
 Cek "Python"      python  "--version"
 Cek "uv"          uv      "--version"
+Cek "jq"          jq      "--version"
 Cek "VS Code"     code    "--version"
 Cek "Claude Code" claude  "--version"
 
@@ -32,7 +33,22 @@ Cek "ffmpeg"      ffmpeg   "-version"
 Cek "yt-dlp"      yt-dlp   "--version"
 Cek "Vercel CLI"  vercel   "--version"
 Cek "Supabase"    supabase "--version"
+Cek "Wrangler"    wrangler "--version"
+Cek "Docker"      docker   "--version"
+Cek "ImageMagick" magick   "-version"
+Cek "Ollama"      ollama   "--version"
+Cek "Gemini CLI"  gemini   "--version"
+Cek "Hermes"      hermes   "--version"
 Cek "opencode"    opencode "--version"
+
+Write-Host ""
+Write-Host "MCP (Claude Code)"
+if (Get-Command claude -ErrorAction SilentlyContinue) {
+  foreach ($m in @("playwright","chrome-devtools","context7")) {
+    claude mcp get $m *> $null
+    if ($LASTEXITCODE -eq 0) { Write-Host "  [OK]    MCP $m" } else { Write-Host "  [BELUM] MCP $m (modul 07)" }
+  }
+}
 
 Write-Host ""
 Write-Host "Akun dan identitas"

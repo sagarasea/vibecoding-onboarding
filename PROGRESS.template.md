@@ -10,7 +10,8 @@
 - Fokus / project pertama:
 - Kegiatan harian dan tools yang paling sering dipakai:
 - Jalur: Gratis / Hemat / Builder / Company
-- Minat: SaaS & web app / AI agent & automation / video & konten / desain & landing page / lainnya
+- Spesifikasi mesin (CPU, RAM, GPU, disk kosong):
+- Minat: SaaS & web app / AI agent & automation / video & konten / desain & landing page / laptop kuat (ArtCraft) / lainnya
 
 ## Modul
 

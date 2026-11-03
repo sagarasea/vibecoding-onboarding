@@ -12,7 +12,9 @@ Agent jalankan dari folder onboarding:
 bash scripts/install-macos.sh
 ```
 
-Tambahkan flag sesuai jalur minat dari `PROGRESS.md`: `--web`, `--video`, `--agent`, atau `--semua`. Script melewati yang sudah terpasang, jadi aman diulang.
+Tambahkan flag sesuai jalur minat dari `PROGRESS.md`: `--web`, `--video`, `--agent`, `--desain`, atau `--semua`. Script melewati yang sudah terpasang, jadi aman diulang.
+
+Yang dipasang script dasar: Homebrew, git, gh, Node, uv, jq, VS Code + 7 ekstensi (Claude Code, ESLint, Prettier, Tailwind, Python, Playwright, GitLens), Claude Code, Claude Desktop, Google Chrome, dan MCP **Playwright** + **Chrome DevTools** supaya agent bisa membuka browser dan mengecek hasil kerjanya sendiri. Isi tiap flag dan fungsi tiap tool ada di [referensi/katalog-tools.md](../referensi/katalog-tools.md).
 
 Kalau mau paham tiap langkah, atau script gagal di tengah, ikuti cara manual di bawah.
 
@@ -43,9 +45,11 @@ Catatan langkah 6: Python bawaan macOS jangan diutak-atik. Pakai `uv` untuk proj
 
 | Minat | Install |
 |---|---|
-| Web/SaaS | `npm install -g vercel` dan `brew install supabase/tap/supabase` |
-| Video | `brew install ffmpeg yt-dlp deno` (deno dibutuhkan yt-dlp untuk YouTube) |
-| Agent | lihat modul 10 |
+| Dasar (tambahan) | `brew install jq` dan `brew install --cask google-chrome` |
+| Web/SaaS | `npm install -g vercel wrangler`, `brew install supabase/tap/supabase`, `brew install --cask docker-desktop`, `npx playwright install chromium` |
+| Video | `brew install ffmpeg yt-dlp deno imagemagick whisper-cpp` (deno dibutuhkan yt-dlp untuk YouTube, whisper-cpp untuk transkrip lokal) |
+| Agent | `npm install -g 9router @google/gemini-cli`, `brew install --cask ollama-app`, opencode dan Hermes di modul 10 |
+| Desain | `brew install --cask figma` |
 | Runtime cepat (opsional) | `curl -fsSL https://bun.com/install \| bash` |
 
 ## Verifikasi

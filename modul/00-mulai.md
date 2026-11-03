@@ -37,6 +37,20 @@ Pilih satu atau lebih. Ini menentukan skill, plugin, dan tools opsional yang dii
 - **Video dan konten:** clipper podcast, reels, motion graphic (HyperFrames, Remotion, ffmpeg, yt-dlp).
 - **Desain dan landing page:** situs portofolio, landing page, design system, Figma ke kode.
 
+## Langkah 4: cek spesifikasi mesin (agent jalankan sendiri)
+
+macOS:
+```bash
+sysctl -n machdep.cpu.brand_string; echo "RAM: $(( $(sysctl -n hw.memsize) / 1073741824 )) GB"; df -h / | tail -1
+```
+
+Windows (PowerShell):
+```powershell
+Get-CimInstance Win32_Processor | Select Name; "RAM: {0} GB" -f [math]::Round((Get-CimInstance Win32_ComputerSystem).TotalPhysicalMemory/1GB); Get-CimInstance Win32_VideoController | Select Name; Get-PSDrive C
+```
+
+Catat di `PROGRESS.md`. Kalau Apple Silicon dengan RAM 16 GB ke atas, atau PC dengan GPU terpisah dan RAM 16 GB ke atas, tawarkan **jalur laptop kuat** (ArtCraft suite: FigCraft, EffectCraft, FilmCraft, dll, modul 12 bagian E) dan model lokal Ollama. Kalau ruang disk kosong di bawah 20 GB, bilang dulu sebelum install jalur video atau Docker.
+
 ## Verifikasi
 
 - `PROGRESS.md` ada dan bagian Profil terisi (jalur dan minat tidak kosong).

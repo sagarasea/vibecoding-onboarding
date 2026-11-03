@@ -46,6 +46,10 @@ Marketplace resmi `claude-plugins-official` sudah otomatis tersedia. Ketik `/plu
 
 ## Langkah 2: MCP dasar
 
+Playwright dan Chrome DevTools sudah dipasang oleh script install di modul 02/03. Cek dengan `claude mcp list`. Kalau belum ada, jalankan perintah di tabel.
+
+Kenapa **Playwright** wajib: tanpa browser, agent cuma bisa menebak apakah halaman yang dia buat benar. Dengan Playwright, agent membuka `localhost`, klik tombol, isi form, ambil screenshot di lebar HP, lalu memperbaiki sendiri kalau ada yang rusak. Biasakan menutup prompt dengan: "cek pakai Playwright di lebar 375px dan 1440px sebelum bilang selesai." Untuk test otomatis yang disimpan di repo (bukan cuma dicek sekali), minta agent memasang Playwright Test: `npm init playwright@latest`.
+
 Agent jalankan dari terminal biasa (bukan di dalam sesi Claude), lalu buka sesi Claude dan ketik `/mcp` untuk login yang pakai OAuth.
 
 | MCP | Untuk | Perintah | Scope |
