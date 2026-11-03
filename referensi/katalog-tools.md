@@ -112,6 +112,15 @@ Yang "manual" butuh login di browser atau API key, jadi agent memandu dan orangn
 
 Lihat modul 01 untuk link daftar dan [biaya.md](biaya.md) untuk harga: GitHub, Claude, ChatGPT (Codex), Google AI Studio, Vercel, Supabase, Cloudflare (DNS, Email Routing, R2, Access), Hostinger, Sumopod, TokenomixAI, Worg, Telegram, Repliz, Buffer, Fonnte, n8n, Resend, payment gateway (DOKU, Tripay, Midtrans, Xendit), Mobbin, 21st.dev.
 
+## 7b. Produk berbayar dari mentor
+
+| Produk | Untuk apa | Harga |
+|---|---|---|
+| motion-studio (skill) | router tools motion graphic, kurasi aset, voiceover, template grading | Rp500.000 |
+| Script AI agent auto reply | auto reply pesan dengan balasan yang terasa seperti manusia | Rp3.000.000 |
+
+Private, beli lewat mentor (sagarasea).
+
 ## 7a. Pengaman
 
 | Pengaman | Untuk apa | Pasang |

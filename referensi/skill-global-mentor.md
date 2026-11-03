@@ -24,6 +24,15 @@ Legenda sumber: **Custom** = dibuat mentor untuk infrastruktur sendiri, tidak un
 | `vps-vhost` | Kelola vhost nginx di VPS mentor | Custom |
 | `client-preview` | Pasang preview situs klien di subdomain | Custom |
 
+## Produk berbayar dari mentor
+
+Private, tidak ada di repo ini. Untuk membeli, hubungi mentor (sagarasea).
+
+| Produk | Isi | Harga |
+|---|---|---|
+| `motion-studio` (skill) | playbook dan router tools motion graphic: kurasi musik, SFX, font, voiceover, template musik dan grading | Rp500.000 |
+| Script AI agent auto reply | agent yang membalas pesan secara otomatis dengan gaya balasan yang terasa seperti manusia | Rp3.000.000 |
+
 ## Plugin aktif (Claude Code)
 
 | Plugin | Fungsi | Install |

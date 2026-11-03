@@ -18,6 +18,10 @@ Kenapa WhatsApp: klien dan pelanggan di Indonesia lebih banyak membaca WhatsApp 
 
 Kenapa Repliz: buatan Indonesia, bayar rupiah, murah, dan satu dashboard untuk hampir semua platform yang dipakai brand lokal. Buffer dipakai untuk X karena integrasinya lebih stabil.
 
+### Produk berbayar dari mentor (opsional)
+
+Mentor punya **script AI agent auto reply** yang balasannya sudah terasa seperti manusia, dijual **Rp3.000.000** (private, hubungi mentor). Cocok kalau butuh auto reply yang siap pakai tanpa membangun dan menyetel sendiri. Tanpa produk ini, kamu tetap bisa membangun auto reply sendiri dengan Repliz, Fonnte, atau Hermes di modul ini dan modul 10.
+
 ## Pola yang dipakai mentor
 
 ```
