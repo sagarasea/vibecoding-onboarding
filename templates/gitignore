@@ -1,0 +1,35 @@
+# Salin ke project baru sebagai .gitignore
+
+# Rahasia: jangan pernah di-commit
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Dependensi dan build
+node_modules/
+.next/
+dist/
+build/
+out/
+.vercel/
+.venv/
+__pycache__/
+vendor/
+
+# Catatan lokal agent
+PROGRESS.md
+.claude/settings.local.json
+CLAUDE.local.md
+
+# OS dan editor
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+
+# Media hasil render (besar, simpan di luar git)
+*.mp4
+*.mov
+renders/

@@ -1,0 +1,52 @@
+# 14 Belajar lanjut
+
+**Tujuan:** kamu punya jalur belajar setelah onboarding, dan tahu harus ngapain minggu depan.
+
+## Kursus gratis dari Anthropic
+
+Semua di https://anthropic.skilljar.com, gratis, dapat sertifikat. Urutan yang disarankan:
+
+1. **Claude Code 101**: dasar.
+2. **Claude Code in Action**: 9 pelajaran praktik, paling relevan untuk modul ini.
+3. **Introduction to agent skills**: cara bikin skill sendiri.
+4. **Introduction to subagents**: membagi kerja ke beberapa agent.
+5. **Introduction to Model Context Protocol**: cara kerja MCP, lalu **MCP: Advanced Topics** kalau mau bikin MCP sendiri.
+6. **Building with the Claude API**: kalau produkmu memanggil Claude dari kode.
+7. **AI Fluency: Framework & Foundations**: cara berpikir bekerja dengan AI, bagus untuk tim non-teknis.
+
+## Dokumentasi yang perlu di-bookmark
+
+- Claude Code: https://code.claude.com/docs
+- Memory dan CLAUDE.md: https://code.claude.com/docs/en/memory
+- Skills: https://code.claude.com/docs/en/skills
+- Plugin: https://code.claude.com/docs/en/plugins
+- MCP: https://code.claude.com/docs/en/mcp
+- Hooks: https://code.claude.com/docs/en/hooks-guide
+- Hermes Agent: https://hermes-agent.nousresearch.com/docs/
+- antislop: https://antislop.ai.id
+
+## Rencana 7 hari setelah onboarding
+
+| Hari | Fokus |
+|---|---|
+| 1 | Rapikan proyek pertama dari feedback pengguna. Commit tiap perubahan. |
+| 2 | Kerjakan "Claude Code in Action" di Skilljar. |
+| 3 | Bikin satu skill sendiri untuk tugas yang kamu ulang-ulang (pakai skill `skill-creator`). |
+| 4 | Tambah satu fitur yang butuh database (Supabase) atau satu automation (Repliz/n8n). |
+| 5 | Coba opencode dengan model gratis untuk tugas ringan, bandingkan dengan Claude. |
+| 6 | (Builder) Pasang Hermes di laptop, sambungkan Telegram. |
+| 7 | Tulis di `MEMORY.md`: apa yang berhasil, apa yang boros waktu, apa yang mau dibikin berikutnya. |
+
+## Kebiasaan jangka panjang
+
+- Setiap kali agent melakukan kesalahan yang sama dua kali, tambahkan aturannya ke `AGENTS.md` project atau `~/.claude/CLAUDE.md`.
+- Setiap kali kamu mengulang alur kerja tiga kali, jadikan skill.
+- Update tools sebulan sekali: `brew upgrade` (Mac) atau `winget upgrade --all` (Windows), `npx antislop-ai --update`, `/plugin` lalu update marketplace.
+- Simpan keputusan dengan tanggal absolut ("2026-11-04", bukan "kemarin").
+
+## Kalau buntu
+
+1. Tanya agent: "jelaskan errornya dalam bahasa sederhana, lalu kasih 2 kemungkinan penyebab".
+2. Minta agent cari dokumentasi terbaru (Context7) sebelum menebak.
+3. `/clear` dan mulai lagi dengan konteks yang lebih jelas.
+4. Tanya mentor, sertakan: apa yang dicoba, pesan error lengkap, dan isi `PROGRESS.md`.
