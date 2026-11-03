@@ -102,6 +102,7 @@ Contoh: clipper podcast, reels, motion graphic, caption otomatis.
 | CLI | ffmpeg | macOS: `brew install ffmpeg`. Windows: `winget install Gyan.FFmpeg` |
 | CLI | yt-dlp | macOS: `brew install yt-dlp`. Windows: `winget install yt-dlp.yt-dlp` |
 | Plugin | HyperFrames (HTML jadi video, 450 blok siap pakai) | `claude plugin marketplace add heygen-com/hyperframes` lalu `claude plugin install hyperframes@hyperframes`. opencode/Codex: `npx hyperframes skills update` |
+| Skill berbayar (opsional) | motion-studio dari mentor, Rp500.000, private: playbook dan router tools untuk motion graphic: memilih tool yang tepat per kebutuhan, kurasi musik, SFX, dan font sesuai tema, voiceover Gemini TTS (termasuk Bahasa Indonesia), plus template musik dan color grading yang sudah teruji di produksi | hubungi mentor (sagarasea) |
 | Plugin | watch (agent bisa "nonton" video referensi) | `/plugin marketplace add bradautomates/claude-video` lalu `/plugin install watch@claude-video` |
 | Framework | Remotion (video pakai React) | `npx create-video@latest` |
 | CLI | ImageMagick (thumbnail, resize massal) | macOS: `brew install imagemagick`. Windows: `winget install ImageMagick.ImageMagick` |

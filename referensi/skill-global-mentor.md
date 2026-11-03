@@ -2,7 +2,7 @@
 
 Daftar ini menunjukkan isi `~/.claude/skills/` dan plugin yang aktif di laptop mentor per 2026-11-04. Tidak perlu install semuanya. Ambil yang sesuai minat (lihat modul 12).
 
-Legenda sumber: **Custom** = dibuat mentor untuk infrastruktur sendiri, tidak untuk diinstall orang lain. Lainnya bisa diinstall dengan perintah di kolom Install.
+Legenda sumber: **Custom** = dibuat mentor untuk infrastruktur sendiri, tidak untuk diinstall orang lain. **Berbayar** = skill buatan mentor yang dijual, private. Lainnya bisa diinstall dengan perintah di kolom Install.
 
 ## Skill di `~/.claude/skills/`
 
@@ -19,7 +19,7 @@ Legenda sumber: **Custom** = dibuat mentor untuk infrastruktur sendiri, tidak un
 | `hyperframes`, `hyperframes-cli`, `hyperframes-registry`, `media-use`, `figma`, `remotion-to-hyperframes`, `slideshow` | Toolkit video HyperFrames (HTML jadi video): CLI, 450 blok siap pakai, media, import Figma, port dari Remotion, slideshow | `npx skills add heygen-com/hyperframes` |
 | `watch` | "Nonton" video: yt-dlp + ffmpeg + transkrip, lalu dianalisis agent | [bradautomates/claude-video](https://github.com/bradautomates/claude-video) |
 | `agent-reach` | Riset internet di 15 platform (X, Reddit, YouTube, XHS, GitHub, dll) | [Panniantong/Agent-Reach](https://github.com/Panniantong/Agent-Reach) |
-| `motion-studio` | Router tools motion/video di Mac mentor | Custom |
+| `motion-studio` | Playbook dan router tools untuk motion graphic: memilih tool yang tepat per kebutuhan, kurasi musik, SFX, dan font sesuai tema, voiceover Gemini TTS (termasuk Bahasa Indonesia), plus template musik dan color grading yang sudah teruji di produksi | **Berbayar, private: Rp500.000.** Hubungi mentor (sagarasea) untuk membeli |
 | `destockd` | Cari footage arsip public domain dari destockd.com | Custom |
 | `vps-vhost` | Kelola vhost nginx di VPS mentor | Custom |
 | `client-preview` | Pasang preview situs klien di subdomain | Custom |

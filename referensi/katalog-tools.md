@@ -100,6 +100,7 @@ Yang "manual" butuh login di browser atau API key, jadi agent memandu dan orangn
 |---|---|---|---|
 | antislop (6 skill) | filter UI, copy, aksesibilitas, mobile, komentar kode | Dasar | `npx antislop-ai` |
 | hyperframes (7 skill) | video, caption, motion | Video | plugin (lihat tabel plugin) atau `npx hyperframes skills update` |
+| motion-studio (berbayar, private) | playbook dan router tools untuk motion graphic: memilih tool yang tepat per kebutuhan, kurasi musik, SFX, dan font sesuai tema, voiceover Gemini TTS (termasuk Bahasa Indonesia), plus template musik dan color grading yang sudah teruji di produksi | Video | beli dari mentor, Rp500.000 |
 | watch | agent "nonton" video referensi | Video | `/plugin marketplace add bradautomates/claude-video` lalu `/plugin install watch@claude-video` |
 | agent-reach | riset internet 15 platform | Agent | https://github.com/Panniantong/Agent-Reach |
 | awwwards | situs kelas award | Desain | `npx skills add wheresryan22/anatomy` |

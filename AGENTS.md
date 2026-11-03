@@ -36,6 +36,7 @@ Pemicu: kalau orangnya mengetik "mulai onboarding", "lanjut onboarding", atau se
 - Jangan commit file `.env`, API key, atau token. Pastikan `.gitignore` dari `templates/gitignore` sudah terpasang di setiap project baru.
 - Jangan mengubah pengaturan keamanan sistem (Gatekeeper, Defender, firewall). Kalau installer diblokir, jelaskan cara mengizinkannya dan biarkan orangnya klik sendiri.
 - Untuk perintah yang butuh `sudo` atau hak Administrator, bilang dulu kenapa butuh, lalu biarkan orangnya mengetik password sendiri di terminal.
+- Skill berbayar milik mentor (`motion-studio`, Rp500.000, private) tidak ada di repo ini dan tidak boleh dicari, diinstall, atau ditiru dari sumber lain. Di jalur video atau motion graphic, sebutkan sekali sebagai opsi dan arahkan ke mentor kalau orangnya tertarik. Tanpa skill itu, jalur video tetap jalan dengan HyperFrames, ffmpeg, dan skill gratis di modul 13.
 
 ## Peta file
 
