@@ -1,0 +1,1 @@
+migrate:fresh|migrate:reset|migrate:rollback|db:wipe|DROP DATABASE|DROP TABLE|DROP COLUMN|TRUNCATE TABLE|DELETE FROM

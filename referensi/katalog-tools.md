@@ -13,6 +13,7 @@ Kolom **Kapan**: `Dasar` = semua orang. `Web`, `Video`, `Agent`, `Desain` = sesu
 | GitHub CLI (`gh`) | GitHub dari terminal: repo, PR, login | Dasar | `brew install gh` | `winget install GitHub.cli` | dasar |
 | Node.js (LTS) | jalanin JavaScript, `npm`, `npx` (hampir semua MCP butuh ini) | Dasar | `brew install node` | `winget install OpenJS.NodeJS.LTS` | dasar |
 | uv | Python dan paket Python | Dasar | `brew install uv` | `winget install astral-sh.uv` | dasar |
+| gitleaks | menolak commit yang berisi API key atau token | Dasar | `brew install gitleaks` | `winget install Gitleaks.Gitleaks` | dasar |
 | jq | baca dan olah JSON di terminal (dipakai di hook dan script) | Dasar | `brew install jq` | `winget install jqlang.jq` | dasar |
 | VS Code | editor kode | Dasar | `brew install --cask visual-studio-code` | `winget install Microsoft.VisualStudioCode` | dasar |
 | Claude Code | agent coding utama | Dasar | `curl -fsSL https://claude.ai/install.sh \| bash` | `irm https://claude.ai/install.ps1 \| iex` | dasar |
@@ -22,6 +23,7 @@ Kolom **Kapan**: `Dasar` = semua orang. `Web`, `Video`, `Agent`, `Desain` = sesu
 | Playwright (browser) | browser yang dikendalikan agent untuk ngetes aplikasi | Web | `npx playwright install chromium` | sama | `--web` |
 | Vercel CLI | deploy dan cek project Vercel dari terminal | Web | `npm i -g vercel` | sama | `--web` |
 | Supabase CLI | database lokal, migration, generate type | Web | `brew install supabase/tap/supabase` | `npx supabase` | `--web` |
+| cloudflared | link publik sementara ke localhost (demo ke klien, terima webhook pembayaran/bot) | Web | `brew install cloudflared` | `winget install Cloudflare.cloudflared` | `--web` |
 | Wrangler | CLI Cloudflare: Workers, Pages, D1, R2 | Web | `npm i -g wrangler` | sama | `--web` |
 | Docker Desktop | menjalankan layanan dalam container (n8n, Supabase lokal, database) | Web, Agent | `brew install --cask docker-desktop` (alternatif lebih ringan: OrbStack) | `winget install Docker.DockerDesktop` (butuh WSL 2, installer yang mengaktifkan) | `--web` |
 | Bun | runtime JavaScript cepat, beberapa tools butuh | opsional | `curl -fsSL https://bun.com/install \| bash` | `powershell -c "irm bun.sh/install.ps1\|iex"` | |
@@ -107,7 +109,15 @@ Yang "manual" butuh login di browser atau API key, jadi agent memandu dan orangn
 
 ## 7. Layanan (akun)
 
-Lihat modul 01 untuk link daftar dan [biaya.md](biaya.md) untuk harga: GitHub, Claude, Google AI Studio, Vercel, Supabase, Cloudflare, Hostinger, Sumopod, TokenomixAI, Worg, Telegram, Repliz, Buffer, n8n, Mobbin, 21st.dev.
+Lihat modul 01 untuk link daftar dan [biaya.md](biaya.md) untuk harga: GitHub, Claude, ChatGPT (Codex), Google AI Studio, Vercel, Supabase, Cloudflare (DNS, Email Routing, R2, Access), Hostinger, Sumopod, TokenomixAI, Worg, Telegram, Repliz, Buffer, Fonnte, n8n, Resend, payment gateway (DOKU, Tripay, Midtrans, Xendit), Mobbin, 21st.dev.
+
+## 7a. Pengaman
+
+| Pengaman | Untuk apa | Pasang |
+|---|---|---|
+| hook db-safety | Claude Code menolak perintah database yang menghapus data | `bash scripts/pasang-pengaman.sh` (sekali, global) |
+| pre-commit gitleaks | git menolak commit berisi API key atau token | `bash scripts/pasang-pengaman.sh --repo` (per project) |
+| `.gitignore` | `.env` tidak ikut ter-commit | salin `templates/gitignore` |
 
 ## 8. Laptop atau PC kuat: ArtCraft suite (flag `--craft`)
 
@@ -133,6 +143,7 @@ Windows: download ArtCraft Launcher dari https://getartcraft.com, lalu install a
 | nginx | reverse proxy, satu vhost per hostname | `apt install -y nginx` |
 | PM2 | menjaga aplikasi Node tetap hidup, restart otomatis | `npm i -g pm2` |
 | ufw | firewall | `apt install -y ufw` |
+| rclone | kirim backup database ke R2 (modul 09b) | `apt install -y rclone` |
 | tmux | sesi terminal yang tidak putus saat SSH terputus | `apt install -y tmux` |
 | Docker | n8n dan layanan lain | https://docs.docker.com/engine/install/ |
 | Hermes + 9router | agent 24 jam + router model | modul 10 |

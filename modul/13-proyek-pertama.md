@@ -26,6 +26,7 @@ Saran untuk desainer yang pegang klien: mulai dari **aplikasi operasional intern
    ```bash
    mkdir -p ~/Projects/nama-project && cd ~/Projects/nama-project
    git init && cp ~/path/ke/onboarding/templates/gitignore .gitignore
+   bash ~/path/ke/onboarding/scripts/pasang-pengaman.sh --repo   # tolak commit berisi API key
    ```
 2. **Salin file wajib project** dari `templates/`: `AGENTS.project.md` jadi `AGENTS.md`, `DESIGN.md`, lalu bikin `CLAUDE.md` berisi satu baris `@AGENTS.md`. Isi bagian yang kosong bersama agent (detail di modul 06).
 3. **Cari referensi desain dulu** (modul 08) sebelum minta agent nulis UI. Tempel 2-3 link referensi ke `DESIGN.md`.
@@ -35,7 +36,7 @@ Saran untuk desainer yang pegang klien: mulai dari **aplikasi operasional intern
    - apa yang sengaja belum dibuat.
 
    Minta agent bikin rencana. Baca rencananya, koreksi, baru setujui.
-5. **Bangun per potongan kecil.** Satu fitur, cek di browser, commit. Ulangi.
+5. **Bangun per potongan kecil.** Satu fitur, cek di browser, commit. Ulangi. Pertama kali project dijalankan, agent jelaskan [materi 07: Menjalankan project di laptop](../materi/07-menjalankan-project-lokal.md) (`npm install`, `npm run dev`, `npm run build`, localhost) dan tawarkan pilihan: agent yang menjalankan dan mengecek, kamu yang menjalankan di terminal VS Code, atau preview di Claude Desktop.
 6. **Deploy** (modul 09): push ke GitHub, sambungkan ke Vercel, tambahkan environment variable di dashboard Vercel.
 7. **Kirim link ke satu orang pengguna nyata.** Catat feedback di `PROGRESS.md`.
 

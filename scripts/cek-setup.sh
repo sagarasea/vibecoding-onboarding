@@ -23,6 +23,7 @@ cek "npm"        npm     "npm --version"
 cek "Python"     python3 "python3 --version"
 cek "uv"         uv      "uv --version"
 cek "jq"         jq      "jq --version"
+cek "gitleaks"   gitleaks "gitleaks version"
 cek "VS Code"    code    "code --version"
 cek "Claude Code" claude "claude --version"
 cek "Codex"      codex   "codex --version"
@@ -36,6 +37,7 @@ cek "yt-dlp"     yt-dlp  "yt-dlp --version"
 cek "Vercel CLI" vercel  "vercel --version"
 cek "Supabase"   supabase "supabase --version"
 cek "Wrangler"   wrangler "wrangler --version"
+cek "cloudflared" cloudflared "cloudflared --version"
 cek "Docker"     docker  "docker --version"
 cek "ImageMagick" magick "magick -version"
 cek "whisper.cpp" whisper-cli "echo terpasang"
@@ -61,6 +63,7 @@ else
 fi
 n="$(git config --global user.name 2>/dev/null)"; e="$(git config --global user.email 2>/dev/null)"
 if [ -n "$n" ] && [ -n "$e" ]; then echo "  [OK]    git identity: $n <$e>"; else echo "  [BELUM] git identity (git config --global user.name / user.email)"; fi
+grep -q db-safety "$HOME/.claude/settings.json" 2>/dev/null && echo "  [OK]    hook db-safety aktif" || echo "  [BELUM] hook db-safety (bash scripts/pasang-pengaman.sh)"
 [ -f "$HOME/.claude/CLAUDE.md" ] && echo "  [OK]    ~/.claude/CLAUDE.md ada" || echo "  [BELUM] ~/.claude/CLAUDE.md (lihat modul 06)"
 
 echo

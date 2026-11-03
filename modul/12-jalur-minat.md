@@ -17,6 +17,46 @@ Contoh: aplikasi operasional untuk tim klien, dashboard, booking, tool internal.
 | CLI | Wrangler (Cloudflare) | `npm i -g wrangler` lalu `wrangler login` |
 | App | Docker Desktop (database lokal, n8n, Supabase lokal) | macOS: `brew install --cask docker-desktop`. Windows: `winget install Docker.DockerDesktop` |
 | Browser | Playwright browser + Playwright Test | `npx playwright install chromium`, test di repo: `npm init playwright@latest` |
+| CLI | cloudflared (link publik sementara ke localhost, terima webhook saat develop) | macOS: `brew install cloudflared`. Windows: `winget install Cloudflare.cloudflared`. Pakai: `cloudflared tunnel --url http://localhost:3000` |
+
+### Layanan yang hampir selalu dibutuhkan SaaS
+
+| Kebutuhan | Pakai | Kenapa | Biaya |
+|---|---|---|---|
+| Kirim email dari aplikasi (verifikasi akun, reset password, notifikasi, invoice) | [Resend](https://resend.com) | API sederhana, ada SDK, bisa jadi SMTP untuk login Supabase. Domain diverifikasi lewat record DNS di Cloudflare (modul 09b) | Free 3.000 email/bulan (100/hari), Pro USD 20/bulan |
+| Terima pembayaran rupiah (QRIS, VA bank, e-wallet, kartu) | **[DOKU](https://www.doku.com) (disarankan)**. Alternatif: [Tripay](https://tripay.co.id), [Midtrans](https://midtrans.com), [Xendit](https://www.xendit.co/id/) | gateway lokal, QRIS dan virtual account, status bayar otomatis lewat webhook. Mentor memakai DOKU | per transaksi, cek situs masing-masing |
+| Belum punya DOKU / baru mulai | **QRIS statis merchant GoPay (GoBiz) atau ShopeePay** + QRIS dinamis buatan agent | owner cukup bikin akun merchant, tanpa integrasi gateway. Lihat bagian di bawah | gratis daftar, potongan MDR QRIS per transaksi |
+| Terima pembayaran internasional | Stripe, Polar, PayPal | pelanggan luar negeri, kartu kredit | per transaksi |
+
+Cara kerja pembayaran yang perlu dipahami: aplikasi membuat transaksi lewat API gateway, pelanggan membayar di halaman gateway, lalu gateway **memanggil balik** aplikasimu (webhook) untuk memberi tahu "sudah dibayar". Saat develop di laptop, webhook butuh alamat publik, di sinilah `cloudflared tunnel` dipakai. Selalu mulai di mode **sandbox** (uang bohongan) sebelum production, dan key sandbox/production disimpan di `.env` ([materi 02](../materi/02-api-key-dan-env.md)). Pendaftaran merchant butuh data usaha (KTP/NPWP/rekening), orangnya yang mengisi.
+
+#### Jalur cepat tanpa gateway: QRIS statis jadi nominal otomatis + kode unik
+
+Untuk yang belum punya DOKU, atau baru mau jualan minggu ini.
+
+**Yang dikerjakan owner (sekali saja):**
+1. Daftar merchant di aplikasi **GoBiz** (GoPay) atau **ShopeePay Merchant**, sampai dapat **QRIS statis** (gambar QR yang biasanya dicetak di kasir).
+2. Simpan gambar QRIS-nya ke project, contoh `docs/qris-statis.png`. Jangan di-commit ke repo publik.
+
+**Yang dibuat agent:**
+1. Membaca isi QRIS statis dari gambar (QR itu sebenarnya teks berformat EMVCo).
+2. Untuk setiap pesanan, membuat **QRIS dinamis** dari QRIS statis tadi: menandai QR sebagai sekali pakai, menyisipkan **nominal** (tag 54), lalu menghitung ulang checksum CRC16 di akhir. Pembeli tinggal scan, nominal sudah terisi, tidak bisa salah ketik.
+3. Menambahkan **kode unik** ke nominal (contoh: harga Rp150.000 + kode 237 = **Rp150.237**). Kode unik membuat tiap pesanan punya nominal berbeda, jadi owner tahu transfer mana untuk pesanan mana.
+4. Halaman checkout menampilkan QR + nominal + batas waktu bayar, dan halaman admin sederhana untuk menandai "sudah dibayar".
+
+Contoh prompt:
+```
+Aku punya QRIS statis merchant GoPay di docs/qris-statis.png. Bikin fitur checkout:
+- baca payload QRIS dari gambar itu,
+- tiap pesanan generate QRIS dinamis dengan nominal = harga + kode unik 1-999
+  (kode unik tidak boleh sama dengan pesanan lain yang belum dibayar),
+- set tag 54 untuk nominal dan hitung ulang CRC16-CCITT,
+- tampilkan QR + nominal + batas waktu 30 menit,
+- halaman admin (dilindungi login) untuk menandai pesanan sudah dibayar.
+Tes dengan scan QR hasilnya pakai aplikasi e-wallet, pastikan nominalnya muncul benar.
+```
+
+**Batasannya (jujur ke klien):** QRIS statis tidak mengirim webhook, jadi status "sudah dibayar" tidak otomatis. Owner mencocokkan nominal unik di aplikasi merchant lalu klik "sudah dibayar" di admin, atau agent bisa membantu membaca notifikasi email/merchant kalau tersedia. Begitu volume naik, pindah ke DOKU supaya konfirmasi otomatis. Selalu tes dengan nominal kecil (misalnya Rp1.000) sebelum dipakai pembeli asli.
 | Plugin | frontend-design | `/plugin install frontend-design@claude-plugins-official` |
 | Skill | antislop (sudah di modul 06) | |
 | MCP | Context7 (dokumentasi library terbaru) | lihat modul 07 |

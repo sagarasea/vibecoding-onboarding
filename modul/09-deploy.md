@@ -25,6 +25,8 @@ Batasan penting jalur gratis:
 
 ## A. Jalur gratis: GitHub → Vercel
 
+Sebelum push pertama, agent jalankan `npm run build` di laptop. Kalau gagal di laptop, deploy pasti gagal ([materi 07](../materi/07-menjalankan-project-lokal.md)).
+
 1. Pastikan project sudah di GitHub (modul 05).
 2. Buka https://vercel.com/new, pilih repo, klik **Import**. Vercel mendeteksi Next.js/Astro otomatis.
 3. Isi **Environment Variables** (nilai dari `.env` kamu, misalnya `NEXT_PUBLIC_SUPABASE_URL`). Orangnya yang tempel nilai di dashboard, bukan di chat.
@@ -40,6 +42,8 @@ Lewat terminal (alternatif): `vercel login`, lalu `vercel` di folder project, la
 3. Sambungkan MCP Supabase (modul 07) supaya agent bisa bikin tabel dan cek data. Mulai dengan `read_only=true`.
 
 ## B. Domain sendiri
+
+Langkah lengkap (pindah DNS ke Cloudflare, email `hello@domainkamu.com`, R2 untuk backup dan media) ada di modul [09b Cloudflare](09b-cloudflare.md). Ringkasnya:
 
 1. Beli domain di https://www.hostinger.com/id/domain-murah (`.com` sekitar Rp110rb tahun pertama saat promo, `.id` sekitar Rp210rb). Cek harga perpanjangan sebelum beli.
 2. Disarankan: pindahkan DNS ke Cloudflare (gratis). Tambah situs di https://dash.cloudflare.com, lalu ganti nameserver di Hostinger ke dua nameserver dari Cloudflare.
@@ -79,4 +83,4 @@ Pakai VPS kalau butuh sesuatu yang jalan terus: Hermes Agent, bot Telegram/Whats
 
 ## Lanjut
 
-Modul [10 API AI, router, agent 24/7](10-ai-api-routing.md).
+Modul [09b Cloudflare: domain, DNS, email, R2](09b-cloudflare.md).

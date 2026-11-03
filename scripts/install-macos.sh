@@ -24,12 +24,13 @@ for a in "$@"; do
 done
 
 ada() { command -v "$1" >/dev/null 2>&1; }
-langkah() { printf "\n==> %s\n" "$1"; }
+langkah() { printf "\n==> %s\n" "$1"; shift; for u in "$@"; do printf "    - %s\n" "$u"; done; }
 brew_f() { for p in "$@"; do if brew list --formula "$p" >/dev/null 2>&1 || ada "$p"; then echo "$p sudah ada"; else brew install "$p"; fi; done; }
 brew_c() { local cask="$1" app="$2"; if [ -d "/Applications/$app.app" ] || brew list --cask "$cask" >/dev/null 2>&1; then echo "$app sudah ada"; else brew install --cask "$cask"; fi; }
 mcp_add() { local nama="$1"; shift; if claude mcp get "$nama" >/dev/null 2>&1; then echo "MCP $nama sudah ada"; else claude mcp add --scope user "$nama" "$@"; fi; }
 
-langkah "Homebrew"
+langkah "Homebrew" \
+  "Homebrew: pemasang tools di Mac, dipakai untuk install semua tools berikutnya"
 [ -x /opt/homebrew/bin/brew ] && ! ada brew && eval "$(/opt/homebrew/bin/brew shellenv)"
 if ! ada brew; then
   if [ ! -t 0 ]; then
@@ -49,29 +50,46 @@ else
   echo "sudah ada"
 fi
 
-langkah "Tools dasar: git, gh, node, uv, jq"
+langkah "Tools dasar: git, gh, node, uv, jq" \
+  "git: version history kode, bisa balik kalau agent merusak sesuatu" \
+  "gh: agent bisa bikin repo, branch, PR, dan login GitHub dari terminal" \
+  "node: mesin JavaScript, dibutuhkan web app, MCP, dan banyak CLI (npm, npx ikut terpasang)" \
+  "uv: Python dan library-nya, untuk script otomatis, AI, dan video" \
+  "jq: baca JSON di terminal, dipakai hook dan script"
 brew_f git gh node uv jq
 
-langkah "Aplikasi: VS Code, Claude Desktop, Google Chrome"
+langkah "Pengaman: gitleaks" \
+  "gitleaks: menolak commit yang berisi API key atau token (dipasang per project lewat scripts/pasang-pengaman.sh --repo)"
+brew_f gitleaks
+
+langkah "Aplikasi: VS Code, Claude Desktop, Google Chrome" \
+  "VS Code: editor untuk lihat file, diff, dan ngobrol dengan agent" \
+  "Claude Desktop: Claude dengan tab Code, sesi paralel, browser bawaan" \
+  "Chrome: browser yang dikendalikan agent untuk mengetes aplikasi"
 brew_c visual-studio-code "Visual Studio Code"
 brew_c claude "Claude"
 brew_c google-chrome "Google Chrome"
 
-langkah "Claude Code (native installer, update otomatis)"
+langkah "Claude Code (native installer, update otomatis)" \
+  "Claude Code: agent coding utama, login pakai langganan Claude"
 if ada claude; then echo "sudah ada: $(claude --version)"; else curl -fsSL https://claude.ai/install.sh | bash; export PATH="$HOME/.local/bin:$PATH"; fi
 
-langkah "Codex (OpenAI) dan opencode"
+langkah "Codex (OpenAI) dan opencode" \
+  "Codex: agent coding OpenAI, login pakai akun ChatGPT, bagus untuk review silang" \
+  "opencode: agent coding dengan model gratis atau token murah"
 ada codex || brew install --cask codex
 ada opencode || curl -fsSL https://opencode.ai/install | bash
 
-langkah "Ekstensi VS Code"
+langkah "Ekstensi VS Code" \
+  "Claude Code, Codex, opencode di editor + ESLint, Prettier, Tailwind, Python, Playwright, GitLens untuk bantu baca dan rapikan kode"
 CODE_BIN="code"
 ada code || CODE_BIN="/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code"
 for ext in anthropic.claude-code openai.chatgpt sst-dev.opencode dbaeumer.vscode-eslint esbenp.prettier-vscode bradlc.vscode-tailwindcss ms-python.python ms-playwright.playwright eamodio.gitlens; do
   "$CODE_BIN" --install-extension "$ext" --force >/dev/null 2>&1 && echo "$ext ok" || echo "$ext gagal (install manual dari VS Code)"
 done
 
-langkah "MCP dasar: Playwright, Chrome DevTools"
+langkah "MCP dasar: Playwright, Chrome DevTools" \
+  "MCP Playwright + Chrome DevTools: mata agent, buka aplikasi, klik, screenshot, baca error"
 if ada claude; then
   mcp_add playwright -- npx @playwright/mcp@latest
   mcp_add chrome-devtools -- npx chrome-devtools-mcp@latest
@@ -81,22 +99,37 @@ else
 fi
 
 if [ $WEB = 1 ]; then
-  langkah "Jalur web: Vercel, Supabase, Wrangler, Docker Desktop, browser Playwright"
+  langkah "Jalur web: Vercel, Supabase, Wrangler, Docker Desktop, browser Playwright" \
+  "Vercel CLI: deploy dan cek project Vercel" \
+  "Supabase CLI: database lokal dan migration" \
+  "Wrangler: CLI Cloudflare (Workers, Pages, DNS)" \
+  "Docker Desktop: jalankan database, n8n, dan layanan lain dalam container" \
+  "cloudflared: kasih link publik sementara ke localhost (demo ke klien, terima webhook)" \
+  "browser Playwright: browser khusus untuk test otomatis"
   ada vercel || npm install -g vercel
   ada wrangler || npm install -g wrangler
   ada supabase || brew install supabase/tap/supabase
+  brew_f cloudflared
   brew_c docker-desktop "Docker"
   npx -y playwright install chromium
   ada claude && mcp_add vercel --transport http https://mcp.vercel.com
 fi
 
 if [ $VIDEO = 1 ]; then
-  langkah "Jalur video: ffmpeg, yt-dlp, deno, ImageMagick, whisper.cpp"
+  langkah "Jalur video: ffmpeg, yt-dlp, deno, ImageMagick, whisper.cpp" \
+  "ffmpeg: potong, gabung, convert, render video dan audio" \
+  "yt-dlp + deno: download video referensi" \
+  "ImageMagick: olah gambar massal" \
+  "whisper.cpp: transkrip audio jadi teks, gratis di laptop"
   brew_f ffmpeg yt-dlp deno imagemagick whisper-cpp
 fi
 
 if [ $AGENT = 1 ]; then
-  langkah "Jalur agent: Hermes Agent, 9router, Ollama, Gemini CLI"
+  langkah "Jalur agent: Hermes Agent, 9router, Ollama, Gemini CLI" \
+  "Hermes: asisten 24 jam yang bisa di-chat dari Telegram" \
+  "9router: satu endpoint untuk banyak model AI dengan fallback" \
+  "Ollama: jalankan model AI di laptop, offline" \
+  "Gemini CLI: agent coding cadangan dari Google"
   ada hermes || curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash
   ada 9router || npm install -g 9router
   ada gemini || npm install -g @google/gemini-cli
@@ -104,7 +137,9 @@ if [ $AGENT = 1 ]; then
 fi
 
 if [ $DESAIN = 1 ]; then
-  langkah "Jalur desain: Figma Desktop, MCP Jiro"
+  langkah "Jalur desain: Figma Desktop, MCP Jiro" \
+  "Figma: desain sebelum dikodekan" \
+  "MCP Jiro: 1.400+ referensi desain untuk agent"
   brew_c figma "Figma"
   ada claude && mcp_add jiro --transport http https://mcp.jiro.build
 fi
@@ -125,4 +160,5 @@ fi
 
 langkah "Selesai. Buka terminal baru, lalu cek:"
 echo "  bash scripts/cek-setup.sh"
+echo "Pengaman global (blokir perintah DB yang menghapus data): bash scripts/pasang-pengaman.sh"
 echo "Langkah berikutnya yang butuh login di browser: gh auth login, claude (login), codex login, npx ctx7 setup --claude, /mcp untuk MCP OAuth."

@@ -121,6 +121,49 @@ API key disimpan di `~/.hermes/.env`, bukan di `config.yaml`.
 
 `TELEGRAM_ALLOWED_USERS` wajib diisi. Tanpa itu, siapa pun yang menemukan bot kamu bisa menyuruh agent menjalankan perintah di komputermu.
 
+### Grup "server" dengan topik per project (pola mentor)
+
+Daripada semua obrolan dengan agent bercampur di satu chat, bikin satu grup Telegram sebagai "server", lalu pisahkan per topik: satu topik untuk operasional, satu untuk log otomatis, satu per project.
+
+1. **Bikin bot** di **@BotFather**: `/newbot`, kasih nama dan username (harus berakhiran `bot`), simpan token ke `~/.hermes/.env` sebagai `TELEGRAM_BOT_TOKEN` (orangnya yang menempel, agent bukakan file-nya).
+2. **Izinkan bot membaca pesan grup**: di @BotFather kirim `/setprivacy`, pilih bot-nya, pilih **Disable**. Tanpa ini bot hanya membaca pesan yang diawali `/` atau yang me-mention dia.
+3. **Bikin grup**, contoh "Agent Server". Masukkan bot ke grup, lalu jadikan **admin** (Info grup, Administrators, Add Admin).
+4. **Aktifkan Topics**: Info grup, Edit, nyalakan **Topics**. Grup otomatis berubah jadi supergroup.
+5. **Bikin topik**, contoh:
+
+   | Topik | Isinya |
+   |---|---|
+   | Ops | perintah umum ke agent, cek server |
+   | Logs | laporan otomatis: hasil cron, backup, deploy |
+   | nama-project-1 | semua kerjaan untuk project itu |
+   | nama-project-2 | ... |
+
+6. **Ambil ID grup dan ID tiap topik.** Cara paling gampang: di tiap topik, kirim satu pesan, tekan lama pesannya, **Copy Message Link**. Hasilnya seperti:
+   ```
+   https://t.me/c/1234567890/31/45
+   ```
+   - `1234567890` → ID grup. Untuk bot ditulis dengan awalan `-100`: **`-1001234567890`**
+   - `31` → **ID topik** (message thread ID)
+   - `45` → ID pesan (tidak dipakai)
+
+   Cara lain, agent yang ambil (token dibaca dari `.env`, tidak ditampilkan di chat):
+   ```bash
+   source ~/.hermes/.env
+   curl -s "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/getUpdates" | jq '.result[].message | {chat: .chat.id, judul: .chat.title, topik: .message_thread_id, teks: .text}'
+   ```
+   Kirim satu pesan di tiap topik dulu, lalu jalankan perintah ini.
+7. **Catat semua ID** di `~/.hermes/.env` atau di `AGENTS.md` server kamu, contoh:
+   ```
+   TELEGRAM_HOME_CHANNEL=-1001234567890
+   TELEGRAM_ALLOWED_USERS=123456789
+   # Topik: Ops=29, Logs=30, project-1=31, project-2=32
+   ```
+8. **Arahkan agent per topik**: jalankan `hermes gateway setup` atau minta agent mengatur konfigurasi Telegram Hermes supaya hanya merespons di grup itu, laporan cron dikirim ke topik Logs, dan tiap topik project bekerja di folder project yang sesuai. Agent baca dokumentasi Hermes (https://hermes-agent.nousresearch.com/docs/) untuk nama pengaturan versi terbaru.
+
+Tes: kirim "halo, kamu di topik apa?" di tiap topik. Bot harus membalas di topik yang sama, dan tidak membalas pesan dari akun yang tidak ada di `TELEGRAM_ALLOWED_USERS`.
+
+Pola yang sama bisa dipakai untuk bot buatan sendiri (bukan Hermes), misalnya bot notifikasi pesanan untuk klien: kirim pesan ke grup dengan parameter `message_thread_id` = ID topik supaya masuk ke topik yang benar.
+
 ### Pindah ke VPS (jalan 24 jam)
 
 Di VPS (modul 09), install Hermes dengan perintah yang sama, salin config, lalu jadikan service:

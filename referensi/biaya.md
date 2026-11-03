@@ -11,7 +11,9 @@ Dicek 2026-11-04. Harga dalam USD dikonversi kasar dengan kurs sekitar Rp16.500.
 | Hosting | Vercel Hobby, Cloudflare Pages/Workers | Vercel Hobby non-komersial |
 | Database | Supabase Free | 2 project, 500 MB, pause setelah seminggu tidak aktif |
 | Domain | `*.vercel.app`, `*.pages.dev` | |
-| Automation | Repliz Free (1 akun), Buffer Free (3 channel) | |
+| Automation | Repliz Free (1 akun), Buffer Free (3 channel), Fonnte Free (1.000 pesan WhatsApp/bulan) | |
+| Email aplikasi | Resend Free | 3.000 email/bulan, 100/hari |
+| DNS, email masuk, R2 | Cloudflare Free | R2 gratis 10 GB, tanpa biaya download |
 
 Claude Code **tidak** tersedia di paket Claude Free.
 

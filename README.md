@@ -62,8 +62,9 @@ Agent akan membaca `AGENTS.md`, bertanya 4 hal tentang kamu, memilihkan jalur, l
 | 07 | [Skills, plugin, MCP](modul/07-skills-plugins-mcp.md) | global vs per repo, MCP dasar | 20 menit |
 | 08 | [Referensi desain](modul/08-referensi-desain.md) | jiro, designspells, refero, supahero, mobbin, 60fps, 21st.dev | 20 menit |
 | 09 | [Deploy](modul/09-deploy.md) | Vercel + Supabase gratis, domain Hostinger, VPS Sumopod | 20-90 menit |
+| 09b | [Cloudflare](modul/09b-cloudflare.md) | DNS domain ke Cloudflare, Email Routing, R2 backup database VPS, R2 media sementara untuk Repliz | 45-60 menit |
 | 10 | [API AI, router, agent 24/7](modul/10-ai-api-routing.md) | langganan vs token, TokenomixAI, Worg, 9router, opencode, Hermes | 30-60 menit |
-| 11 | [Automation](modul/11-automation.md) | Repliz, Buffer, n8n | 20 menit |
+| 11 | [Automation](modul/11-automation.md) | Repliz, Buffer, Fonnte (WhatsApp), n8n | 20 menit |
 | 12 | [Jalur minat](modul/12-jalur-minat.md) | tools per minat: SaaS, agent, video, desain, SEO | 15-30 menit |
 | 13 | [Proyek pertama](modul/13-proyek-pertama.md) | dari ide sampai online | 2-4 jam |
 | 14 | [Belajar lanjut](modul/14-belajar-lanjut.md) | kursus Anthropic, rencana 7 hari | |
@@ -88,8 +89,8 @@ AGENTS.md              instruksi untuk AI agent pemandu (dibaca semua agent)
 CLAUDE.md              satu baris: @AGENTS.md
 PROGRESS.template.md   disalin jadi PROGRESS.md oleh agent
 modul/                 langkah-langkah 00-14
-materi/                konsep yang muncul sesuai fase: git & GitHub, API key & .env, deploy, worktree & bersih-bersih,
-                       dari ide ke prompt (brainstorm di ChatGPT/Gemini), cari repo open source dulu
+materi/                konsep yang muncul sesuai fase: terminal & tools dasar, git & GitHub, API key & .env, deploy,
+                       worktree & bersih-bersih, dari ide ke prompt, cari repo open source, npm run dev/build & localhost
 templates/             file untuk project baru dan ~/.claude/
   CLAUDE.global.md       aturan kerja agent global (Karpathy + aturan mentor)
   AGENTS.project.md      template konteks project
@@ -97,9 +98,11 @@ templates/             file untuk project baru dan ~/.claude/
   gitignore              .gitignore aman (tidak commit .env)
   claude-settings.json   izin dasar Claude Code per project
   mcp.json               contoh .mcp.json (Supabase read-only)
+  hooks/                 db-safety.sh + pola, pre-commit gitleaks
 scripts/
   install-macos.sh       installer sekali jalan (--web --video --agent --desain --craft --semua)
   install-windows.ps1    installer sekali jalan (-Web -Video -Agent -Desain -Craft -Semua)
+  pasang-pengaman.sh     hook db-safety (global) dan scan rahasia gitleaks (--repo)
   figcraft-mcp.sh        MCP FigCraft yang menempel ke aplikasi FigCraft (macOS)
   cek-setup.sh / .ps1    cek apa yang sudah dan belum terpasang
 referensi/

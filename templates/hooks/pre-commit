@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Git pre-commit hook: tolak commit kalau ada API key, token, atau password di perubahan yang di-stage.
+# Dipasang oleh: bash <folder-onboarding>/scripts/pasang-pengaman.sh --repo
+# Lewati sekali (kalau yakin itu bukan rahasia): SKIP_GITLEAKS=1 git commit ...
+
+[ "${SKIP_GITLEAKS:-0}" = "1" ] && exit 0
+
+if ! command -v gitleaks >/dev/null 2>&1; then
+  echo "[pengaman] gitleaks belum terpasang, commit dilanjutkan tanpa scan. Install: brew install gitleaks / winget install Gitleaks.Gitleaks" >&2
+  exit 0
+fi
+
+if ! gitleaks git --pre-commit --staged --redact --no-banner -v; then
+  echo "" >&2
+  echo "[pengaman] Commit DITOLAK: ada yang terlihat seperti API key / token / password." >&2
+  echo "[pengaman] Pindahkan nilainya ke .env (lihat materi/02-api-key-dan-env.md), lalu commit lagi." >&2
+  echo "[pengaman] Kalau key itu sempat ter-push sebelumnya: revoke dan bikin key baru." >&2
+  exit 1
+fi

@@ -24,6 +24,7 @@
 - [ ] 07 Skills, plugin, MCP
 - [ ] 08 Referensi desain
 - [ ] 09 Deploy
+- [ ] 09b Cloudflare: domain, DNS, email, R2
 - [ ] 10 API AI, router, agent 24/7
 - [ ] 11 Automation
 - [ ] 12 Jalur minat
@@ -32,12 +33,14 @@
 
 ## Materi yang sudah dibahas
 
+- [ ] 00 Terminal dan tools dasar (modul 02/03)
 - [ ] 01 Git dan GitHub dasar (modul 05)
 - [ ] 02 API key dan .env (modul 07)
 - [ ] 03 Deploy (modul 09)
 - [ ] 04 Worktree dan bersih-bersih (modul 13)
 - [ ] 05 Dari ide ke prompt (modul 13)
 - [ ] 06 Cari repo open source (modul 13)
+- [ ] 07 Menjalankan project di laptop (modul 13)
 
 ## Catatan
 

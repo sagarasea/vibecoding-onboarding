@@ -94,10 +94,19 @@ Lalu isi `AGENTS.md` bareng agent. Cara paling cepat: jalankan `/init` di Claude
 3. Tulis "pola yang diambil" dari tiap referensi: layout, palet, tipografi, atau interaksi.
 4. Baru minta agent mengisi palet dan tipografi berdasarkan referensi itu.
 
+## Langkah 5: pengaman (agent yang pasang)
+
+```bash
+bash scripts/pasang-pengaman.sh
+```
+
+Ini memasang hook **db-safety** di Claude Code: perintah database yang menghapus data (lihat daftar di bagian 7 `~/.claude/CLAUDE.md`) diblokir sebelum sempat jalan. Aturannya sudah tertulis di CLAUDE.md global, tapi tulisan bisa "dilupakan" agent, hook tidak. Di tiap project baru nanti, `bash scripts/pasang-pengaman.sh --repo` memasang scan rahasia (gitleaks) yang menolak commit berisi API key (modul 13).
+
 ## Verifikasi
 
 - `~/.claude/CLAUDE.md` ada dan berisi empat prinsip Karpathy.
 - `npx antislop-ai` selesai tanpa error. Di sesi Claude Code baru, ketik `/` lalu cari `antislop`, skill-nya muncul.
+- `/hooks` di sesi Claude Code baru menampilkan hook db-safety.
 - Folder `templates/` berisi `AGENTS.project.md`, `DESIGN.md`, `gitignore`.
 
 ## Lanjut

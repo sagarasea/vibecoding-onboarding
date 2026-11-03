@@ -6,6 +6,10 @@
 
 Claude Code sekarang jalan langsung di Windows, **tidak perlu WSL**. Git for Windows tetap disarankan karena Claude Code memakai Git Bash untuk menjalankan perintah. WSL baru perlu kalau nanti butuh toolchain Linux.
 
+## Materi dulu
+
+Sebelum menjalankan install, agent jelaskan [materi 00: Terminal dan kenapa butuh tools dasar](../materi/00-terminal-dan-tools-dasar.md). Saat script jalan, setiap langkah mencetak "untuk apa" tiap tool. Agent bacakan dalam satu kalimat per langkah.
+
 ## Buka PowerShell
 
 Tekan tombol Windows, ketik `PowerShell`, buka **Windows PowerShell** (bukan "Run as Administrator", kecuali diminta). Semua perintah di modul ini diketik di sana.
@@ -26,17 +30,20 @@ Yang dipasang script dasar: git, gh, Node, uv, jq, Codex, opencode, VS Code + 9 
 
 Semua lewat `winget` (bawaan Windows 11, di Windows 10 install **App Installer** dari Microsoft Store).
 
-| # | Tool | Install | Verifikasi |
-|---|---|---|---|
-| 1 | Git for Windows | `winget install --id Git.Git -e --source winget` | `git --version` |
-| 2 | GitHub CLI | `winget install --id GitHub.cli` | `gh --version` |
-| 3 | Node.js LTS | `winget install OpenJS.NodeJS.LTS` | `node --version` |
-| 4 | uv (Python) | `winget install --id=astral-sh.uv -e` | `uv --version` |
-| 5 | VS Code | `winget install Microsoft.VisualStudioCode` | `code --version` |
-| 6 | Claude Code | `irm https://claude.ai/install.ps1 \| iex` | `claude --version`, `claude doctor` |
-| 7 | Codex CLI | `winget install OpenAI.Codex` | `codex --version` |
-| 8 | opencode | `npm install -g opencode-ai` | `opencode --version` |
-| 9 | Claude Desktop | `winget install Anthropic.Claude` | buka dari Start menu |
+| # | Tool | Untuk apa | Install | Verifikasi |
+|---|---|---|---|---|
+| 1 | Git for Windows | version history kode + Git Bash yang dipakai Claude Code | `winget install --id Git.Git -e --source winget` | `git --version` |
+| 2 | GitHub CLI | GitHub dari terminal: login, repo, PR | `winget install --id GitHub.cli` | `gh --version` |
+| 3 | Node.js LTS | mesin JavaScript, npm, npx (dibutuhkan web app, MCP, banyak CLI) | `winget install OpenJS.NodeJS.LTS` | `node --version` |
+| 4 | uv (Python) | Python dan library-nya untuk script, AI, video | `winget install --id=astral-sh.uv -e` | `uv --version` |
+| 5 | jq | baca JSON di terminal, dipakai hook dan script | `winget install jqlang.jq` | `jq --version` |
+| 6 | gitleaks | menolak commit yang berisi API key | `winget install Gitleaks.Gitleaks` | `gitleaks version` |
+| 7 | VS Code | editor untuk lihat file, diff, dan ngobrol dengan agent | `winget install Microsoft.VisualStudioCode` | `code --version` |
+| 8 | Claude Code | agent coding utama | `irm https://claude.ai/install.ps1 \| iex` | `claude --version`, `claude doctor` |
+| 9 | Codex CLI | agent coding OpenAI (akun ChatGPT) | `winget install OpenAI.Codex` | `codex --version` |
+| 10 | opencode | agent coding dengan model gratis | `npm install -g opencode-ai` | `opencode --version` |
+| 11 | Claude Desktop | aplikasi Claude dengan tab Code | `winget install Anthropic.Claude` | buka dari Start menu |
+| 12 | Google Chrome | browser yang dikendalikan agent untuk tes | `winget install Google.Chrome` | buka dari Start menu |
 
 Setelah tiap install, **tutup PowerShell dan buka lagi** supaya perintah baru dikenali.
 
@@ -49,8 +56,7 @@ curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del in
 
 | Minat | Install |
 |---|---|
-| Dasar (tambahan) | `winget install jqlang.jq`, `winget install Google.Chrome` |
-| Web/SaaS | `npm install -g vercel wrangler`, `winget install Docker.DockerDesktop` (installer akan mengaktifkan WSL 2, butuh restart), `npx playwright install chromium`. Supabase CLI cukup lewat `npx supabase ...` |
+| Web/SaaS | `npm install -g vercel wrangler`, `winget install Cloudflare.cloudflared`, `winget install Docker.DockerDesktop` (installer akan mengaktifkan WSL 2, butuh restart), `npx playwright install chromium`. Supabase CLI cukup lewat `npx supabase ...` |
 | Video | `winget install Gyan.FFmpeg`, `winget install yt-dlp.yt-dlp`, `winget install DenoLand.Deno`, `winget install ImageMagick.ImageMagick`. Transkrip pakai API dulu |
 | Agent | `npm install -g 9router @google/gemini-cli`, `winget install Ollama.Ollama`, opencode dan Hermes di modul 10 |
 | Desain | `winget install Figma.Figma` |

@@ -11,7 +11,10 @@
 | [Repliz](https://repliz.com) | jadwal posting, auto-reply komentar dan DM, hapus spam | Facebook, Instagram, Threads, TikTok, YouTube, LinkedIn, X, WhatsApp, Telegram, Pinterest, Shopee | Free 1 akun. Standard Rp18rb, Premium Rp29rb (ada jadwal posting), Gold Rp49rb (API penuh) per bulan, bayar sekali tanpa perpanjangan otomatis | Public API, webhook, node n8n, MCP `https://mcp.repliz.com/mcp` |
 | [Buffer](https://buffer.com) | jadwal posting | mentor pakai khusus X/Twitter | Free 3 channel, 10 post terjadwal per channel. Essentials USD 5 per channel/bulan | API (1 key di paket free) |
 | [n8n](https://n8n.io) | workflow otomatis (kalau ada X, lakukan Y), self-host | ratusan integrasi | gratis kalau self-host di VPS. Sumopod punya paket n8n siap pakai | API dan webhook |
+| [Fonnte](https://fonnte.com) | kirim pesan WhatsApp otomatis: notifikasi, pengingat, chatbot, broadcast | WhatsApp | Free 1.000 pesan/bulan (teks), paket berbayar per bulan | API dan webhook, docs: https://docs.fonnte.com |
 | Make / Zapier | sama seperti n8n, versi cloud | | Make free 1.000 kredit/bulan, Zapier free 100 task/bulan | |
+
+Kenapa WhatsApp: klien dan pelanggan di Indonesia lebih banyak membaca WhatsApp daripada email atau Telegram. Fonnte memakai **API WhatsApp tidak resmi** (menyambungkan nomor lewat scan QR seperti WhatsApp Web). Murah dan cepat, tapi nomor bisa diblokir WhatsApp kalau dipakai spam. Pakai nomor khusus (bukan nomor pribadi), kirim hanya ke orang yang setuju menerima, dan untuk skala besar pertimbangkan WhatsApp Business Platform resmi dari Meta.
 
 Kenapa Repliz: buatan Indonesia, bayar rupiah, murah, dan satu dashboard untuk hampir semua platform yang dipakai brand lokal. Buffer dipakai untuk X karena integrasinya lebih stabil.
 
@@ -38,6 +41,13 @@ Key Repliz bisa dipakai untuk memposting atas nama brand. Perlakukan sesuai [mat
    ```
 3. Baca dokumentasi di https://docs.repliz.com untuk cara autentikasi MCP atau API, lalu minta agent membuat script kecil "jadwalkan post ini ke akun X jam Y" yang membaca key dari `.env`.
 4. Tes dengan satu post ke akun pribadi, jadwalkan 1 jam ke depan, cek muncul di dashboard Repliz.
+5. Gambar dan video untuk posting: agent upload dulu ke bucket R2 `media-sementara` yang menghapus isinya otomatis, lalu kirim URL publiknya ke Repliz (modul 09b bagian E).
+
+## Langkah: kirim WhatsApp lewat Fonnte (opsional)
+
+1. Agent buka `open "https://fonnte.com"`, orangnya daftar, tambahkan device, scan QR dengan WhatsApp di HP (pakai nomor khusus).
+2. Salin token device ke `.env` sebagai `FONNTE_TOKEN`.
+3. Minta agent: "bikin script kirim WhatsApp ke nomorku sendiri lewat Fonnte, baca token dari .env". Tes ke nomor sendiri dulu.
 
 ## Langkah: n8n di VPS (opsional)
 

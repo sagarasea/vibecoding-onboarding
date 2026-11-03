@@ -54,6 +54,11 @@ Semua link yang dipakai di modul, dikelompokkan. Dicek 2026-11-04.
 
 ## Hosting dan domain
 
+- Cloudflare R2: https://developers.cloudflare.com/r2/
+- Cloudflare Email Routing: https://developers.cloudflare.com/email-routing/
+- Resend: https://resend.com
+- Payment gateway: https://www.doku.com, https://tripay.co.id, https://midtrans.com, https://www.xendit.co/id/
+
 - Vercel: https://vercel.com
 - Supabase: https://supabase.com
 - Cloudflare: https://dash.cloudflare.com
@@ -72,6 +77,8 @@ Semua link yang dipakai di modul, dikelompokkan. Dicek 2026-11-04.
 - Ollama: https://ollama.com
 
 ## Automation
+
+- Fonnte (WhatsApp): https://fonnte.com (docs: https://docs.fonnte.com)
 
 - Repliz: https://repliz.com (docs: https://docs.repliz.com)
 - Buffer: https://buffer.com

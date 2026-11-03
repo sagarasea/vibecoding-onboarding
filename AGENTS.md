@@ -10,7 +10,8 @@ Pemicu: kalau orangnya mengetik "mulai onboarding", "lanjut onboarding", atau se
 2. **Mulai dari `modul/00-mulai.md`.** Ajukan 4 pertanyaan kenalan di sana, satu pesan, lalu tentukan jalur (Gratis, Hemat, Builder, atau Company) dan minat. Tulis hasilnya ke `PROGRESS.md`.
 3. **Jalankan modul berurutan** sesuai daftar di `README.md`. Modul yang ditandai "opsional untuk jalur X" boleh dilewati kalau tidak relevan, tapi tulis alasannya di `PROGRESS.md`.
 4. **Satu langkah, satu verifikasi.** Untuk tiap tool: cek dulu apakah sudah terpasang (`command -v`, `--version`), install hanya kalau belum ada, lalu jalankan perintah verifikasi yang tertulis di modul. Jangan lanjut kalau verifikasi gagal. Perbaiki dulu atau tanya.
-5. **Kamu yang menjalankan, bukan orangnya.** Semua download, install, dan konfigurasi kamu jalankan sendiri lewat terminal (script di `scripts/` atau perintah di modul). Jangan menyuruh orangnya copy-paste perintah. Sebelum menjalankan, bilang dalam satu kalimat apa yang akan terjadi. Sesudahnya, laporkan hasil dalam satu kalimat.
+5. **Kamu yang menjalankan, bukan orangnya.** Semua download, install, dan konfigurasi kamu jalankan sendiri lewat terminal (script di `scripts/` atau perintah di modul). Jangan menyuruh orangnya copy-paste perintah. Sebelum menjalankan, bilang dalam satu kalimat apa yang akan terjadi **dan kenapa tool itu dibutuhkan** (script install mencetak baris "untuk apa" di tiap langkah, bacakan itu). Sesudahnya, laporkan hasil dalam satu kalimat.
+   Untuk menjalankan project (dev server, preview), tawarkan pilihan dulu: kamu yang menjalankan dan mengecek pakai Playwright, orangnya yang menjalankan di terminal VS Code, atau preview di Claude Desktop (`materi/07-menjalankan-project-lokal.md`).
 6. **Signup dan login: bukakan halamannya.** Untuk daftar akun atau login, langsung buka halamannya di browser default orangnya, lalu bilang apa yang harus diklik dan tunggu dia bilang "udah":
    - macOS: `open "https://github.com/signup"`
    - Windows: `Start-Process "https://github.com/signup"`
@@ -40,7 +41,7 @@ Pemicu: kalau orangnya mengetik "mulai onboarding", "lanjut onboarding", atau se
 
 - `README.md`: gambaran untuk manusia, urutan modul, jalur.
 - `modul/`: langkah-langkah. Setiap modul punya bagian Tujuan, Langkah, Verifikasi, dan Kalau gagal.
-- `materi/`: penjelasan konsep yang dibuka sesuai fasenya: git dan GitHub, API key dan .env, deploy, worktree dan bersih-bersih, dari ide ke prompt, cari repo open source.
+- `materi/`: penjelasan konsep yang dibuka sesuai fasenya: terminal dan tools dasar, git dan GitHub, API key dan .env, deploy, worktree dan bersih-bersih, dari ide ke prompt, cari repo open source, menjalankan project di laptop.
 - `templates/`: file yang disalin ke project baru dan ke `~/.claude/`.
 - `scripts/`: cek setup dan installer sekali jalan.
 - `referensi/`: daftar link, biaya, skill global mentor, dan `katalog-tools.md` (daftar lengkap tools, ekstensi, MCP, plugin, skill per jalur). Kalau orangnya tanya "butuh apa lagi?" atau "X itu buat apa?", jawab dari katalog ini.
