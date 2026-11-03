@@ -78,4 +78,4 @@ Semua baris di "Tools dasar" berstatus `[OK]`.
 
 ## Lanjut
 
-Modul [04 VS Code + Claude Code, Codex, opencode](04-claude-code.md).
+Modul [04 VS Code + Claude Code, Codex, opencode](04-vscode-dan-agent.md).
