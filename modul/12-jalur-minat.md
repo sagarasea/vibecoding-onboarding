@@ -30,6 +30,16 @@ Contoh: aplikasi operasional untuk tim klien, dashboard, booking, tool internal.
 
 Cara kerja pembayaran yang perlu dipahami: aplikasi membuat transaksi lewat API gateway, pelanggan membayar di halaman gateway, lalu gateway **memanggil balik** aplikasimu (webhook) untuk memberi tahu "sudah dibayar". Saat develop di laptop, webhook butuh alamat publik, di sinilah `cloudflared tunnel` dipakai. Selalu mulai di mode **sandbox** (uang bohongan) sebelum production, dan key sandbox/production disimpan di `.env` ([materi 02](../materi/02-api-key-dan-env.md)). Pendaftaran merchant butuh data usaha (KTP/NPWP/rekening), orangnya yang mengisi.
 
+#### DOKU Personal atau Corporate?
+
+| Rencana | Saran mentor |
+|---|---|
+| Satu brand, baru mulai | **DOKU Personal** (atas nama pribadi, cukup KTP dan rekening) sudah oke |
+| **Multi brand** (beberapa produk, toko, atau klien di bawah satu usaha) | mending urus **DOKU Corporate** dari awal (atas nama badan usaha, butuh dokumen seperti akta, NIB, NPWP badan). Lebih rapi daripada pindah akun di tengah jalan saat brand sudah banyak |
+| Opsi lain | **Midtrans**, juga mendukung QRIS, VA, dan e-wallet |
+
+Syarat dokumen bisa berubah, cek halaman pendaftaran masing-masing sebelum mengurus.
+
 #### Jalur cepat tanpa gateway: QRIS statis jadi nominal otomatis + kode unik
 
 Untuk yang belum punya DOKU, atau baru mau jualan minggu ini.
