@@ -197,6 +197,24 @@ Untuk perusahaan yang mau memakai AI di produk atau internal dengan data pelangg
 
 Kapan pakai Worg dibanding provider global: data pelanggan masuk ke prompt, klien mensyaratkan data tidak keluar negeri, atau butuh faktur pajak Indonesia.
 
+### Email perusahaan tanpa langganan per user
+
+Untuk perusahaan dengan puluhan karyawan, langganan email per user per bulan cepat membengkak:
+
+| Jumlah karyawan | Google Workspace Business Standard (USD 14/user/bulan, tahunan) | Business Plus (USD 22/user/bulan) |
+|---|---|---|
+| 10 orang | USD 140/bulan, sekitar Rp2,4 juta/bulan | USD 220/bulan, sekitar Rp3,8 juta/bulan |
+| 30 orang | USD 420/bulan, sekitar Rp7 juta/bulan | USD 660/bulan, sekitar Rp11 juta/bulan |
+| 70 orang | USD 980/bulan, sekitar Rp16 juta/bulan (sekitar Rp200 juta/tahun) | USD 1.540/bulan, sekitar Rp26 juta/bulan |
+
+Harga Google Workspace dari halaman resmi Google (USD, paket tahunan), dikonversi kasar dengan kurs sekitar Rp17.000. Cek https://workspace.google.com/intl/id/pricing.html untuk harga terbaru.
+
+Mentor menyediakan **jasa setup email perusahaan, mulai Rp10.000.000, bayar sekali** (bukan per user per bulan). Cocok untuk perusahaan yang butuh alamat `nama@perusahaan.com` untuk banyak karyawan. Rincian yang termasuk (jumlah akun, penyimpanan, fitur, dan biaya infrastruktur kalau ada) dibahas saat konsultasi. Hubungi mentor (sagarasea).
+
+Kalau cuma butuh beberapa alamat yang diteruskan ke Gmail, Cloudflare Email Routing gratis sudah cukup (modul 09b bagian B).
+
+### On-premise penuh
+
 Kalau perusahaan mau semuanya benar-benar di mesin sendiri (on-premise), model open-weight juga bisa dijalankan dengan [Ollama](https://ollama.com) di server kantor, lalu didaftarkan ke 9router sebagai provider. Butuh GPU yang memadai.
 
 ## Verifikasi

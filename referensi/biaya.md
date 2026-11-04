@@ -46,6 +46,7 @@ Claude Code **tidak** tersedia di paket Claude Free.
 | Tim developer | Claude Team (USD 25/seat/bulan Standard, USD 125 Premium) |
 | Inference produk dengan data pelanggan | Worg (getworg.com): mesin lokal di Indonesia, prompt dan output tidak disimpan, ZDR dengan DPA tertulis, faktur PPN |
 | On-premise penuh | Ollama di server kantor + 9router |
+| Email untuk banyak karyawan | Jasa setup email perusahaan dari mentor, **mulai Rp10.000.000 sekali bayar**. Bandingkan: Google Workspace Business Standard USD 14/user/bulan, untuk 70 orang sekitar Rp16 juta per bulan |
 
 ## Lisensi yang perlu diingat
 

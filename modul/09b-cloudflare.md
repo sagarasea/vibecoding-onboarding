@@ -48,6 +48,8 @@ Aturan dari pengalaman mentor: **untuk VPS, pasang vhost nginx dulu, baru bikin 
 3. **Routing rules**, **Create address**: contoh `hello` diteruskan ke Gmail tadi. Tambahkan juga `admin`, `billing`, dll kalau perlu, atau aktifkan **Catch-all** supaya semua alamat masuk.
 4. Tes: kirim email dari akun lain ke `hello@domainkamu.com`, harus masuk Gmail.
 
+Untuk perusahaan dengan banyak karyawan yang butuh kotak masuk sendiri-sendiri (bukan sekadar diteruskan ke Gmail), lihat jasa setup email perusahaan dari mentor di modul 10 bagian F.
+
 Catatan: Email Routing hanya **menerima**. Untuk **mengirim** email dari aplikasi (verifikasi akun, reset password, notifikasi), pakai Resend (modul 12 bagian A) dengan domain yang sama. Resend akan meminta beberapa record DNS, tambahkan di Cloudflare.
 
 ## C. R2: bikin bucket

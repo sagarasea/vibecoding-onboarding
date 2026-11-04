@@ -38,6 +38,14 @@ Private, tidak ada di repo ini. Untuk membeli, hubungi mentor (sagarasea). Semua
 | Article generator + articles to social (paket) | paket article generator + articles to social: bikin artikel, lalu ubah jadi konten sosial media | Rp2.500.000 untuk berdua |
 | Repo AI agent outreach Threads | AI agent untuk outreach di Threads, sudah dipakai mentor untuk brand sendiri | Rp10.000.000 |
 
+## Layanan setup dari mentor (untuk company)
+
+| Layanan | Isi | Harga |
+|---|---|---|
+| Setup email perusahaan | alamat `nama@perusahaan.com` untuk banyak karyawan tanpa langganan per user per bulan | mulai Rp10.000.000, sekali bayar |
+
+Rincian dibahas saat konsultasi. Hubungi mentor (sagarasea).
+
 ## Plugin aktif (Claude Code)
 
 | Plugin | Fungsi | Install |

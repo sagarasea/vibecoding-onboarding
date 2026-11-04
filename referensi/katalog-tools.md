@@ -124,6 +124,12 @@ Lihat modul 01 untuk link daftar dan [biaya.md](biaya.md) untuk harga: GitHub, C
 
 Private, beli lewat mentor (sagarasea). Harga di atas khusus student. Semua produk ini sebenarnya **bisa kamu bikin sendiri** dengan modul di repo ini. Beli kalau mau lebih cepat, tidak beli juga tidak apa-apa.
 
+### Layanan setup dari mentor (company)
+
+| Layanan | Untuk apa | Harga |
+|---|---|---|
+| Setup email perusahaan | email `nama@perusahaan.com` untuk banyak karyawan, sekali bayar, bukan per user per bulan | mulai Rp10.000.000 |
+
 ## 7b. Pengaman
 
 | Pengaman | Untuk apa | Pasang |
