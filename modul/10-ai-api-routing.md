@@ -184,7 +184,7 @@ Tulis aturan agent di `~/.hermes/SOUL.md` dan `~/.hermes/AGENTS.md`. Masukkan Ka
 
 Kalau punya Google AI Pro, Gemini CLI bisa jadi agent coding cadangan saat kuota Claude habis. Install: `npm install -g @google/gemini-cli`, jalankan `gemini`. Aturan di `AGENTS.md` tetap berguna karena semua agent ini membacanya.
 
-## F. Skala perusahaan: Worg (getworg.com)
+## F. Skala perusahaan: Worg, email perusahaan, on-premise
 
 Untuk perusahaan yang mau memakai AI di produk atau internal dengan data pelanggan, masalahnya bukan cuma harga, tapi **di mana data diproses dan apakah disimpan**.
 
