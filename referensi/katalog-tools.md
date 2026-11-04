@@ -37,6 +37,7 @@ Kolom **Kapan**: `Dasar` = semua orang. `Web`, `Video`, `Agent`, `Desain` = sesu
 | 9router | satu endpoint untuk banyak model + fallback | Agent | `npm i -g 9router` | sama | `--agent` |
 | Ollama | jalankan model AI di laptop sendiri, offline | Agent, Company | `brew install --cask ollama-app` | `winget install Ollama.Ollama` | `--agent` |
 | Gemini CLI | agent coding cadangan dari Google | Agent | `npm i -g @google/gemini-cli` | sama | `--agent` |
+| Antigravity | IDE agent dari Google, ikut di Google AI Pro (paket 18 bulan lewat mentor Rp50.000, modul 10 bagian A1) | Agent | download dari https://antigravity.google | sama | manual |
 | Figma Desktop | desain sebelum dikodekan, sumber MCP Figma | Desain | `brew install --cask figma` | `winget install Figma.Figma` | `--desain` |
 
 ## 2. Ekstensi VS Code

@@ -12,10 +12,31 @@
 |---|---|---|---|
 | **Claude Pro / Max / Ultra** | langganan bulanan (USD 20 / 100 / 200) | coding harian di Claude Code | Paling enak untuk coding. Ada batas pemakaian per 5 jam. |
 | **ChatGPT Plus / Pro** | langganan bulanan (Plus USD 20) | Codex: second opinion, review kode, cadangan saat kuota Claude habis | Codex ikut di paket ChatGPT, tidak ada langganan terpisah. Paket Free terbatas. |
-| **Google AI Pro (Gemini)** | langganan | Gemini app, Gemini CLI, kuota Gemini lebih besar | Harga resmi Rp309rb/bulan. Mentor biasa beli paket **18 bulan lewat AAL** (tanya mentor link-nya). Paket 18 bulan yang beredar umumnya promo operator luar negeri yang dijual ulang, jadi bisa dicabut sewaktu-waktu. Beli yang murah, jangan jadikan satu-satunya andalan. |
+| **Google AI Pro (Gemini)** | langganan | Gemini app, Gemini CLI, Antigravity, Deep Research, NotebookLM, video AI (Veo/Flow), Gemini di Gmail/Docs/Sheets | Harga resmi Rp309rb/bulan. Lewat mentor ada paket **Google AI Pro 18 bulan (Head Family) Rp50.000**, langsung di akun Gmail pribadi, bisa mengundang sampai 5 anggota family. Lihat bagian A1. |
 | **TokenomixAI** | token prepaid, bayar QRIS | agent dan aplikasi yang butuh API (Hermes, opencode, aplikasi kamu sendiri) | Satu API key untuk banyak model (GLM, DeepSeek, Kimi, dll), endpoint OpenAI-compatible `https://api.tokenomixai.com/v1`, tidak ada limit 5 jam, sisa token tidak hangus. Harga paket lihat di https://tokenomixai.com. |
 | **Worg** | saldo prepaid (USD, top-up rupiah) | **skala perusahaan**: data sensitif, butuh inference di mesin lokal Indonesia dan Zero Data Retention | Lihat bagian F. |
 | **Gratis** | kuota gratis | belajar, prototype | Google AI Studio (Gemini API gratis, data dipakai Google untuk perbaikan produk), OpenRouter model `:free` (50 request/hari), model gratis opencode Zen, Groq. |
+
+### A1. Paket Google AI Pro 18 bulan (Head Family) lewat mentor
+
+**Rp50.000 untuk 18 bulan**, dipasang langsung di akun Gmail pribadi, dan kamu jadi Head/Manager Family. Hubungi mentor (sagarasea) untuk membeli.
+
+Isi menurut penawaran:
+- Gemini AI Pro, Deep Research, NotebookLM Plus
+- Gemini di Gmail, Docs, Sheets, Slides
+- Antigravity (IDE agent dari Google)
+- Video AI: Veo 3 (sekitar 3 video per hari per akun) dan Flow (1.000 credits per bulan, sekitar 50 video Veo 3 Fast tergantung model dan durasi)
+- Penyimpanan Google besar
+- Bisa mengundang sampai 5 anggota family
+
+Cocok untuk: riset (Deep Research, NotebookLM), bikin video AI untuk konten, brainstorm prompt panjang (materi 05), dan Gemini CLI atau Antigravity sebagai agent coding cadangan saat kuota Claude habis.
+
+Hal yang perlu dipahami sebelum beli:
+- Harga ini jauh di bawah harga resmi. Paket seperti ini biasanya berasal dari promo, jadi ada risiko dicabut Google sebelum 18 bulan. Dengan harga Rp50.000, risikonya kecil, tapi jangan jadikan satu-satunya alat kerja.
+- Kuota video dan TTS dari Google bisa berubah sewaktu-waktu.
+- Undang anggota family yang kamu kenal (keluarga atau tim sendiri). Aturan Google untuk family group memang ditujukan untuk keluarga.
+
+Voiceover untuk video juga bisa pakai Gemini TTS lewat Google AI Studio. Free tier-nya terbatas jumlah request per hari, cek kuota terbaru di https://aistudio.google.com.
 
 Rekomendasi kombinasi:
 - **Hemat:** Claude Pro untuk coding + Gemini gratis/AI Pro untuk riset dan konten.

@@ -23,6 +23,7 @@ Claude Code **tidak** tersedia di paket Claude Free.
 |---|---|---|
 | Agent coding | Claude Pro (termasuk Claude Code) | USD 20/bulan, atau USD 17/bulan kalau tahunan |
 | Agent kedua (opsional) | ChatGPT Plus untuk Codex | USD 20/bulan |
+| Gemini (sangat disarankan) | Google AI Pro 18 bulan (Head Family) lewat mentor | Rp50.000 untuk 18 bulan |
 | Domain | Hostinger `.com` / `.id` | sekitar Rp110rb (promo tahun pertama) / Rp210rb per tahun |
 | Sisanya | sama dengan jalur Gratis | Rp0 |
 
@@ -32,7 +33,7 @@ Claude Code **tidak** tersedia di paket Claude Free.
 |---|---|---|
 | Agent coding | Claude Pro, Max (USD 100), atau Ultra (USD 200) | sesuai intensitas |
 | Token untuk agent dan aplikasi | TokenomixAI | paket prepaid mulai puluhan ribu rupiah, lihat tokenomixai.com |
-| Gemini | Google AI Pro, mentor beli paket 18 bulan lewat AAL | resmi Rp309rb/bulan |
+| Gemini | Google AI Pro 18 bulan (Head Family) lewat mentor | **Rp50.000 untuk 18 bulan** (resmi Rp309rb/bulan) |
 | VPS | Sumopod (2 vCPU / 2-4 GB) | perkiraan Rp40-100rb/bulan, cek sumopod.com |
 | Hosting komersial | Vercel Pro atau Cloudflare | Vercel Pro USD 20/bulan, Cloudflare Workers Paid USD 5/bulan |
 | Database produksi | Supabase Pro | USD 25/bulan |
