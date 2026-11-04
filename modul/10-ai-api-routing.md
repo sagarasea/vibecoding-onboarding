@@ -19,7 +19,7 @@
 
 ### A1. Paket Google AI Pro 18 bulan (Head Family) lewat mentor
 
-**Rp50.000 untuk 18 bulan**, dipasang langsung di akun Gmail pribadi, dan kamu jadi Head/Manager Family. Hubungi mentor (sagarasea) untuk membeli.
+**Rp50.000 untuk 18 bulan**, dipasang langsung di akun Gmail pribadi, dan kamu jadi Head/Manager Family. Hubungi mentor, Aal (sagarasea) untuk membeli.
 
 Isi menurut penawaran:
 - Gemini AI Pro, Deep Research, NotebookLM Plus
@@ -230,7 +230,7 @@ Untuk perusahaan dengan puluhan karyawan, langganan email per user per bulan cep
 
 Harga Google Workspace dari halaman resmi Google (USD, paket tahunan), dikonversi kasar dengan kurs sekitar Rp17.000. Cek https://workspace.google.com/intl/id/pricing.html untuk harga terbaru.
 
-Mentor menyediakan **jasa setup email perusahaan, mulai Rp10.000.000, bayar sekali** (bukan per user per bulan). Cocok untuk perusahaan yang butuh alamat `nama@perusahaan.com` untuk banyak karyawan. Rincian yang termasuk (jumlah akun, penyimpanan, fitur, dan biaya infrastruktur kalau ada) dibahas saat konsultasi. Hubungi mentor (sagarasea).
+Mentor menyediakan **jasa setup email perusahaan, mulai Rp10.000.000, bayar sekali** (bukan per user per bulan). Cocok untuk perusahaan yang butuh alamat `nama@perusahaan.com` untuk banyak karyawan. Rincian yang termasuk (jumlah akun, penyimpanan, fitur, dan biaya infrastruktur kalau ada) dibahas saat konsultasi. Hubungi mentor, Aal (sagarasea).
 
 Kalau cuma butuh beberapa alamat yang diteruskan ke Gmail, Cloudflare Email Routing gratis sudah cukup (modul 09b bagian B).
 

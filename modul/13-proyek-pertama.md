@@ -72,7 +72,7 @@ Untuk reel, promo, kinetic type, explainer, caption, atau clipper. Agent bikin v
 | Skill | antislop-ui, emil-design-eng, review-animations | motion yang rapi, tidak norak | modul 06 dan 12 |
 | Alternatif | Remotion (video pakai React) | kalau sudah familiar React. Gratis untuk individu dan usaha sampai 3 karyawan | `npx create-video@latest` |
 | Aplikasi (laptop kuat) | EffectCraft, FilmCraft (ArtCraft) | motion dan edit video native GPU, punya CLI untuk agent | `bash scripts/install-macos.sh --craft` (modul 12 bagian E) |
-| Skill berbayar (opsional) | `motion-studio` buatan mentor, private, **Rp500.000** (harga khusus student) | playbook dan router tools untuk motion graphic: memilih tool yang tepat per kebutuhan, kurasi musik, SFX, dan font sesuai tema, voiceover Gemini TTS (termasuk Bahasa Indonesia), plus template musik dan color grading yang sudah teruji di produksi. Mempercepat jalur 1 dan 2 | hubungi mentor (sagarasea) |
+| Skill berbayar (opsional) | `motion-studio` buatan mentor, private, **Rp500.000** (harga khusus student) | playbook dan router tools untuk motion graphic: memilih tool yang tepat per kebutuhan, kurasi musik, SFX, dan font sesuai tema, voiceover Gemini TTS (termasuk Bahasa Indonesia), plus template musik dan color grading yang sudah teruji di produksi. Mempercepat jalur 1 dan 2 | hubungi mentor, Aal (sagarasea) |
 | Media gratis | musik dan SFX: Pixabay Music. Footage dan foto: Pexels, Pixabay, NASA, Openverse. Font: Google Fonts | aset yang boleh dipakai | cek lisensi tiap aset, catat sumbernya di `docs/aset.md` |
 
 Ruang disk: sisakan minimal 20 GB. Render dan footage cepat memakan tempat.
