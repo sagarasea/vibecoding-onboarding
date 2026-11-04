@@ -26,6 +26,8 @@ Legenda sumber: **Custom** = dibuat mentor untuk infrastruktur sendiri, tidak un
 
 ## Produk berbayar dari mentor
 
+Semua produk ini sebenarnya **bisa kamu bikin sendiri** dengan modul di repo ini. Beli kalau mau lebih cepat, tidak beli juga tidak apa-apa.
+
 Private, tidak ada di repo ini. Untuk membeli, hubungi mentor (sagarasea). Semua harga di bawah adalah **harga khusus student**.
 
 | Produk | Isi | Harga khusus student |
