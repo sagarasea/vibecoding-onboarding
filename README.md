@@ -116,6 +116,7 @@ PROGRESS.template.md   disalin jadi PROGRESS.md oleh agent
 modul/                 langkah-langkah 00-14
 materi/                konsep yang muncul sesuai fase: terminal & tools dasar, git & GitHub, API key & .env, deploy,
                        worktree & bersih-bersih, dari ide ke prompt, cari repo open source, npm run dev/build & localhost,
+                       penempatan folder (laptop, GitHub, workdesk Hermes multi brand di VPS),
                        plus kamus istilah dan kuis akhir
 templates/             file untuk project baru dan ~/.claude/
   CLAUDE.global.md       aturan kerja agent global (Karpathy + aturan mentor)

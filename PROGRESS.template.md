@@ -43,6 +43,7 @@
 - [ ] 05 Dari ide ke prompt (modul 13)
 - [ ] 06 Cari repo open source (modul 13)
 - [ ] 07 Menjalankan project di laptop (modul 13)
+- [ ] 08 Penempatan folder: A laptop dan GitHub (modul 05), B workdesk Hermes multi brand (modul 10, Builder)
 
 Hasil cek (paham / perlu diulang, bagian mana):
 

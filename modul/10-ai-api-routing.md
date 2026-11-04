@@ -197,6 +197,10 @@ journalctl -u hermes-gateway -f      # lihat log
 
 Pola mentor: 9router dan Hermes jalan di VPS yang sama, Hermes memanggil 9router lewat localhost, dan Telegram dipakai sebagai "remote". Grup Telegram dengan beberapa topik (Ops, Logs, satu topik per project) membantu memisahkan percakapan.
 
+### Banyak brand di satu VPS
+
+Kalau pegang lebih dari satu brand atau klien, topik Telegram saja tidak cukup: memori, API key, dan cron tetap tercampur. Agent jelaskan dulu [materi 08 bagian B: workdesk agent Hermes di VPS](../materi/08-penempatan-folder.md#bagian-b-workdesk-agent-hermes-di-vps-untuk-banyak-brand), lalu pasang satu profile Hermes, satu folder `~/workdesk/<brand>`, dan satu bot Telegram per brand.
+
 ### Persona dan aturan
 
 Tulis aturan agent di `~/.hermes/SOUL.md` dan `~/.hermes/AGENTS.md`. Masukkan Karpathy guidelines dan aturan keamanan (jangan tampilkan token, jangan hapus data tanpa konfirmasi). Skill Hermes bisa disimpan di repo GitHub private supaya sama di laptop dan VPS.
@@ -246,6 +250,7 @@ Kalau perusahaan mau semuanya benar-benar di mesin sendiri (on-premise), model o
   curl http://localhost:20128/v1/models -H "Authorization: Bearer $ROUTER_API_KEY"
   ```
 - (Builder) `hermes doctor` hijau, dan bot Telegram membalas pesan dari akun kamu, tapi tidak membalas akun lain.
+- (Builder, banyak brand) `hermes profile list` menampilkan satu profile per brand, dan bot tiap brand menjawab "kamu brand apa, dan kerja di folder mana?" dengan brand dan `~/workdesk/<brand>` yang benar.
 
 ## Lanjut
 

@@ -10,6 +10,8 @@ Kenapa wajib: GitHub itu tempat backup, riwayat perubahan (bisa balik ke versi k
 
 Sebelum langkah pertama, agent jelaskan [materi 01: Git dan GitHub dasar](../materi/01-git-github-dasar.md): repo, commit, push, pull, branch, merge, PR, dan kapan commit. Praktiknya di langkah 3.
 
+Sebelum langkah 3 (bikin repo pertama), agent jelaskan [materi 08 bagian A: penempatan folder](../materi/08-penempatan-folder.md#bagian-a-di-laptop-dan-di-github): semua project di `~/Projects`, laci per brand atau klien, nama folder sama dengan nama repo. Praktiknya: cari repo yang nyasar di Desktop atau Downloads.
+
 ## Langkah
 
 1. **Login GitHub CLI.** Agent jalankan:
@@ -53,7 +55,7 @@ Hasilnya: kamu sudah mengalami satu siklus penuh branch, commit, push, PR, merge
 
 ## Kebiasaan yang dipakai mentor
 
-- Satu project, satu repo, default **private**.
+- Satu project, satu repo, default **private**. Foldernya di `~/Projects/<brand-atau-klien>/<nama-repo>` (materi 08).
 - Commit kecil dan sering. Sebelum minta AI mengubah banyak hal, commit dulu supaya gampang balik.
 - Jangan pernah commit `.env`. Salin `templates/gitignore` ke project baru sebagai `.gitignore` sebelum commit pertama.
 - Kerja di branch, bukan langsung di `main`, begitu project sudah dipakai orang lain.

@@ -12,6 +12,7 @@ Penjelasan konsep yang muncul tepat saat dibutuhkan, bukan di awal. Agent membuk
 | [05 Dari ide ke prompt](05-dari-ide-ke-prompt.md) | modul 13, sebelum plan mode | brainstorm di ChatGPT/Gemini sampai jadi brief lengkap, lalu dibawa ke agent coding |
 | [06 Cari repo open source](06-cari-repo-open-source.md) | modul 13, sebelum bangun dari nol | cari di GitHub dulu, cara menilai repo dan lisensi, format report |
 | [07 Menjalankan project di laptop](07-menjalankan-project-lokal.md) | modul 13 (diulang di 09) | npm install, npm run dev, build, start, localhost, siapa yang menjalankan, lihat di HP, cloudflared |
+| [08 Penempatan folder yang rapi](08-penempatan-folder.md) | modul 05 (bagian A), modul 10 (bagian B, Builder) | `~/Projects` per brand atau klien, nama folder = nama repo, organization GitHub, workdesk Hermes di VPS dengan satu profile per brand |
 
 Pendukung:
 

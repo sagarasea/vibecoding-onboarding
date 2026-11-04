@@ -32,6 +32,7 @@ Satu baris per istilah, urut abjad. Angka di kolom terakhir menunjuk file materi
 | **MCP** | kabel penghubung agent ke aplikasi atau data luar (browser, Figma, Supabase) | modul 07 |
 | **merge** | menggabungkan satu branch ke branch lain | 01 |
 | **npm / npx** | package manager JavaScript. `npm install` mengunduh library, `npx` menjalankan tool tanpa install permanen | 00 |
+| **organization (GitHub)** | "kantor" di GitHub untuk satu brand atau klien, tempat repo dan anggota timnya dikumpulkan | 08 |
 | **package manager** | App Store versi terminal: Homebrew, winget, npm, uv | 00 |
 | **PATH** | daftar folder tempat terminal mencari perintah. Terminal baru diperlukan setelah install | 00 |
 | **plan mode** | mode agent yang menyusun rencana dulu sebelum mengubah file | modul 04 |
@@ -39,6 +40,7 @@ Satu baris per istilah, urut abjad. Angka di kolom terakhir menunjuk file materi
 | **port** | nomor "pintu" aplikasi di laptop, contoh `3000` di `localhost:3000` | 07 |
 | **preview** | link deploy per branch atau PR, untuk dicek sebelum tayang | 03 |
 | **production** | versi yang dipakai pengguna sungguhan | 03 |
+| **profile (Hermes)** | satu Hermes terpisah dengan memori, aturan, `.env`, bot Telegram, dan cron sendiri. Satu per brand | 08 |
 | **pull** | mengambil perubahan terbaru dari GitHub ke laptop | 01 |
 | **pull request (PR)** | permintaan menggabungkan branch ke `main`, tempat review | 01 |
 | **push** | mengirim commit dari laptop ke GitHub | 01 |
@@ -49,4 +51,5 @@ Satu baris per istilah, urut abjad. Angka di kolom terakhir menunjuk file materi
 | **skill** | folder berisi instruksi untuk satu jenis tugas, dimuat agent saat tugasnya cocok | modul 07 |
 | **sudo / Administrator** | menjalankan perintah dengan izin penuh. Password diketik sendiri | 00 |
 | **terminal** | aplikasi tempat mengetik perintah | 00 |
+| **workdesk** | folder kerja agent di VPS, satu per brand: konteks, repo, aset, dan hasil kerja | 08 |
 | **worktree** | folder kerja kedua dari repo yang sama dengan branch sendiri, untuk agent paralel | 04 |
