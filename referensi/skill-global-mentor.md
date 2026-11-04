@@ -34,6 +34,7 @@ Private, tidak ada di repo ini. Untuk membeli, hubungi mentor (sagarasea). Semua
 | Script AI agent auto reply | agent yang membalas pesan secara otomatis dengan gaya balasan yang terasa seperti manusia | Rp3.000.000 |
 | Repo carousel generator | generator carousel untuk konten sosial media | Rp2.500.000 |
 | Article generator + articles to social (paket) | paket article generator + articles to social: bikin artikel, lalu ubah jadi konten sosial media | Rp2.500.000 untuk berdua |
+| Repo AI agent outreach Threads | AI agent untuk outreach di Threads, sudah dipakai mentor untuk brand sendiri | Rp10.000.000 |
 
 ## Plugin aktif (Claude Code)
 

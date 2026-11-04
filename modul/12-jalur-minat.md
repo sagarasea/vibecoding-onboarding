@@ -83,6 +83,7 @@ Contoh: asisten Telegram untuk tim, agent yang kerja 24 jam di VPS, posting otom
 |---|---|---|
 | Agent | Hermes Agent | modul 10 |
 | Produk berbayar (opsional) | script AI agent auto reply dari mentor, balasan terasa seperti manusia, Rp3.000.000 (harga khusus student), private | hubungi mentor (sagarasea) |
+| Produk berbayar (opsional) | repo AI agent outreach di Threads dari mentor, Rp10.000.000 (harga khusus student), private | hubungi mentor (sagarasea) |
 | Router | 9router (satu endpoint untuk banyak model, termasuk yang gratis) | modul 10 |
 | Agent coding gratis | opencode | modul 10 |
 | Automation | Repliz, Buffer, n8n | modul 11 |

@@ -120,6 +120,7 @@ Lihat modul 01 untuk link daftar dan [biaya.md](biaya.md) untuk harga: GitHub, C
 | Script AI agent auto reply | auto reply pesan dengan balasan yang terasa seperti manusia | Rp3.000.000 |
 | Repo carousel generator | bikin carousel konten sosial media | Rp2.500.000 |
 | Article generator + articles to social (paket) | paket article generator + articles to social: bikin artikel, lalu ubah jadi konten sosial media | Rp2.500.000 untuk berdua |
+| Repo AI agent outreach Threads | AI agent untuk outreach di Threads, sudah dipakai mentor untuk brand sendiri | Rp10.000.000 |
 
 Private, beli lewat mentor (sagarasea). Harga di atas khusus student.
 

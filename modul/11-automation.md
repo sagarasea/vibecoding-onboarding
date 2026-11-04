@@ -26,6 +26,8 @@ Untuk bahan posting, mentor juga menjual **repo carousel generator** seharga **R
 
 Ada juga paket **article generator + articles to social**: bikin artikel, lalu ubah jadi konten sosial media. Dua-duanya satu paket **Rp2.500.000** (harga khusus student), private.
 
+Untuk mencari pelanggan secara aktif, ada **repo AI agent outreach di Threads** yang sudah dipakai mentor untuk brand sendiri, **Rp10.000.000** (harga khusus student), private.
+
 ## Pola yang dipakai mentor
 
 ```
