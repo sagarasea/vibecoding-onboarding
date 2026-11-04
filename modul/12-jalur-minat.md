@@ -100,6 +100,7 @@ Contoh: clipper podcast, reels, motion graphic, caption otomatis.
 
 | Jenis | Yang diinstall | Perintah |
 |---|---|---|
+| Produk berbayar (opsional) | repo carousel generator dari mentor, Rp2.500.000, private | hubungi mentor (sagarasea) |
 | CLI | ffmpeg | macOS: `brew install ffmpeg`. Windows: `winget install Gyan.FFmpeg` |
 | CLI | yt-dlp | macOS: `brew install yt-dlp`. Windows: `winget install yt-dlp.yt-dlp` |
 | Plugin | HyperFrames (HTML jadi video, 450 blok siap pakai) | `claude plugin marketplace add heygen-com/hyperframes` lalu `claude plugin install hyperframes@hyperframes`. opencode/Codex: `npx hyperframes skills update` |

@@ -22,6 +22,8 @@ Kenapa Repliz: buatan Indonesia, bayar rupiah, murah, dan satu dashboard untuk h
 
 Mentor punya **script AI agent auto reply** yang balasannya sudah terasa seperti manusia, dijual **Rp3.000.000** (private, hubungi mentor). Cocok kalau butuh auto reply yang siap pakai tanpa membangun dan menyetel sendiri. Tanpa produk ini, kamu tetap bisa membangun auto reply sendiri dengan Repliz, Fonnte, atau Hermes di modul ini dan modul 10.
 
+Untuk bahan posting, mentor juga menjual **repo carousel generator** seharga **Rp2.500.000** (private). Hasil carousel-nya bisa langsung dijadwalkan lewat Repliz.
+
 ## Pola yang dipakai mentor
 
 ```

@@ -32,6 +32,7 @@ Private, tidak ada di repo ini. Untuk membeli, hubungi mentor (sagarasea).
 |---|---|---|
 | `motion-studio` (skill) | playbook dan router tools motion graphic: kurasi musik, SFX, font, voiceover, template musik dan grading | Rp500.000 |
 | Script AI agent auto reply | agent yang membalas pesan secara otomatis dengan gaya balasan yang terasa seperti manusia | Rp3.000.000 |
+| Repo carousel generator | generator carousel untuk konten sosial media | Rp2.500.000 |
 
 ## Plugin aktif (Claude Code)
 

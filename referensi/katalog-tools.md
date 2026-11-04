@@ -118,6 +118,7 @@ Lihat modul 01 untuk link daftar dan [biaya.md](biaya.md) untuk harga: GitHub, C
 |---|---|---|
 | motion-studio (skill) | router tools motion graphic, kurasi aset, voiceover, template grading | Rp500.000 |
 | Script AI agent auto reply | auto reply pesan dengan balasan yang terasa seperti manusia | Rp3.000.000 |
+| Repo carousel generator | bikin carousel konten sosial media | Rp2.500.000 |
 
 Private, beli lewat mentor (sagarasea).
 
