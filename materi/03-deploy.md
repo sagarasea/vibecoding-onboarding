@@ -3,6 +3,12 @@
 > Muncul di: **modul 09**, sebelum import project ke Vercel.
 > Agent: jelaskan alur "dari laptop ke internet" di bawah, lalu tunjukkan langsung di dashboard Vercel mana production dan mana preview.
 
+**Setelah ini kamu bisa:**
+
+- menjelaskan beda localhost, preview, dan production
+- tahu kenapa environment variable perlu diisi juga di Vercel
+- tahu cara balik ke versi sebelumnya kalau deploy merusak
+
 ## Gambaran besar
 
 Selama ini aplikasimu jalan di `localhost`: alamat yang hanya bisa dibuka dari laptopmu sendiri. **Deploy** artinya menaruh aplikasi di komputer lain yang menyala 24 jam dan bisa diakses siapa pun lewat internet.
@@ -45,8 +51,34 @@ Jadi kamu tidak pernah "upload file". Alurnya selalu: commit, push, (PR, cek pre
 2. Salin bagian error ke agent: "deploy gagal dengan error ini, perbaiki". Atau sambungkan MCP Vercel supaya agent membaca log sendiri.
 3. Penyebab paling sering: environment variable belum diisi di Vercel, atau `npm run build` memang gagal di laptop juga. Biasakan minta agent menjalankan `npm run build` sebelum push.
 
+## Coba sendiri
+
+Buka dashboard Vercel project latihan. Tunjukkan ke agent mana deployment Production dan mana Preview, lalu buka keduanya di HP.
+
+## Salah kaprah yang sering muncul
+
+- "Klien bisa membuka localhost-ku." localhost hanya ada di laptopmu. Klien butuh link preview atau production (atau cloudflared untuk sementara, materi 07).
+- "`.env` di laptop ikut terkirim ke Vercel." Tidak, karena `.env` tidak di-commit. Isi environment variable di dashboard Vercel.
+- "Beli domain berarti sudah punya hosting." Domain cuma alamat. Hosting tempat aplikasinya jalan. DNS yang menyambungkan keduanya.
+
 ## Cek pemahaman
 
-Agent tanyakan satu: "Klien minta lihat fitur baru dulu sebelum tayang ke semua pengguna. Kamu kirim link yang mana, dan dari mana link itu muncul?"
+Agent tanyakan satu per satu.
+
+1. "Klien minta lihat fitur baru dulu sebelum tayang ke semua pengguna. Kamu kirim link yang mana, dan dari mana link itu muncul?"
 
 Jawaban yang diharapkan: link **preview** dari PR/branch fitur itu, yang dibuat otomatis oleh Vercel saat branch di-push. Bukan link production.
+
+2. "Deploy terbaru bikin halaman utama error, dan klien sedang memakainya. Apa langkah tercepat?"
+
+Jawaban yang diharapkan: rollback: di Vercel, Deployments, pilih deploy sebelumnya yang sehat, Promote to Production. Setelah aman, baru perbaiki di branch.
+
+Kalau jawabannya meleset, jelaskan ulang bagian itu dengan analogi lain, lalu tanya lagi dengan skenario yang sedikit berbeda.
+
+## Kartu contekan
+
+- localhost: hanya di laptopmu.
+- preview: link per branch untuk dicek dulu.
+- production: yang dipakai orang.
+- env var diisi di dashboard hosting, bukan ikut di-commit.
+- Rusak setelah deploy: rollback dulu, perbaiki kemudian.

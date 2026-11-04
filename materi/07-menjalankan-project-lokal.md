@@ -3,6 +3,12 @@
 > Muncul di: **modul 13**, pertama kali project dijalankan. Diingatkan lagi di modul 09 (cek `npm run build` sebelum deploy).
 > Agent: jelaskan tabel perintah di bawah, lalu **tawarkan tiga pilihan** di bagian "Siapa yang menjalankan" dan ikuti pilihan orangnya. Tutup dengan pertanyaan cek pemahaman.
 
+**Setelah ini kamu bisa:**
+
+- tahu urutan `npm install`, `npm run dev`, lalu buka localhost
+- menjalankan `npm run build` sebelum push
+- memilih siapa yang menjalankan dev server: agent, kamu, atau preview Claude Desktop
+
 ## Gambaran besar
 
 Kode di folder itu seperti file desain. Untuk melihat hasilnya, kode harus **dijalankan** dulu oleh sebuah program di laptopmu (dev server), lalu dibuka di browser lewat alamat `localhost`.
@@ -75,8 +81,33 @@ Apa pun pilihannya, minta agent **membuktikan** hasilnya: "jalankan, cek pakai P
 | perubahan tidak muncul | dev server mati, atau cache | cek terminal dev server masih jalan, refresh `Cmd/Ctrl+Shift+R` |
 | `npm run build` gagal tapi `npm run dev` jalan | dev lebih longgar, build lebih ketat | kirim error build ke agent, perbaiki sebelum push |
 
+## Coba sendiri
+
+Jalankan dev server dengan pilihan mana pun, buka localhost, lalu minta agent mengganti satu teks di halaman. Perhatikan halamannya berubah sendiri tanpa refresh.
+
+## Salah kaprah yang sering muncul
+
+- "Menutup terminal tidak mematikan aplikasi." Dev server ikut mati kalau terminalnya ditutup atau kena `Ctrl+C`.
+- "Setiap ubah kode harus restart." Dev server memuat ulang sendiri. Restart hanya setelah mengubah `.env` atau menginstall library baru.
+- "Jalan di `npm run dev` berarti pasti jalan di production." Build lebih ketat. Jalankan `npm run build` dulu sebelum push.
+
 ## Cek pemahaman
 
-Agent tanyakan satu: "Aplikasimu jalan normal di `npm run dev`, tapi deploy di Vercel gagal. Perintah apa yang seharusnya kamu (atau agent) jalankan di laptop sebelum push, dan kenapa?"
+Agent tanyakan satu per satu.
+
+1. "Aplikasimu jalan normal di `npm run dev`, tapi deploy di Vercel gagal. Perintah apa yang seharusnya kamu (atau agent) jalankan di laptop sebelum push, dan kenapa?"
 
 Jawaban yang diharapkan: `npm run build`. Vercel menjalankan build yang sama; kalau build gagal di laptop, deploy juga gagal. Dev server lebih longgar sehingga error baru ketahuan saat build.
+
+2. "Kamu baru menambah key di `.env`, tapi aplikasi masih bilang key tidak ditemukan. Apa yang kamu coba dulu?"
+
+Jawaban yang diharapkan: matikan dev server (`Ctrl+C`) lalu jalankan lagi, karena `.env` dibaca saat dev server mulai.
+
+Kalau jawabannya meleset, jelaskan ulang bagian itu dengan analogi lain, lalu tanya lagi dengan skenario yang sedikit berbeda.
+
+## Kartu contekan
+
+- Pertama kali: `npm install`.
+- Kerja harian: `npm run dev`, buka localhost.
+- Sebelum push: `npm run build`.
+- Ubah `.env`: restart dev server.

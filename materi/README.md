@@ -1,6 +1,6 @@
 # Materi konsep
 
-Penjelasan konsep yang muncul tepat saat dibutuhkan, bukan di awal. Agent membuka materi ini di titik yang ditandai **Materi dulu** di tiap modul, menjelaskannya dengan analogi, mempraktikkannya, lalu menutup dengan satu pertanyaan cek pemahaman.
+Penjelasan konsep yang muncul tepat saat dibutuhkan, bukan di awal. Agent membuka materi ini di titik yang ditandai **Materi dulu** di tiap modul, menjelaskannya dengan analogi, mempraktikkannya, lalu menutup dengan pertanyaan cek pemahaman.
 
 | Materi | Muncul di | Isi |
 |---|---|---|
@@ -13,4 +13,35 @@ Penjelasan konsep yang muncul tepat saat dibutuhkan, bukan di awal. Agent membuk
 | [06 Cari repo open source](06-cari-repo-open-source.md) | modul 13, sebelum bangun dari nol | cari di GitHub dulu, cara menilai repo dan lisensi, format report |
 | [07 Menjalankan project di laptop](07-menjalankan-project-lokal.md) | modul 13 (diulang di 09) | npm install, npm run dev, build, start, localhost, siapa yang menjalankan, lihat di HP, cloudflared |
 
+Pendukung:
+
+| File | Untuk |
+|---|---|
+| [Kamus istilah](kamus.md) | semua istilah dalam satu halaman, satu baris per istilah, dengan link ke materinya |
+| [Kuis akhir](kuis-akhir.md) | sepuluh pertanyaan skenario campuran, di akhir onboarding (modul 14) dan diulang di hari ke-7 |
+
 Mau baca duluan juga boleh. Semua materi bisa dibaca tanpa agent.
+
+## Isi setiap materi
+
+Setiap file punya urutan yang sama, supaya orangnya tahu apa yang akan datang:
+
+1. **Setelah ini kamu bisa**: dua atau tiga hal yang bisa dicek, bukan "paham tentang X".
+2. **Gambaran besar**: masalahnya dulu, lalu analogi dari dunia desain atau sehari-hari.
+3. **Istilah**: hanya yang dipakai di fase itu.
+4. **Coba sendiri** atau **Praktik**: satu hal yang orangnya kerjakan, dengan hasil yang kelihatan.
+5. **Salah kaprah yang sering muncul**: anggapan keliru yang paling sering, dan pelurusannya.
+6. **Cek pemahaman**: dua pertanyaan skenario, satu per satu.
+7. **Kartu contekan**: ringkasan untuk dibuka lagi nanti.
+
+## Cara agent mengajar
+
+1. **Masalah dulu, definisi belakangan.** Mulai dari "kenapa ini perlu" dengan contoh yang dekat dengan kerjaan orangnya (lihat Profil di `PROGRESS.md`).
+2. **Paling banyak tiga istilah baru sekali jalan.** Sisanya dikenalkan saat benar-benar dipakai.
+3. **Tebak dulu, baru jalankan.** Sebelum menjalankan perintah yang sedang dibahas, minta orangnya menebak hasilnya. Tebakan yang salah tidak apa-apa, justru dari situ orang paling banyak belajar.
+4. **Tunjukkan di layar.** Jalankan perintahnya, lalu tunjuk baris output yang penting. Jangan menjelaskan output yang tidak ada.
+5. **Cek pakai skenario, bukan hafalan.** Tanya satu per satu dan tunggu jawabannya. Kalau meleset, ganti analogi, jangan mengulang kalimat yang sama.
+6. **Minta dijelaskan balik.** Untuk konsep inti (commit vs push, `.env`, preview vs production), minta orangnya menjelaskan dengan bahasanya sendiri dalam satu kalimat.
+7. **Perhatikan tanda capek.** Kalau jawabannya makin pendek atau dia bilang bingung, tawarkan istirahat lima menit atau langsung praktik dulu, penjelasannya menyusul.
+8. **Catat.** Di `PROGRESS.md`, tulis materi yang sudah dibahas dan hasilnya: paham, atau perlu diulang (dan bagian mana).
+9. **Jangan menyelipkan tawaran produk** di tengah materi. Aturannya di `AGENTS.md` bagian produk dan layanan.

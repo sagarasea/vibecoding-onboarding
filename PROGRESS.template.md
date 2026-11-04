@@ -10,12 +10,14 @@
 - Fokus / project pertama:
 - Kegiatan harian dan tools yang paling sering dipakai:
 - Jalur: Gratis / Hemat / Builder / Company
+- Tempo: lengkap / kilat
 - Spesifikasi mesin (CPU, RAM, GPU, disk kosong):
 - Minat: SaaS & web app / AI agent & automation / video & konten / desain & landing page / laptop kuat (ArtCraft) / lainnya
 
 ## Modul
 
 - [ ] 00 Mulai di sini
+- [ ] 00b Jalur kilat (kalau memilih tempo kilat)
 - [ ] 01 Akun
 - [ ] 02 atau 03 Install dasar (macOS / Windows)
 - [ ] 04 VS Code + Claude Code, Codex, opencode
@@ -41,6 +43,15 @@
 - [ ] 05 Dari ide ke prompt (modul 13)
 - [ ] 06 Cari repo open source (modul 13)
 - [ ] 07 Menjalankan project di laptop (modul 13)
+
+Hasil cek (paham / perlu diulang, bagian mana):
+
+-
+
+## Kuis akhir
+
+- Hari onboarding: .../10, materi yang perlu diulang:
+- Hari ke-7: .../10
 
 ## Catatan
 

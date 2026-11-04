@@ -3,6 +3,12 @@
 > Muncul di: **modul 07**, pertama kali kamu memasang sesuatu yang butuh key (MCP 21st.dev, Context7, Supabase). Diingatkan lagi di modul 09 (environment variable di Vercel), 10 (key TokenomixAI, 9router, Telegram bot), dan 11 (Repliz).
 > Agent: jelaskan sebelum meminta key pertama. Lalu praktikkan langsung: bikin `.env` dan `.env.example`, cek `.gitignore`, buktikan `.env` tidak muncul di `git status`.
 
+**Setelah ini kamu bisa:**
+
+- menjelaskan apa itu API key dengan analogi
+- menyimpan key di `.env` tanpa pernah menempelkannya ke chat
+- tahu langkah pertama kalau key bocor
+
 ## Apa itu API
 
 API itu "pintu layanan" sebuah aplikasi untuk dipakai program lain. Kalau kamu buka ChatGPT di browser, kamu yang ngetik. Kalau aplikasimu memanggil model AI lewat API, kodenya yang "ngetik" dan menerima jawaban.
@@ -73,8 +79,29 @@ git status
 
 `.env` tidak boleh muncul di daftar `git status`. `.env.example` boleh.
 
+## Salah kaprah yang sering muncul
+
+- "Repo-nya private, jadi aman taruh key di kode." Repo private bisa dibagikan, di-fork, atau bocor. Key tetap di `.env`.
+- "Hapus key dari file lalu commit lagi sudah beres." Key masih ada di riwayat git. Revoke di dashboard, bikin key baru.
+- "`.env.example` juga rahasia." Isinya nama variabel tanpa nilai, justru wajib di-commit supaya orang lain tahu key apa saja yang dibutuhkan.
+
 ## Cek pemahaman
 
-Agent tanyakan satu: "Kamu butuh key TokenomixAI di aplikasi Next.js yang memanggil AI dari server. Nama variabelnya pakai `NEXT_PUBLIC_TOKENOMIX_KEY` atau `TOKENOMIX_KEY`? Kenapa?"
+Agent tanyakan satu per satu.
+
+1. "Kamu butuh key TokenomixAI di aplikasi Next.js yang memanggil AI dari server. Nama variabelnya pakai `NEXT_PUBLIC_TOKENOMIX_KEY` atau `TOKENOMIX_KEY`? Kenapa?"
 
 Jawaban yang diharapkan: `TOKENOMIX_KEY`. Dengan awalan `NEXT_PUBLIC_`, key dikirim ke browser dan siapa pun bisa mengambilnya lalu menghabiskan saldo.
+
+2. "Kamu tidak sengaja menempel API key ke grup WhatsApp. Apa langkah pertamamu?"
+
+Jawaban yang diharapkan: revoke key itu di dashboard layanannya dan bikin yang baru, lalu ganti isi `.env`. Menghapus pesannya saja tidak cukup.
+
+Kalau jawabannya meleset, jelaskan ulang bagian itu dengan analogi lain, lalu tanya lagi dengan skenario yang sedikit berbeda.
+
+## Kartu contekan
+
+- API key: kunci rumah sekaligus kartu tagihan. Siapa pun yang pegang bisa memakai saldomu.
+- Tempatnya di `.env`, tidak di kode, tidak di chat.
+- `.env` tidak di-commit, `.env.example` di-commit.
+- Bocor: revoke dulu, baru yang lain.

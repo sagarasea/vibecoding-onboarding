@@ -3,6 +3,12 @@
 > Muncul di: **modul 02 / 03**, sebelum script install dijalankan.
 > Agent: jelaskan "Gambaran besar" dan tabel "Kenapa butuh ini" dengan bahasa sederhana. Lalu, saat script berjalan dan mencetak `==> nama langkah`, sebutkan dalam satu kalimat tool itu untuk apa. Tutup dengan pertanyaan cek pemahaman.
 
+**Setelah ini kamu bisa:**
+
+- bilang apa yang sedang terjadi saat agent menjalankan perintah install
+- menjelaskan dengan bahasamu sendiri kenapa butuh Homebrew/winget, Git, dan Node
+- tahu harus ngapain kalau muncul `command not found`
+
 ## Gambaran besar
 
 Selama ini kamu memakai komputer lewat klik: buka aplikasi, klik menu, drag file. **Terminal** adalah cara kedua: mengetik perintah. Untuk ngoding, hampir semua tools hanya punya versi terminal, dan AI agent juga bekerja lewat terminal.
@@ -62,8 +68,33 @@ nama-tool --version # tool ini sudah terpasang belum, versi berapa?
 - Teks merah banyak: belum tentu gagal. Salin ke agent, minta dijelaskan dalam bahasa sederhana.
 - Mau menghentikan perintah yang jalan lama: `Ctrl+C`.
 
+## Coba sendiri
+
+Buka terminal di VS Code (`` Ctrl+` ``). Sebelum menekan Enter, tebak dulu apa yang akan muncul, lalu ketik `pwd` dan `node --version`. Tebakanmu benar?
+
+## Salah kaprah yang sering muncul
+
+- "Teks merah berarti install gagal." Banyak tool mencetak peringatan berwarna merah padahal install berhasil. Lihat baris terakhir dan hasil `--version`.
+- "Aku harus hafal perintahnya." Cukup bisa mengenali. Agent yang mengetik, kamu yang mengawasi.
+- "Password-ku tidak keketik." Terminal memang tidak menampilkan apa pun saat password diketik. Ketik saja lalu Enter.
+
 ## Cek pemahaman
 
-Agent tanyakan satu: "Kamu baru install Node, lalu mengetik `node --version` di terminal yang sama dan muncul `command not found`. Apa yang terjadi, dan apa yang kamu lakukan?"
+Agent tanyakan satu per satu.
+
+1. "Kamu baru install Node, lalu mengetik `node --version` di terminal yang sama dan muncul `command not found`. Apa yang terjadi, dan apa yang kamu lakukan?"
 
 Jawaban yang diharapkan: terminal itu belum membaca PATH yang baru. Tutup terminal, buka lagi, lalu coba lagi.
+
+2. "Kenapa Homebrew (atau winget) dipasang paling awal, sebelum tools lain?"
+
+Jawaban yang diharapkan: karena Homebrew/winget yang dipakai untuk menginstall tools berikutnya, dan nanti untuk meng-update semuanya sekaligus.
+
+Kalau jawabannya meleset, jelaskan ulang bagian itu dengan analogi lain, lalu tanya lagi dengan skenario yang sedikit berbeda.
+
+## Kartu contekan
+
+- Terminal: tempat mengetik perintah. Agent mengetik, kamu mengawasi.
+- Package manager (brew, winget, npm, uv): App Store versi terminal.
+- `command not found` setelah install: tutup terminal, buka lagi.
+- `Ctrl+C`: hentikan perintah yang sedang jalan.

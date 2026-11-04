@@ -23,7 +23,7 @@ Batasan penting jalur gratis:
 - **Vercel Hobby hanya untuk pemakaian pribadi/non-komersial.** Untuk aplikasi yang dipakai klien secara komersial, pakai Vercel Pro (USD 20/bulan) atau Cloudflare (Workers gratis 100rb request per hari).
 - **Supabase Free di-pause kalau tidak dipakai seminggu.** Cocok untuk belajar dan prototype. Untuk produksi, Pro USD 25/bulan.
 
-## A. Jalur gratis: GitHub → Vercel
+## A. Jalur gratis: GitHub ke Vercel
 
 Sebelum push pertama, agent jalankan `npm run build` di laptop. Kalau gagal di laptop, deploy pasti gagal ([materi 07](../materi/07-menjalankan-project-lokal.md)).
 

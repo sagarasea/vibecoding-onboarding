@@ -37,7 +37,7 @@ Ditambah aturan mentor: pilih model sesuai tugas, tanpa em-dash, keamanan databa
 
 Alternatif lewat plugin (kalau mau update otomatis dari sumbernya):
 ```
-/plugin marketplace add forrestchang/andrej-karpathy-skills
+/plugin marketplace add multica-ai/andrej-karpathy-skills
 /plugin install andrej-karpathy-skills@karpathy-skills
 ```
 

@@ -24,7 +24,11 @@ cek "Python"     python3 "python3 --version"
 cek "uv"         uv      "uv --version"
 cek "jq"         jq      "jq --version"
 cek "gitleaks"   gitleaks "gitleaks version"
-cek "VS Code"    code    "code --version"
+if command -v code >/dev/null 2>&1 || [ ! -d "/Applications/Visual Studio Code.app" ]; then
+  cek "VS Code"    code    "code --version"
+else
+  printf "  [OK]    %-12s %s\n" "VS Code" "aplikasi ada, perintah code belum di PATH (modul 04 langkah 1)"; ok=$((ok+1))
+fi
 cek "Claude Code" claude "claude --version"
 cek "Codex"      codex   "codex --version"
 cek "opencode"   opencode "opencode --version"

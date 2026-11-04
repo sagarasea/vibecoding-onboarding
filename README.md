@@ -70,13 +70,14 @@ Atau pakai Claude Desktop: tab **Code**, pilih folder ini. Untuk Codex: `codex`.
 mulai onboarding
 ```
 
-Agent akan membaca `AGENTS.md`, bertanya 4 hal tentang kamu, memilihkan jalur, lalu memandu modul satu per satu. Progres tersimpan di `PROGRESS.md`, jadi kalau terputus cukup jalankan `claude` lagi dan ketik "lanjut onboarding".
+Agent akan membaca `AGENTS.md`, bertanya 4 hal tentang kamu, memilihkan jalur, lalu menawarkan dua tempo: **lengkap** (modul satu per satu, 4-6 jam) atau **kilat** (satu perintah install semua, langsung proyek pertama, sekitar 3 jam). Progres tersimpan di `PROGRESS.md`, jadi kalau terputus cukup jalankan `claude` lagi dan ketik "lanjut onboarding".
 
 ## Urutan modul
 
 | # | Modul | Isi | Waktu |
 |---|---|---|---|
 | 00 | [Mulai di sini](modul/00-mulai.md) | kenalan, cek spesifikasi laptop, pilih jalur biaya dan minat | 10 menit |
+| 00b | [Jalur kilat](modul/00b-jalur-kilat.md) | opsional: satu perintah install dan konfigurasi, materi sambil menunggu, langsung ke modul 13 | sekitar 3 jam total |
 | 01 | [Akun](modul/01-akun.md) | GitHub, Claude, ChatGPT (Codex), Vercel, Supabase, Cloudflare, DOKU/Midtrans/GoBiz, Resend, dll | 20 menit |
 | 02 | [Install macOS](modul/02-install-macos.md) | materi terminal, Homebrew, git, gh, Node, uv, VS Code, Claude Code, Codex, opencode, Playwright MCP | 30 menit |
 | 03 | [Install Windows](modul/03-install-windows.md) | materi terminal, winget, Git for Windows, Node, uv, VS Code, Claude Code, Codex, opencode, Playwright MCP | 30 menit |
@@ -114,7 +115,8 @@ CLAUDE.md              satu baris: @AGENTS.md
 PROGRESS.template.md   disalin jadi PROGRESS.md oleh agent
 modul/                 langkah-langkah 00-14
 materi/                konsep yang muncul sesuai fase: terminal & tools dasar, git & GitHub, API key & .env, deploy,
-                       worktree & bersih-bersih, dari ide ke prompt, cari repo open source, npm run dev/build & localhost
+                       worktree & bersih-bersih, dari ide ke prompt, cari repo open source, npm run dev/build & localhost,
+                       plus kamus istilah dan kuis akhir
 templates/             file untuk project baru dan ~/.claude/
   CLAUDE.global.md       aturan kerja agent global (Karpathy + aturan mentor)
   AGENTS.project.md      template konteks project
@@ -126,6 +128,7 @@ templates/             file untuk project baru dan ~/.claude/
 scripts/
   install-macos.sh       installer sekali jalan (--web --video --agent --desain --craft --semua)
   install-windows.ps1    installer sekali jalan (-Web -Video -Agent -Desain -Craft -Semua)
+  setup-kilat.sh / .ps1  jalur kilat: install + identitas git + aturan global + pengaman + plugin + cek, sekali jalan
   pasang-pengaman.sh     hook db-safety (global) dan scan rahasia gitleaks (--repo)
   figcraft-mcp.sh        MCP FigCraft yang menempel ke aplikasi FigCraft (macOS)
   cek-setup.sh / .ps1    cek apa yang sudah dan belum terpasang

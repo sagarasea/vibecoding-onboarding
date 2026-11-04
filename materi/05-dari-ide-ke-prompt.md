@@ -3,6 +3,11 @@
 > Muncul di: **modul 13**, sebelum masuk plan mode untuk proyek pertama. Berlaku juga setiap kali mulai project atau fitur besar.
 > Agent: kalau orangnya bingung mau mulai dari mana atau prompt-nya cuma satu kalimat, tawarkan alur ini. Berikan "prompt untuk bikin prompt" di bawah, minta dia bawa ke ChatGPT atau Gemini, lalu tunggu hasilnya ditempel kembali.
 
+**Setelah ini kamu bisa:**
+
+- mengubah ide satu kalimat jadi brief lengkap lewat ChatGPT atau Gemini
+- menyimpan brief di `docs/brief.md` dan memakainya di plan mode
+
 ## Kenapa
 
 Agent coding bekerja sebaik konteks yang dia terima. Prompt "bikinin aplikasi buat tim klien" menghasilkan aplikasi generik. Prompt yang menjelaskan siapa penggunanya, proses mereka sekarang, apa yang menyakitkan, dan apa yang belum perlu dibuat, menghasilkan aplikasi yang benar-benar dipakai.
@@ -70,8 +75,32 @@ yang tidak aku sebutkan, tulis [PERLU DIKONFIRMASI] kalau belum tahu.
 - **Bawa screenshot.** ChatGPT dan Gemini bisa membaca gambar: screenshot spreadsheet atau grup WhatsApp yang dipakai klien sekarang memperjelas masalahnya. Hapus data pribadi dulu.
 - **Jangan tempel data rahasia klien** (nomor HP pelanggan, data keuangan) ke chat AI gratis.
 
+## Coba sendiri
+
+Tulis idemu dalam satu kalimat. Bawa "prompt untuk bikin prompt" di atas ke ChatGPT atau Gemini, jawab pertanyaan-pertanyaannya, lalu tempel hasil akhirnya ke `docs/brief.md`.
+
+## Salah kaprah yang sering muncul
+
+- "Makin panjang prompt, makin bagus." Yang penting jelas: siapa penggunanya, masalah apa yang diselesaikan, dan kapan dianggap selesai. Panjang tanpa isi bikin agent menebak.
+- "Brainstorm dulu buang waktu." Lima belas menit brainstorm biasanya menghemat berjam-jam revisi.
+- "Brief harus final sebelum mulai." Brief boleh berubah. Ubah file-nya, jangan cuma bilang di chat.
+
 ## Cek pemahaman
 
-Agent tanyakan satu: "Kenapa brief-nya disimpan ke `docs/brief.md` di project, bukan cuma ditempel ke chat agent?"
+Agent tanyakan satu per satu.
+
+1. "Kenapa brief-nya disimpan ke `docs/brief.md` di project, bukan cuma ditempel ke chat agent?"
 
 Jawaban yang diharapkan: supaya semua agent dan semua sesi berikutnya bisa membacanya. Isi chat hilang saat `/clear` atau ganti agent, file di repo tetap ada.
+
+2. "Brief-mu belum menyebut siapa penggunanya. Apa akibatnya ke hasil agent?"
+
+Jawaban yang diharapkan: agent menebak pengguna yang generik, jadi tampilan, bahasa, dan alurnya ikut generik.
+
+Kalau jawabannya meleset, jelaskan ulang bagian itu dengan analogi lain, lalu tanya lagi dengan skenario yang sedikit berbeda.
+
+## Kartu contekan
+
+- Ide satu kalimat, brainstorm di ChatGPT/Gemini, brief di `docs/brief.md`, plan mode, baru kerja.
+- Brief yang baik menyebut pengguna, masalah, fitur inti, dan definisi selesai.
+- Brief berubah? Ubah file-nya.

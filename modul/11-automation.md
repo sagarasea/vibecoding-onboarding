@@ -18,18 +18,6 @@ Kenapa WhatsApp: klien dan pelanggan di Indonesia lebih banyak membaca WhatsApp 
 
 Kenapa Repliz: buatan Indonesia, bayar rupiah, murah, dan satu dashboard untuk hampir semua platform yang dipakai brand lokal. Buffer dipakai untuk X karena integrasinya lebih stabil.
 
-### Produk berbayar dari mentor (opsional)
-
-Semua produk ini sebenarnya **bisa kamu bikin sendiri** dengan modul di repo ini. Beli kalau mau lebih cepat, tidak beli juga tidak apa-apa.
-
-Mentor punya **script AI agent auto reply** yang balasannya sudah terasa seperti manusia, dijual **Rp3.000.000** (harga khusus student), private, hubungi mentor (sagarasea). Cocok kalau butuh auto reply yang siap pakai tanpa membangun dan menyetel sendiri. Tanpa produk ini, kamu tetap bisa membangun auto reply sendiri dengan Repliz, Fonnte, atau Hermes di modul ini dan modul 10.
-
-Untuk bahan posting, mentor juga menjual **repo carousel generator** seharga **Rp2.500.000** (harga khusus student), private. Hasil carousel-nya bisa langsung dijadwalkan lewat Repliz.
-
-Ada juga paket **article generator + articles to social**: bikin artikel, lalu ubah jadi konten sosial media. Dua-duanya satu paket **Rp2.500.000** (harga khusus student), private.
-
-Untuk mencari pelanggan secara aktif, ada **repo AI agent outreach di Threads** yang sudah dipakai mentor untuk brand sendiri, **Rp10.000.000** (harga khusus student), private.
-
 ## Pola yang dipakai mentor
 
 ```
@@ -76,6 +64,10 @@ Pasang di belakang nginx + Cloudflare Access (modul 09). Jangan buka port 5678 l
 
 - Satu post terjadwal muncul di dashboard Repliz atau Buffer.
 - Key tersimpan di `.env`, dan `git status` tidak menampilkan `.env`.
+
+## Setelah modul ini: opsi lebih cepat (boleh dilewati)
+
+Semua yang di atas bisa kamu bangun sendiri. Kalau nanti mau versi jadi supaya lebih cepat, mentor punya beberapa produk private dengan harga khusus student: script auto reply, carousel generator, paket article generator + articles to social, dan agent outreach Threads. Daftar dan harganya ada di [katalog bagian 7a](../referensi/katalog-tools.md#7a-produk-berbayar-dari-mentor). Tidak beli juga tidak apa-apa.
 
 ## Lanjut
 

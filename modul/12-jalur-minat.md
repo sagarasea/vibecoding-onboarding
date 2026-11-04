@@ -82,8 +82,6 @@ Contoh: asisten Telegram untuk tim, agent yang kerja 24 jam di VPS, posting otom
 | Jenis | Yang diinstall | Perintah / modul |
 |---|---|---|
 | Agent | Hermes Agent | modul 10 |
-| Produk berbayar (opsional) | script AI agent auto reply dari mentor, balasan terasa seperti manusia, Rp3.000.000 (harga khusus student), private | hubungi mentor (sagarasea) |
-| Produk berbayar (opsional) | repo AI agent outreach di Threads dari mentor, Rp10.000.000 (harga khusus student), private | hubungi mentor (sagarasea) |
 | Router | 9router (satu endpoint untuk banyak model, termasuk yang gratis) | modul 10 |
 | Agent coding gratis | opencode | modul 10 |
 | Automation | Repliz, Buffer, n8n | modul 11 |
@@ -101,12 +99,9 @@ Contoh: clipper podcast, reels, motion graphic, caption otomatis.
 
 | Jenis | Yang diinstall | Perintah |
 |---|---|---|
-| Produk berbayar (opsional) | repo carousel generator dari mentor, Rp2.500.000 (harga khusus student), private | hubungi mentor (sagarasea) |
-| Produk berbayar (opsional) | paket article generator + articles to social dari mentor, Rp2.500.000 untuk berdua (harga khusus student), private | hubungi mentor (sagarasea) |
 | CLI | ffmpeg | macOS: `brew install ffmpeg`. Windows: `winget install Gyan.FFmpeg` |
 | CLI | yt-dlp | macOS: `brew install yt-dlp`. Windows: `winget install yt-dlp.yt-dlp` |
 | Plugin | HyperFrames (HTML jadi video, 450 blok siap pakai) | `claude plugin marketplace add heygen-com/hyperframes` lalu `claude plugin install hyperframes@hyperframes`. opencode/Codex: `npx hyperframes skills update` |
-| Skill berbayar (opsional) | motion-studio dari mentor, Rp500.000 (harga khusus student), private: playbook dan router tools untuk motion graphic: memilih tool yang tepat per kebutuhan, kurasi musik, SFX, dan font sesuai tema, voiceover Gemini TTS (termasuk Bahasa Indonesia), plus template musik dan color grading yang sudah teruji di produksi | hubungi mentor (sagarasea) |
 | Plugin | watch (agent bisa "nonton" video referensi) | `/plugin marketplace add bradautomates/claude-video` lalu `/plugin install watch@claude-video` |
 | Framework | Remotion (video pakai React) | `npx create-video@latest` |
 | CLI | ImageMagick (thumbnail, resize massal) | macOS: `brew install imagemagick`. Windows: `winget install ImageMagick.ImageMagick` |
@@ -176,6 +171,10 @@ Aturan singkat (detail di modul 07): skill yang kamu pakai di banyak project dip
 
 - Jalankan `bash scripts/cek-setup.sh` (atau `.ps1`), semua tools jalur kamu berstatus OK.
 - Di Claude Code, `/plugin` menampilkan plugin yang diinstall, `/mcp` menampilkan MCP yang tersambung.
+
+## Setelah modul ini: opsi lebih cepat (boleh dilewati)
+
+Setiap jalur di atas bisa dikerjakan dengan tools gratis. Untuk jalur agent, konten, dan video, mentor juga punya produk private versi jadi dengan harga khusus student. Daftarnya di [katalog bagian 7a](../referensi/katalog-tools.md#7a-produk-berbayar-dari-mentor). Beli hanya kalau mau lebih cepat.
 
 ## Lanjut
 

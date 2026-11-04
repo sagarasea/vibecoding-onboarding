@@ -2,6 +2,10 @@
 
 **Tujuan:** kamu punya jalur belajar setelah onboarding, dan tahu harus ngapain minggu depan.
 
+## Langkah pertama: kuis akhir (15 menit)
+
+Agent jalankan [materi/kuis-akhir.md](../materi/kuis-akhir.md): sepuluh pertanyaan skenario campuran dari semua materi, satu per satu. Tujuannya bukan nilai, tapi menemukan bagian yang belum nempel selagi masih ada waktu untuk mengulang. Skor dan materi yang perlu diulang dicatat di `PROGRESS.md`.
+
 ## Kursus gratis dari Anthropic
 
 Semua di https://anthropic.skilljar.com, gratis, dapat sertifikat. Urutan yang disarankan:
@@ -35,7 +39,7 @@ Semua di https://anthropic.skilljar.com, gratis, dapat sertifikat. Urutan yang d
 | 4 | Tambah satu fitur yang butuh database (Supabase) atau satu automation (Repliz/n8n). |
 | 5 | Coba opencode dengan model gratis untuk tugas ringan, bandingkan dengan Claude. |
 | 6 | (Builder) Pasang Hermes di laptop, sambungkan Telegram. |
-| 7 | Tulis di `MEMORY.md`: apa yang berhasil, apa yang boros waktu, apa yang mau dibikin berikutnya. |
+| 7 | Ulangi kuis akhir dengan agent, bandingkan skornya dengan hari onboarding. Tulis di `MEMORY.md`: apa yang berhasil, apa yang boros waktu, apa yang mau dibikin berikutnya. |
 
 ## Kebiasaan jangka panjang
 

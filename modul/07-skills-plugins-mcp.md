@@ -67,7 +67,7 @@ Beberapa MCP di langkah ini butuh API key. Sebelum meminta key pertama, agent je
 | MCP | Untuk | Perintah | Scope |
 |---|---|---|---|
 | Supabase | baca/ubah database dan tabel lewat agent | `claude mcp add --scope project --transport http supabase "https://mcp.supabase.com/mcp?project_ref=ID_PROJECT&read_only=true"` | project |
-| Vercel | cek deploy, log, domain | `claude mcp add --transport http vercel https://mcp.vercel.com` | user |
+| Vercel | cek deploy, log, domain | `claude mcp add --scope user --transport http vercel https://mcp.vercel.com` | user |
 | GitHub | issue, PR, repo lewat MCP (biasanya `gh` sudah cukup) | `/plugin install github@claude-plugins-official` | user |
 | Figma | baca frame Figma jadi kode | `/plugin install figma@claude-plugins-official` | user |
 | Jiro | 1.400+ referensi desain yang bisa ditarik agent | `claude mcp add --scope user --transport http jiro https://mcp.jiro.build` | user |

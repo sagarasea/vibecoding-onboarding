@@ -51,10 +51,21 @@ Get-CimInstance Win32_Processor | Select Name; "RAM: {0} GB" -f [math]::Round((G
 
 Catat di `PROGRESS.md`. Kalau Apple Silicon dengan RAM 16 GB ke atas, atau PC dengan GPU terpisah dan RAM 16 GB ke atas, tawarkan **jalur laptop kuat** (ArtCraft suite: FigCraft, EffectCraft, FilmCraft, dll, modul 12 bagian E) dan model lokal Ollama. Kalau ruang disk kosong di bawah 20 GB, bilang dulu sebelum install jalur video atau Docker.
 
+## Langkah 5: pilih tempo
+
+Tanyakan: "Mau jalur lengkap atau jalur kilat?"
+
+| Tempo | Isi | Waktu |
+|---|---|---|
+| **Lengkap** | modul 01 sampai 14 satu per satu, setiap tool dijelaskan dan diverifikasi | 4-6 jam |
+| **Kilat** | satu perintah install semua sesuai minat, materi diajarkan sambil menunggu, langsung proyek pertama ([modul 00b](00b-jalur-kilat.md)) | sekitar 3 jam |
+
+Keduanya memasang tools yang sama dan tetap membahas materi. Bedanya, jalur kilat menunda modul yang belum dibutuhkan proyek pertama. Catat pilihannya di `PROGRESS.md`.
+
 ## Verifikasi
 
-- `PROGRESS.md` ada dan bagian Profil terisi (jalur dan minat tidak kosong).
+- `PROGRESS.md` ada dan bagian Profil terisi (jalur, minat, dan tempo tidak kosong).
 
 ## Lanjut
 
-Modul [01 Akun](01-akun.md).
+Jalur lengkap: modul [01 Akun](01-akun.md). Jalur kilat: modul [00b Jalur kilat](00b-jalur-kilat.md).

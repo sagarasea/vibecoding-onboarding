@@ -1,7 +1,13 @@
 # Materi 01: Git dan GitHub dasar
 
 > Muncul di: **modul 05**, sebelum login `gh` dan bikin repo pertama.
-> Agent: jelaskan bagian "Gambaran besar" dengan analoginya, lalu tunjukkan tiap istilah sambil benar-benar menjalankannya di repo latihan. Tutup dengan satu pertanyaan cek pemahaman di akhir file.
+> Agent: jelaskan bagian "Gambaran besar" dengan analoginya, lalu tunjukkan tiap istilah sambil benar-benar menjalankannya di repo latihan. Tutup dengan pertanyaan cek pemahaman di akhir file.
+
+**Setelah ini kamu bisa:**
+
+- menjelaskan beda commit, push, dan pull request
+- menyuruh agent bikin branch, commit, dan PR dengan kalimatmu sendiri
+- tahu kapan harus commit sebelum minta perubahan besar
 
 ## Gambaran besar
 
@@ -58,8 +64,33 @@ Kamu tidak perlu mengetik ini. Cukup bilang ke agent: "bikin branch buat fitur X
 
 Untuk latihan dan project yang belum dipakai siapa pun, commit langsung di `main` masih boleh.
 
+## Coba sendiri
+
+Di repo latihan, bilang ke agent dengan kata-katamu sendiri: bikin branch `coba-warna`, ganti satu kata di README, commit, lalu tunjukkan `git log`. Kamu yang menyebut urutannya, agent yang menjalankan.
+
+## Salah kaprah yang sering muncul
+
+- "Sudah commit berarti sudah aman di GitHub." Commit baru tersimpan di laptop. Ada di GitHub setelah push.
+- "Git dan GitHub itu sama." Git alatnya, jalan di laptop. GitHub tempat menyimpan dan berbagi di internet.
+- "Branch itu salinan folder." Branch cabang riwayat di folder yang sama. Dua folder kerja terpisah untuk dua agent itu worktree (materi 04).
+
 ## Cek pemahaman
 
-Agent tanyakan satu: "Kamu habis minta agent ganti seluruh tampilan dashboard, ternyata hasilnya jelek dan kamu belum commit apa-apa sejak pagi. Apa yang hilang, dan apa yang seharusnya dilakukan tadi pagi?"
+Agent tanyakan satu per satu.
+
+1. "Kamu habis minta agent ganti seluruh tampilan dashboard, ternyata hasilnya jelek dan kamu belum commit apa-apa sejak pagi. Apa yang hilang, dan apa yang seharusnya dilakukan tadi pagi?"
 
 Jawaban yang diharapkan: semua perubahan sejak pagi tidak punya titik balik. Seharusnya commit dulu sebelum minta perubahan besar, atau kerjakan di branch terpisah.
+
+2. "Kamu sudah commit, lalu laptopnya rusak sebelum sempat push. Commit itu ada di GitHub?"
+
+Jawaban yang diharapkan: tidak. Commit hanya ada di laptop sampai di-push. Makanya push minimal di akhir hari.
+
+Kalau jawabannya meleset, jelaskan ulang bagian itu dengan analogi lain, lalu tanya lagi dengan skenario yang sedikit berbeda.
+
+## Kartu contekan
+
+- commit: titik simpan di laptop, pesannya menjelaskan apa yang berubah.
+- push: kirim commit ke GitHub. pull: ambil yang terbaru.
+- branch: ruang eksperimen, `main` tetap aman.
+- PR: minta gabung ke `main`, sekalian dapat link preview.

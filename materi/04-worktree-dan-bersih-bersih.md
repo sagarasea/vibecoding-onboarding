@@ -3,6 +3,12 @@
 > Muncul di: **modul 13**, saat kamu mulai ingin menjalankan lebih dari satu sesi agent di project yang sama (misalnya satu agent bikin fitur, satu lagi benerin bug). Diingatkan lagi di modul 14 (rutinitas bulanan).
 > Agent: jelaskan masalahnya dulu (dua agent di satu folder saling timpa), baru solusinya. Praktikkan satu worktree di proyek pertama, lalu bersihkan.
 
+**Setelah ini kamu bisa:**
+
+- menjelaskan kenapa dua agent di satu folder bisa saling timpa
+- bikin satu worktree, memakainya, lalu menghapusnya
+- tahu kapan waktunya bersih-bersih branch dan worktree
+
 ## Masalahnya
 
 Satu folder project hanya bisa berada di **satu branch** dalam satu waktu. Kalau dua sesi agent bekerja di folder yang sama, mereka mengedit file yang sama, saling menimpa, dan commit-nya tercampur.
@@ -81,8 +87,29 @@ gh repo edit --delete-branch-on-merge
 | image Docker tak terpakai | bisa puluhan GB | `docker system prune` (tanya dulu, ini menghapus container yang berhenti) |
 | sesi agent lama | sidebar penuh | arsipkan sesi yang selesai di Claude Desktop |
 
+## Salah kaprah yang sering muncul
+
+- "Worktree sama dengan clone kedua." Worktree memakai riwayat git yang sama, jadi lebih hemat tempat dan branch-nya langsung terlihat dari folder utama.
+- "Hapus folder worktree lewat Finder sudah cukup." Pakai `git worktree remove` supaya git ikut lupa. Kalau terlanjur, `git worktree prune`.
+- "Kerja paralel selalu lebih cepat." Dua tugas yang menyentuh file yang sama lebih aman dikerjakan berurutan. Paralel hanya untuk tugas yang benar-benar terpisah.
+
 ## Cek pemahaman
 
-Agent tanyakan satu: "Agent A sedang bikin fitur login, dan kamu mau agent B benerin bug di halaman laporan pada saat yang sama. Apa yang kamu siapkan dulu, dan apa yang kamu lakukan setelah PR bug fix di-merge?"
+Agent tanyakan satu per satu.
+
+1. "Agent A sedang bikin fitur login, dan kamu mau agent B benerin bug di halaman laporan pada saat yang sama. Apa yang kamu siapkan dulu, dan apa yang kamu lakukan setelah PR bug fix di-merge?"
 
 Jawaban yang diharapkan: buat worktree terpisah (branch sendiri) untuk agent B. Setelah PR di-merge, hapus worktree dan branch-nya (`git worktree remove`, `git branch -d`).
+
+2. "Sebutkan satu situasi di mana worktree justru tidak perlu."
+
+Jawaban yang diharapkan: cuma satu agent yang bekerja, atau dua tugas menyentuh file yang sama sehingga lebih aman berurutan.
+
+Kalau jawabannya meleset, jelaskan ulang bagian itu dengan analogi lain, lalu tanya lagi dengan skenario yang sedikit berbeda.
+
+## Kartu contekan
+
+- worktree: folder kerja kedua dari repo yang sama, dengan branch sendiri.
+- Satu agent, satu worktree.
+- PR sudah di-merge: hapus worktree dan branch-nya.
+- Sebulan sekali: bersih-bersih branch, worktree, dan cache.
