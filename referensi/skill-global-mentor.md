@@ -19,20 +19,21 @@ Legenda sumber: **Custom** = dibuat mentor untuk infrastruktur sendiri, tidak un
 | `hyperframes`, `hyperframes-cli`, `hyperframes-registry`, `media-use`, `figma`, `remotion-to-hyperframes`, `slideshow` | Toolkit video HyperFrames (HTML jadi video): CLI, 450 blok siap pakai, media, import Figma, port dari Remotion, slideshow | `npx skills add heygen-com/hyperframes` |
 | `watch` | "Nonton" video: yt-dlp + ffmpeg + transkrip, lalu dianalisis agent | [bradautomates/claude-video](https://github.com/bradautomates/claude-video) |
 | `agent-reach` | Riset internet di 15 platform (X, Reddit, YouTube, XHS, GitHub, dll) | [Panniantong/Agent-Reach](https://github.com/Panniantong/Agent-Reach) |
-| `motion-studio` | Playbook dan router tools untuk motion graphic: memilih tool yang tepat per kebutuhan, kurasi musik, SFX, dan font sesuai tema, voiceover Gemini TTS (termasuk Bahasa Indonesia), plus template musik dan color grading yang sudah teruji di produksi | **Berbayar, private: Rp500.000.** Hubungi mentor (sagarasea) untuk membeli |
+| `motion-studio` | Playbook dan router tools untuk motion graphic: memilih tool yang tepat per kebutuhan, kurasi musik, SFX, dan font sesuai tema, voiceover Gemini TTS (termasuk Bahasa Indonesia), plus template musik dan color grading yang sudah teruji di produksi | **Berbayar, private: Rp500.000 (harga khusus student).** Hubungi mentor (sagarasea) untuk membeli |
 | `destockd` | Cari footage arsip public domain dari destockd.com | Custom |
 | `vps-vhost` | Kelola vhost nginx di VPS mentor | Custom |
 | `client-preview` | Pasang preview situs klien di subdomain | Custom |
 
 ## Produk berbayar dari mentor
 
-Private, tidak ada di repo ini. Untuk membeli, hubungi mentor (sagarasea).
+Private, tidak ada di repo ini. Untuk membeli, hubungi mentor (sagarasea). Semua harga di bawah adalah **harga khusus student**.
 
-| Produk | Isi | Harga |
+| Produk | Isi | Harga khusus student |
 |---|---|---|
 | `motion-studio` (skill) | playbook dan router tools motion graphic: kurasi musik, SFX, font, voiceover, template musik dan grading | Rp500.000 |
 | Script AI agent auto reply | agent yang membalas pesan secara otomatis dengan gaya balasan yang terasa seperti manusia | Rp3.000.000 |
 | Repo carousel generator | generator carousel untuk konten sosial media | Rp2.500.000 |
+| Article generator + articles to social (paket) | paket article generator + articles to social: bikin artikel, lalu ubah jadi konten sosial media | Rp2.500.000 untuk berdua |
 
 ## Plugin aktif (Claude Code)
 
