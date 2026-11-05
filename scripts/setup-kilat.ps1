@@ -31,7 +31,7 @@ if ((git config --global user.name) -and (git config --global user.email)) {
   Write-Host "BELUM: isi `$env:GIT_NAME dan `$env:GIT_EMAIL lalu jalankan ulang, atau isi manual (modul 05)."
 }
 
-Langkah "3/7" "Aturan kerja global agent" @('~\.claude\CLAUDE.md untuk Claude Code, ~\.codex\AGENTS.md untuk Codex (Karpathy + aturan mentor)')
+Langkah "3/7" "Aturan kerja global agent" @('~\.claude\CLAUDE.md untuk Claude Code, ~\.codex\AGENTS.md untuk Codex (Karpathy + aturan mentor)', 'skill belajar-lanjut: cek level dan fokus belajar berikutnya')
 function Pasang-Aturan($tujuan) {
   $sumber = "templates\CLAUDE.global.md"
   New-Item -ItemType Directory -Force -Path (Split-Path $tujuan) | Out-Null
@@ -46,9 +46,10 @@ function Pasang-Aturan($tujuan) {
 }
 Pasang-Aturan (Join-Path $HOME ".claude\CLAUDE.md")
 Pasang-Aturan (Join-Path $HOME ".codex\AGENTS.md")
+$gitBash = "C:\Program Files\Git\bin\bash.exe"
+if (Test-Path $gitBash) { & $gitBash scripts/pasang-skill.sh }   # skill belajar-lanjut: "harus belajar apa lagi?" dari folder mana pun
 
 Langkah "4/7" "Pengaman" @('hook db-safety: perintah database yang menghapus data diblokir sebelum jalan (lewat Git Bash)')
-$gitBash = "C:\Program Files\Git\bin\bash.exe"
 if (Test-Path $gitBash) { & $gitBash scripts/pasang-pengaman.sh } else { Write-Host "Git Bash belum ada. Buka PowerShell baru lalu jalankan ulang script ini." }
 
 Langkah "5/7" "Plugin dasar Claude Code" @('antislop: filter hasil generik', 'frontend-design: UI yang tidak template', '(video) hyperframes dan watch')

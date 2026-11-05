@@ -102,9 +102,18 @@ bash scripts/pasang-pengaman.sh
 
 Ini memasang hook **db-safety** di Claude Code: perintah database yang menghapus data (lihat daftar di bagian 7 `~/.claude/CLAUDE.md`) diblokir sebelum sempat jalan. Aturannya sudah tertulis di CLAUDE.md global, tapi tulisan bisa "dilupakan" agent, hook tidak. Di tiap project baru nanti, `bash scripts/pasang-pengaman.sh --repo` memasang scan rahasia (gitleaks) yang menolak commit berisi API key (modul 13).
 
+## Langkah 6: skill `belajar-lanjut` (agent yang pasang)
+
+```bash
+bash scripts/pasang-skill.sh
+```
+
+Windows: jalankan dari Git Bash. Ini memasang skill global `belajar-lanjut` di `~/.claude/skills/`. Gunanya untuk nanti: setelah beberapa hari atau minggu vibecode, dari folder project mana pun kamu cukup bertanya "harus belajar apa lagi?". Agent akan memeriksa project kamu, menentukan level, dan memberi satu fokus belajar berikutnya ([modul 15](15-cek-level.md)). Skill ini menunjuk ke folder onboarding, jadi kalau folder ini dipindah, jalankan ulang perintahnya.
+
 ## Verifikasi
 
 - `~/.claude/CLAUDE.md` ada dan berisi empat prinsip Karpathy.
+- `~/.claude/skills/belajar-lanjut/SKILL.md` ada dan menyebut path folder onboarding ini.
 - `npx antislop-ai` selesai tanpa error. Di sesi Claude Code baru, ketik `/` lalu cari `antislop`, skill-nya muncul.
 - `/hooks` di sesi Claude Code baru menampilkan hook db-safety.
 - Folder `templates/` berisi `AGENTS.project.md`, `DESIGN.md`, `gitignore`.

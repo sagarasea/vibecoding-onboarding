@@ -41,6 +41,8 @@ Semua di https://anthropic.skilljar.com, gratis, dapat sertifikat. Urutan yang d
 | 6 | (Builder) Pasang Hermes di laptop, sambungkan Telegram. |
 | 7 | Ulangi kuis akhir dengan agent, bandingkan skornya dengan hari onboarding. Tulis di `MEMORY.md`: apa yang berhasil, apa yang boros waktu, apa yang mau dibikin berikutnya. |
 
+Setelah hari ke-7, rencananya tidak lagi sama untuk semua orang. Seminggu sekali, dari folder project mana pun, tanya agent "harus belajar apa lagi?". Agent menjalankan [modul 15 Cek level](15-cek-level.md): memeriksa project kamu, menentukan level, dan memberi satu fokus untuk minggu itu.
+
 ## Kebiasaan jangka panjang
 
 - Setiap ide baru: brainstorm dulu di ChatGPT/Gemini sampai jadi brief ([materi 05](../materi/05-dari-ide-ke-prompt.md)), lalu cek GitHub apakah sudah ada yang bikin ([materi 06](../materi/06-cari-repo-open-source.md)).

@@ -34,7 +34,7 @@ else
   echo "BELUM: jalankan ulang dengan GIT_NAME dan GIT_EMAIL, atau isi manual (modul 05)."
 fi
 
-langkah 3/7 "Aturan kerja global agent" "~/.claude/CLAUDE.md untuk Claude Code, ~/.codex/AGENTS.md untuk Codex (Karpathy + aturan mentor)"
+langkah 3/7 "Aturan kerja global agent" "~/.claude/CLAUDE.md untuk Claude Code, ~/.codex/AGENTS.md untuk Codex (Karpathy + aturan mentor)" "skill belajar-lanjut: cek level dan fokus belajar berikutnya"
 pasang_aturan() {
   local tujuan="$1"
   mkdir -p "$(dirname "$tujuan")"
@@ -49,6 +49,7 @@ pasang_aturan() {
 }
 pasang_aturan "$HOME/.claude/CLAUDE.md"
 pasang_aturan "$HOME/.codex/AGENTS.md"
+bash scripts/pasang-skill.sh   # skill belajar-lanjut: "harus belajar apa lagi?" dari folder mana pun
 
 langkah 4/7 "Pengaman" "hook db-safety: perintah database yang menghapus data diblokir sebelum jalan"
 bash scripts/pasang-pengaman.sh

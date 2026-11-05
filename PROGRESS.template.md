@@ -33,6 +33,12 @@
 - [ ] 13 Proyek pertama
 - [ ] 14 Belajar lanjut
 
+## Cek level
+
+Satu baris per cek (modul 15), terbaru di bawah: tanggal, level, fokus, tanda naik level.
+
+-
+
 ## Materi yang sudah dibahas
 
 - [ ] 00 Terminal dan tools dasar (modul 02/03)

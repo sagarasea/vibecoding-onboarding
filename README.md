@@ -52,17 +52,19 @@ Ketiga agent ini membaca `AGENTS.md`, jadi panduan di repo ini jalan di mana pun
 
 **2. Ambil repo ini**
 
-- Kalau sudah diundang sebagai collaborator: buka halaman repo di GitHub, klik **Code**, **Download ZIP**, ekstrak ke folder `Projects` di home kamu.
-- Kalau dikirim file ZIP oleh mentor: ekstrak ke tempat yang sama.
+- Paling gampang: buka https://github.com/sagarasea/vibecoding-onboarding, klik **Code**, **Download ZIP**, ekstrak ke folder `Projects` di home kamu.
+- Kalau sudah punya git: `git clone https://github.com/sagarasea/vibecoding-onboarding.git ~/Projects/vibecoding-onboarding`. Cara ini lebih enak karena nanti bisa ambil update dengan `git pull`.
 
 **3. Jalankan agent di folder ini**
 
 ```bash
-cd ~/Projects/vibecoding-onboarding-main   # sesuaikan dengan nama folder hasil ekstrak
+cd ~/Projects/vibecoding-onboarding-main   # hasil ZIP; kalau pakai git clone: ~/Projects/vibecoding-onboarding
 claude
 ```
 
 Atau pakai Claude Desktop: tab **Code**, pilih folder ini. Untuk Codex: `codex`. Untuk opencode: `opencode`.
+
+Sudah punya VS Code? Install ekstensi **Claude Code** (publisher Anthropic) dari tab Extensions, buka folder ini lewat **File, Open Folder**, klik ikon Claude di pojok kanan atas editor, lalu **Sign in** pakai akun Claude.ai (Pro/Max). Belum punya VS Code tidak apa-apa: nanti dipasang di modul 02/03 dan disetel di modul 04.
 
 **4. Ketik:**
 
@@ -71,6 +73,8 @@ mulai onboarding
 ```
 
 Agent akan membaca `AGENTS.md`, bertanya 4 hal tentang kamu, memilihkan jalur, lalu menawarkan dua tempo: **lengkap** (modul satu per satu, 4-6 jam) atau **kilat** (satu perintah install semua, langsung proyek pertama, sekitar 3 jam). Progres tersimpan di `PROGRESS.md`, jadi kalau terputus cukup jalankan `claude` lagi dan ketik "lanjut onboarding".
+
+**Sudah vibecode beberapa hari?** Ketik `harus belajar apa lagi?`. Agent memeriksa project kamu, menentukan level, dan memberi satu fokus belajar untuk minggu ini ([modul 15](modul/15-cek-level.md)). Setelah modul 06, pertanyaan ini bisa diketik dari folder project mana pun.
 
 ## Urutan modul
 
@@ -93,6 +97,7 @@ Agent akan membaca `AGENTS.md`, bertanya 4 hal tentang kamu, memilihkan jalur, l
 | 12 | [Jalur minat](modul/12-jalur-minat.md) | tools per minat: SaaS (Resend, DOKU, QRIS), agent, video, desain, ArtCraft, SEO | 15-30 menit |
 | 13 | [Proyek pertama](modul/13-proyek-pertama.md) | brief dari ChatGPT/Gemini, cek repo GitHub, npm run dev, motion graphic 2 jalur, sampai online | 2-4 jam |
 | 14 | [Belajar lanjut](modul/14-belajar-lanjut.md) | kursus Anthropic, rencana 7 hari | |
+| 15 | [Cek level](modul/15-cek-level.md) | kapan saja setelah vibecode beberapa hari: agent periksa project kamu, tentukan level, kasih satu fokus belajar berikutnya | 15-20 menit |
 
 Modul 02 atau 03, pilih salah satu sesuai OS. Modul 09-11 sebagian opsional tergantung jalur.
 
@@ -113,7 +118,7 @@ Rincian di [referensi/biaya.md](referensi/biaya.md).
 AGENTS.md              instruksi untuk AI agent pemandu (dibaca semua agent)
 CLAUDE.md              satu baris: @AGENTS.md
 PROGRESS.template.md   disalin jadi PROGRESS.md oleh agent
-modul/                 langkah-langkah 00-14
+modul/                 langkah-langkah 00-14, plus 15 cek level kapan saja
 materi/                konsep yang muncul sesuai fase: terminal & tools dasar, git & GitHub, API key & .env, deploy,
                        worktree & bersih-bersih, dari ide ke prompt, cari repo open source, npm run dev/build & localhost,
                        penempatan folder (laptop, GitHub, workdesk Hermes multi brand di VPS),
@@ -125,12 +130,14 @@ templates/             file untuk project baru dan ~/.claude/
   gitignore              .gitignore aman (tidak commit .env)
   claude-settings.json   izin dasar Claude Code per project
   mcp.json               contoh .mcp.json (Supabase read-only)
+  skills/                skill global belajar-lanjut (cek level dari folder mana pun)
   hooks/                 db-safety.sh + pola, pre-commit gitleaks
 scripts/
   install-macos.sh       installer sekali jalan (--web --video --agent --desain --craft --semua)
   install-windows.ps1    installer sekali jalan (-Web -Video -Agent -Desain -Craft -Semua)
   setup-kilat.sh / .ps1  jalur kilat: install + identitas git + aturan global + pengaman + plugin + cek, sekali jalan
   pasang-pengaman.sh     hook db-safety (global) dan scan rahasia gitleaks (--repo)
+  pasang-skill.sh        skill global belajar-lanjut ke ~/.claude/skills/
   figcraft-mcp.sh        MCP FigCraft yang menempel ke aplikasi FigCraft (macOS)
   cek-setup.sh / .ps1    cek apa yang sudah dan belum terpasang
 referensi/
@@ -151,8 +158,16 @@ Windows:
 powershell -ExecutionPolicy Bypass -File scripts\cek-setup.ps1
 ```
 
+## Mau belajar langsung?
+
+Semua isi repo ini bisa dikerjakan sendiri bareng agent. Kalau kamu mau didampingi langsung (mentoring, kelas privat, atau workshop untuk tim), hubungi mentor (sagarasea) di **founder@tokenomixai.com**. Jadwal dan biaya dibahas di sana.
+
 ## Catatan untuk mentor
 
-- Repo ini private. Undang peserta sebagai collaborator (read) atau kirim ZIP dari GitHub.
+- Repo ini publik. Cukup bagikan link https://github.com/sagarasea/vibecoding-onboarding, peserta tidak perlu diundang.
 - Harga dan link dicek 2026-11-04. Perbarui `referensi/biaya.md` dan modul 10 kalau ada perubahan paket.
 - Kalau peserta menemukan langkah yang gagal, minta dia kirim isi `PROGRESS.md` dan pesan error lengkap.
+
+## Lisensi
+
+Materi repo ini berlisensi [CC BY-NC-SA 4.0](LICENSE): boleh dipakai, dibagikan, dan diubah asal menyebut sumbernya (sagarasea) dan memakai lisensi yang sama. Tidak boleh dijual ulang atau dipakai untuk kelas berbayar tanpa izin.
